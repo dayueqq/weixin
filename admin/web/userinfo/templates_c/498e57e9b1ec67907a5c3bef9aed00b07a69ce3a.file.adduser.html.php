@@ -1,0 +1,79 @@
+<?php /* Smarty version Smarty-3.0.6, created on 2013-10-20 14:56:20
+         compiled from "./adduser.html" */ ?>
+<?php /*%%SmartyHeaderCode:133645263ef141c6b12-46973857%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '498e57e9b1ec67907a5c3bef9aed00b07a69ce3a' => 
+    array (
+      0 => './adduser.html',
+      1 => 1382280912,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '133645263ef141c6b12-46973857',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>添加用户</title>
+<link href="../../res/css/userinfo/adduser.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js "></script>
+</head>
+<script type="text/javascript">
+  function checkForm(){
+	  // 验证手机号码
+	  var sMobile = $('#tele').val(); 
+      if(!(/^1[3|5|8][0-9]\d{4,8}$/.test(sMobile))){ 
+	      alert("不是完整的11位手机号或者正确的手机号"); 
+          $('#tele').focus(); 
+          return false; 
+      }
+	  
+	  //验证 QQ 号码
+	  var qq=$("#qq").val();
+	  if(qq!=""){
+		  if(qq.search(/^[1-9]\d{6,12}$/) != -1){   
+		      return true;    
+		  }else{    
+		      alert("qq格式错误"); 
+		      return false;
+		  }  
+	  }
+
+  }
+</script>
+
+<body>
+
+  <form action="upuser.php" method="post" enctype="multipart/form-data" class="usertype" onsubmit="return checkForm()">
+      <table width="90%" border="1">
+        <tr>
+          <td width="100px">名字</td>
+          <td><input type="text" name="name" /></td>
+        </tr>
+        <tr>
+          <td>性别</td>
+          <td><input class="sex" type="radio" name="sex" value="man" />男<input class="sex" type="radio" name="sex" value="woman" />女</td>
+        </tr>
+        <tr>
+          <td>手机号码</td>
+          <td><input id="tele" type="text" name="tele" /></td>
+        </tr>
+        <tr>
+          <td>QQ</td>
+          <td><input id="qq" type="text" name="qq" /></td>
+        </tr>
+        <tr>
+           <td align="right" colspan="2"><input style="width:100px" type="submit" value="添加用户" /></td>
+        </tr>
+      </table>
+      
+  </form>
+</body>
+</html>

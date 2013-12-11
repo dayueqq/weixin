@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>经销商信息</title>
+<link href="../../res/css/dealer/dealerinfo.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="info">
+      <table width="100%" border="1">
+        <tr>
+          <td>姓名</td>
+          <td>性别</td>
+          <td>手机号码</td>
+          <td>QQ</td>
+          <td>汽车</td>
+          <td>订车号</td>
+        </tr>
+        <!--{section name=info_id loop=$info}-->
+            <tr>
+              <td><!--{$info[info_id].name}--></td>
+              <td><!--{$info[info_id].sex}--></td>
+              <td><!--{$info[info_id].tele}--></td>
+              <td><!--{$info[info_id].qq}--></td>
+              <td><!--{$info[info_id].carid}--></td>
+              <td><!--{$info[info_id].buynum}--></td>
+            </tr>
+        <!--{/section}-->
+      </table>
+      <div style="clear:both; font-size:14px; padding-top:15px;"> 
+         <p class="page" align="center"><!--{$pageshow}--></p>   <!-- 显示页码-->
+      </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>试驾车型列表</title>
+<link rel="stylesheet" href="../../res/css/activity.css" type="text/css" />
+<script type="text/javascript" src="../../res/js/activity.js"></script>
+</head>
+
+<body>
+<!--activity modify-->
+<ul class="activityContanor">
+  <!--{section name=info_id loop=$info}-->
+	<li class="actAdded"  onmouseout="closeVessel('operate<!--{$smarty.section.info_id.index}-->');" onmouseover="openVessel('operate<!--{$smarty.section.info_id.index}-->');">
+    		<div id="operate<!--{$smarty.section.info_id.index}-->" class="operate" onmouseout="closeVessel('operate<!--{$smarty.section.info_id.index}-->');" style="display:none;">
+            	<div class="opacityLayer">
+                	 <div class="innerCase"></div>
+    				 <a class="actModify" href="addDrive.php?driId=<!--{$info[info_id].drive_id}-->"></a>
+                     <a class="actDelete" onclick="return confirm('是否删除此试驾信息')" href="operation.php?action=delDri&driId=<!--{$info[info_id].drive_id}-->"></a>
+                </div>   
+            </div>
+    		<div class="actPic">
+        	<div class="actImg">
+            	<img class="actCar" src="../../res/img/actCar.png"/>
+             	<div class="mengban">
+            		<p><!--{$info[info_id].model}--></p>
+            	</div>  
+            </div>          
+      		</div>
+        <div class="actDescribe">
+        	<p><!--{$info[info_id].actDescribe}--></p>
+        </div>
+    </li>
+ <!--{/section}--> 
+	
+
+    <li class="actNew">
+    	<a href="addDrive.php" class="addAct" title="新增优惠活动"></a>
+    </li>
+    
+    <div class="page" style="clear:both; font-size:14px; padding-top:5px"> 
+       <p class="page" align="center"><!--{$pageshow}--></p>   <!-- 显示页码-->
+    </div>
+
+</ul>
+<!--activity modify-->
+
+
+</body>
+</html>

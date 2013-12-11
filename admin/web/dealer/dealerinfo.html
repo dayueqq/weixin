@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>经销商信息</title>
+<link href="../../res/css/dealer/dealerinfo.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="info">
+      <table width="100%" border="1">
+        <tr>
+          <td>经销商</td>
+          <td>所在城市</td>
+          <td>所在地区</td>
+          <td>联系方式</td>
+          <td>经销商官网</td>
+          <td>礼品1</td>
+          <td>礼品2</td>
+          <td>礼品3</td>
+        </tr>
+        <!--{section name=info_id loop=$info}-->
+            <tr>
+              <td><!--{$info[info_id].name}--></td>
+              <td><!--{$info[info_id].city}--></td>
+              <td><!--{$info[info_id].place}--></td>
+              <td><!--{$info[info_id].cont}--></td>
+              <td><!--{$info[info_id].url}--></td>
+              <td><!--{$info[info_id].gift1}--></td>
+              <td><!--{$info[info_id].gift2}--></td>
+              <td><!--{$info[info_id].gift3}--></td>
+            </tr>
+        <!--{/section}-->
+      </table>
+      <div style="clear:both; font-size:14px; padding-top:15px;"> 
+         <p class="page" align="center"><!--{$pageshow}--></p>   <!-- 显示页码-->
+      </div>
+  </div>
+</body>
+</html>

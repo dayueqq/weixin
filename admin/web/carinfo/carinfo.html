@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>活动汽车情况</title>
+<script type="text/javascript" src="../../res/js/jquery.js"></script>
+<link href="../../res/css/carinfo/carinfo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+   function change(obj){
+	   alert(obj);
+   }
+</script>
+
+</head>
+
+<body>
+  <div class="info">
+      <table width="100%" border="1">
+        <tr>
+          <td>汽车图片</td>
+          <td>促销活动</td>
+          <td>经销商</td>
+          <td>品牌</td>
+          <td>车型</td>
+          <td>车款</td>
+          <td>原价</td>
+          <td>活动价</td>
+          <td>活动数量</td>
+          <td>已订</td>
+          <td>礼品1</td>
+          <td>礼品2</td>
+          <td>礼品3</td>
+          <td>操作</td>
+        </tr>
+        <!--{section name=info_id loop=$info}-->
+            <tr>
+              <td><img width="100" src="<!--{$info[info_id].carpic}-->" /></td>
+              <td><!--{$info[info_id].active}--></td>
+              <td><!--{$info[info_id].dealername}--></td>
+              <td><!--{$info[info_id].brand}--></td>
+              <td><!--{$info[info_id].design}--></td>
+              <td><!--{$info[info_id].type}--></td>
+              <td><!--{$info[info_id].price}--></td>
+              <td><!--{$info[info_id].discount}--></td>
+              <td><!--{$info[info_id].amount}--></td>
+              <td><!--{$info[info_id].booked}--></td>
+              <td><!--{$info[info_id].gift1}--></td>
+              <td><!--{$info[info_id].gift2}--></td>
+              <td><!--{$info[info_id].gift3}--></td>
+              <td><a href="updatecar.php?order=del&id=<!--{$info[info_id].carid}-->">删除</a>
+              </td>
+            </tr>
+        <!--{/section}-->
+      </table>
+      <div style="clear:both; font-size:14px; padding-top:15px;"> 
+         <p class="page" align="center"><!--{$pageshow}--></p>   <!-- 显示页码-->
+      </div>
+  </div>
+</body>
+</html>

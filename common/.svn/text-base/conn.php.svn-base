@@ -1,0 +1,6 @@
+<?php
+  //include 'conn.inc.php';
+  include $_SERVER['DOCUMENT_ROOT'].'/stampnew/shareplatform/web/common/sql.inc.php';
+  include $_SERVER['DOCUMENT_ROOT'].'/stampnew/shareplatform/web/smarty.inc.php';
+
+?> 

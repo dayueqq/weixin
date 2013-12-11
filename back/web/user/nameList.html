@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>在售车型</title>
+<script type="text/javascript" src="../../res/js/jquery-1.4.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../res/css/nameList.css" />
+<link rel="stylesheet" href="../../res/css/datepicker.css" type="text/css" />
+<script src="../../res/js/nameList.js"></script>
+<script type="text/javascript" src="../../res/js/datepicker.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	//实例三
+	$('#date3').DatePicker({
+		flat: true,
+		date: ['2009-12-28','2010-01-23'],
+		current: '2010-01-01',
+		calendars: 3,
+		mode: 'range',
+		starts: 1
+	});
+	//实例五
+	var now3 = new Date();
+	now3.addDays(-4);
+	var now4 = new Date()
+	$('#widgetCalendar').DatePicker({
+		flat: true,
+		format: 'Y-m-d',
+		date: [new Date(now3), new Date(now4)],
+		calendars: 3,
+		mode: 'range',
+		starts: 1,
+		onChange: function(formated) {
+			$('#widgetField span').get(0).innerHTML = formated.join(' —— ');
+		}
+	});
+	var state = false;
+	$('#widgetField>a').bind('click', function(){
+		$('#widgetCalendar').stop().animate({height: state ? 0 : $('#widgetCalendar div.datepicker').get(0).offsetHeight}, 500);
+		state = !state;
+		return false;
+	});
+	
+
+});
+</script>
+</head>
+
+<body>
+	<div class="carOnSellList">
+    	<div class="addNewCar">
+        	<a class="tabBuy" href="#" >购车报名</a>
+            <a class="tabDrive" href="#">试驾报名</a>
+        </div>
+        <div class="carSelect">
+        	<form class="searchCondition">
+           	<label for="carSeries">车系:</label>
+            <select class="carSeries" name="carSeries">
+        		<option>- 请选择 - </option>
+            	<!--{section name=info_id loop=$carInfo}-->
+                    <option value="<!--{$carInfo[info_id].car_id}-->"><!--{$carInfo[info_id].name}--></option>
+                <!--{/section}-->
+           </select>
+       
+           <label for="carModel">车型:</label>
+           <select class="carModel" name="carModel">
+        	   <option>- 请选择 - </option>
+               <option>2013款2.2L手动豪华版</option>
+               <option>2013款2.2L手动豪华版</option>
+               <option>2013款2.2L手动豪华版</option>
+               <option>2013款2.2L手动豪华版</option>
+               <option>2013款2.2L手动豪华版</option>     	
+          </select>
+      
+            <label for="actName">活动:</label>
+            <select class="actName" name="actName">
+        	   <option>- 请选择 - </option>
+               <option>2013款2.2L手动豪华版</option>
+               <option>2013款2.2L手动豪华版</option>
+               <option>2013款2.2L手动豪华版</option>
+               <option>2013款2.2L手动豪华版</option>
+               <option>2013款2.2L手动豪华版</option>     	
+          </select>
+            <div class="tab">
+			  <div id="widget">
+				<div id="widgetField">
+					<span>2011 , 一月 1 — 2012 , 一月 11</span>
+					<a href="#">Select date range</a>
+				</div>
+				<div id="widgetCalendar">
+				</div>
+			   </div>
+		    </div>
+           </form>
+           <a class="search" href="#">查看</a>
+           <a class="export" href="#">导出</a>
+           <br />
+        </div>
+        <iframe frameborder="0" allowtransparency="1" width="782px" height="800px" src="nameStatics.php">
+
+    </iframe>
+</div>
+</body>
+</html>

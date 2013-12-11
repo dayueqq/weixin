@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>添加活动汽车</title>
+<link href="../../res/css/carinfo/addcar.css" rel="stylesheet" type="text/css" />
+</head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js "></script>
+<script type="text/javascript">
+   function check(){
+	   var temp=$('.cartype table tr td select').find("option:selected").text();  //获取Select选择的Text 
+	   $('.dealername').val(temp);
+	   $('#theForm').submit();
+   }
+</script>
+
+<body>
+
+  <form id="theForm" action="upcar.php" method="post" enctype="multipart/form-data" class="cartype">
+      <table width="90%" border="1">
+        <tr>
+          <td>活动名称</td>
+          <td><input type="text" name="active" /></td>
+        </tr>
+        <tr>
+          <td width="100px">经销商名称</td>
+          <td>
+             <select style="margin-left:10px" name="dealer">
+                <!--{section name=dealer_id loop=$dealer}-->
+                   <option value="<!--{$dealer[dealer_id].dealerid}-->"><!--{$dealer[dealer_id].name}--></option>
+                <!--{/section}-->
+             </select>
+             <input type="hidden" class="dealername" name="dealername" />
+          </td>
+        </tr>
+        <tr>
+          <td>品牌</td>
+          <td><input type="text" name="brand" /></td>
+        </tr>
+        <tr>
+          <td>汽车图片</td>
+          <td><input type="file" name="pic" /></td>
+        </tr>
+        <tr>
+        <tr>
+          <td>车型</td>
+          <td><input type="text" name="design" /></td>
+        </tr>
+        <tr>
+          <td>车款</td>
+          <td><input type="text" name="type" /></td>
+        </tr>
+        <tr>
+          <td>原价</td>
+          <td><input type="text" name="price" />万元</td>
+        </tr>
+        <tr>
+          <td>活动价</td>
+          <td><input type="text" name="discount" />万元</td>
+        </tr>
+        <tr>
+          <td>汽车数量</td>
+          <td><input type="text" name="amount" /></td>
+        </tr>
+        <tr>
+           <td align="right" colspan="2"><input style="width:100px" type="button" onclick="check()" value="添加活动汽车" /></td>
+        </tr>
+      </table>
+      
+  </form>
+</body>
+</html>

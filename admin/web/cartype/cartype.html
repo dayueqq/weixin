@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>添加车型车系</title>
+<link href="../../res/css/cartype.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js "></script>
+<script language="javascript">
+   window.onload=function(){
+	   $('#type').change(function(){
+		   $.post("cartype.php?level=2",{'father':$(this).val()},function(data){
+			   //alert(data);
+			   var resp=data.split("@/@");
+			   var str='';
+			   for(var i=0;i<resp.length;i++){
+				   var temp=resp[i].split("@@");
+				   str+="<option value='"+temp[0]+"'>"+temp[1]+"</option>" ;
+			   }
+			   $('#series').html(str);
+           });
+	   });
+	   
+	   
+	   $(".button:eq(0)").click( function() {
+		   $.post("upcartype.php?level=1",{'name':$('input:eq(0)').val()},function(data){
+			   if(data==1){
+				   alert('添加成功');
+				   location.reload();
+			   }else{
+				   alert('添加失败');
+			   }
+		   });
+       });
+	   $(".button:eq(1)").click( function() {
+		   $.post("upcartype.php?level=2",{'name':$(this).parent().find('input:eq(0)').val(),'father':$(this).parent().find('select').val()},function(data){
+			   if(data==1){
+				   alert('添加成功');
+				   location.reload();
+			   }else{
+				   alert('添加失败');
+			   }
+		   });
+       });
+	   $(".button:eq(2)").click( function() {
+		   $.post("upcartype.php?level=3",{'name':$(this).parent().find('input:eq(0)').val(),'father':$('#series').val()},function(data){
+			   if(data==1){
+				   alert('添加成功');
+				   location.reload();
+			   }else{
+				   alert('添加失败');
+			   }
+		   });
+       });
+   }
+</script>
+</head>
+
+<body>
+  
+  <div class="cartype">
+      <table width="90%" border="1">
+        <tr>
+          <td width="100px">添加品牌</td>
+          <td><input class="brand" type="text" name="brand" /><input class="button" type="button" value="添加" /></td>
+        </tr>
+        <tr>
+          <td>添加车型</td>
+          <td>
+             <select name="type">
+                <!--{section name=type_id loop=$type}-->
+                    <option value="<!--{$type[type_id].id}-->"><!--{$type[type_id].name}--></option> 
+                <!--{/section}-->
+             </select>
+             <input type="text" name="series" /><input class="button" type="button" value="添加" />
+          </td>
+        </tr>
+        <tr>
+          <td>添加车款</td>
+          <td>
+             <select id="type" name="type">
+                <!--{section name=type_id loop=$type}-->
+                    <option value="<!--{$type[type_id].id}-->"><!--{$type[type_id].name}--></option> 
+                <!--{/section}-->
+             </select>
+             <select id="series">
+             </select>
+             <input type="text" name="type" /><input class="button" type="button" value="添加" />
+          </td>
+        </tr>
+        <tr>
+          <td>汽车图片</td>
+          <td><input type="file" />
+        </tr>
+        <tr>
+          <td>汽车配置</td>
+          <td><input type="text" />
+        </tr>
+      </table>
+  </div>
+</body>
+</html>

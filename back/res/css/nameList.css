@@ -1,0 +1,425 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serifl;color:#5a5a5a;}
+.pagedemo{width:700px;margin:0 auto;text-align:left;}
+.pagedemo h1{font-size:21px;height:47px;line-height:47px;text-transform:uppercase;}
+.tabsContent{border:1px solid #ccc;width:698px;overflow:hidden;}
+.tab{padding-top:10px;display:block;}
+.tab h2{font-weight:bold;font-size:16px;}
+.tab h3{font-weight:bold;font-size:14px;margin-top:20px;}
+.tab p{margin-top:16px;clear:both;}
+.tab ul{margin-top:16px;list-style:disc;}
+.tab li{margin:10px 0 0 35px;}
+.tab a{color:#8FB0CF;}
+.tab strong{font-weight:bold;}
+.tab pre{font-size:11px;margin-top:20px;width:668px;overflow:auto;clear:both;}
+.tab table{width:100%;}
+.tab table td{padding:6px 10px 6px 0;vertical-align:top;}
+
+input.inputDate{border:1px solid #999;padding:4px;border-bottom-color:#ddd;border-right-color:#ddd;width:165px;}
+#widget{position:relative;}
+#widgetField{width:290px;height:26px;background:url(../images/field.png);overflow:hidden;position:relative;}
+#widgetField a{display:block;position:absolute;width:26px;height:26px;top:0;right:0;text-decoration:none;text-indent:-3000px;}
+#widgetField span{font-size:12px;font-weight:bold;color:#000;position:absolute;top:0;height:26px;line-height:26px;left:5px;width:250px;text-align:center;}
+#widgetCalendar{position:absolute;top:26px;left:0;height:0px;overflow:hidden;width:588px;background:#B9B9B9;}
+
+
+.carOnSellList{
+	width:780px;
+	height:auto;
+	margin:20px 20px 0 24px;	
+}
+.addNewCar{
+	width:780px;
+	height:35px;
+	font-family:"微软雅黑";
+	font-size:14px;
+}
+.tabBuy{
+	display:block;
+	width:100px;
+	height:31px;
+	background:#f3f3f3;
+	float:left;
+	text-decoration:none;
+	line-height:31px;
+	padding-left:40px;
+	border:solid 1px #CCCCCC;
+	color:#000;
+}
+.tabDriveSelected{
+    background:url(../img/tabBack.jpg);
+	display:block;
+	width:100px;
+	height:31px;
+	float:left;
+	text-decoration:none;
+	line-height:31px;
+	border:solid 1px #CCC;
+	border-left:none;
+	color:#000;
+	padding-left:40px;
+}
+.tabBuySelected{
+	background:url(../img/tabBack.jpg);
+	display:block;
+	width:100px;
+	height:31px;
+	float:left;
+	text-decoration:none;
+	line-height:31px;
+	padding-left:40px;
+	border:solid 1px #CCCCCC;
+	color:#000
+}
+.tabDrive{
+	display:block;
+	width:100px;
+	height:31px;
+	background:#f3f3f3;
+	float:left;
+	text-decoration:none;
+	line-height:31px;
+	border:solid 1px #CCC;
+	border-left:none;
+	color:#000;
+	padding-left:40px;
+}
+.tabServiceSelected{
+	background:url(../img/tabBack.jpg);
+	display:block;
+	width:100px;
+	height:31px;
+	float:left;
+	text-decoration:none;
+	line-height:31px;
+	padding-left:40px;
+	border-top:solid 1px #CCCCCC;
+	border-right:solid 1px #CCCCCC;
+	border-bottom:solid 1px #CCCCCC;
+	color:#000
+}
+.tabService{
+	display:block;
+	width:100px;
+	height:31px;
+	background:#f3f3f3;
+	float:left;
+	text-decoration:none;
+	line-height:31px;
+	border:solid 1px #CCC;
+	border-left:none;
+	color:#000;
+	padding-left:40px;
+}
+.tabGroupBuy{
+	display:block;
+	width:100px;
+	height:31px;
+	background:#f3f3f3;
+	float:left;
+	text-decoration:none;
+	line-height:31px;
+	border:solid 1px #CCC;
+	border-left:none;
+	color:#000;
+	padding-left:40px;
+}
+.tabGroupBuySelected{
+	background:url(../img/tabBack.jpg);
+	display:block;
+	width:100px;
+	height:31px;
+	float:left;
+	text-decoration:none;
+	line-height:31px;
+	padding-left:40px;
+	border-top:solid 1px #CCCCCC;
+	border-right:solid 1px #CCCCCC;
+	border-bottom:solid 1px #CCCCCC;
+	color:#000
+}
+.tabBuy:hover{
+	background:url(../img/tabBack.jpg);
+}
+.tabDrive:hover{
+	background:url(../img/tabBack.jpg);
+}
+.tabService:hover{
+	background:url(../img/tabBack.jpg);
+}
+.tabGroupBuy:hover{
+	background:url(../img/tabBack.jpg);
+}
+.buyTable{
+	margin-left:15px;
+	widht:80%;
+}
+.driveTable{
+	margin-left:15px;
+	widht:80%;
+}
+.serviceTable{
+	margin-top:10px;
+	margin-left:15px;
+	widht:80%;
+}
+.groupBuyTable{
+	margin-left:15px;
+	widht:80%;
+}
+/*
+.tabBuy:visited{
+	background:url(../img/tabBack.jpg);
+}
+.tabDrive:visited{
+	background:url(../img/tabBack.jpg);
+}
+*/
+.carTable{
+	width:782px;
+	height:auto;
+	text-align:left;
+	line-height:30px;
+	font-family:"微软雅黑";
+	font-weight:500;
+    word-break:break-all; 
+	word-wrap:break-all;
+}
+.thead{
+	border-collapse:collapse;
+	border:none;
+}
+.thead td{
+	border:1px solid #CCC;
+	border-bottom:none;
+	font-size:14px;
+	padding-left:10px;
+}
+
+.tbody{
+	border-collapse:collapse;
+	border:none;
+	font-size:11px;
+	color:#999;
+}
+.tbody td{
+	border:1px solid #CCC;
+	font-size:12px;
+	padding-left:5px;
+}
+/*表头各项宽度*/
+.date{
+	width:90px;
+}
+.brand{
+	width:60px;
+}
+.series{
+	width:140px;
+}
+.model{
+	width:224px;
+}
+.name{
+	width:70px;
+}
+.phone{
+	width:100px;
+}
+.source{
+	width:146px;
+}
+.serviceKind{
+	width:58px;
+}
+.source p{
+	float:left;
+}
+.carNum{
+	width:80px;
+}
+.bookDate{
+	width:100px;
+}
+.bookTime{
+	width:100px;
+}
+.willBuyTime{
+	width:90px;
+}
+.operation{
+	width:60px;	
+}
+.operation1{
+	width:274px;
+}
+.operation2{
+	width:200px;
+}
+.operation3{
+	width:50px;
+}
+.detail{
+	width:438px;
+}
+/*表头各项数据项规定*/
+.site{
+	display:block;
+	overflow:hidden;
+	float:left;
+	width:140px;
+	height:30px;
+	margin-left:2px;
+}
+
+.page
+{
+	margin-top:13px;
+	*margin-top:33px;
+	_margin-top:13px;
+	height:32px;
+	text-align:center;
+	font-size:10px;	
+	font-family:"微软雅黑";
+	float:right;
+}
+
+.page span
+{
+	display:inline-block;
+	width:16px;
+	margin:4px 8px 0 0;
+	height:25px;
+	font-size:10px;
+	font:10px Arial;
+	vertical-align:top;
+}
+
+.page a
+{
+	display:inline-block;
+	width:auto;
+	padding:3px 8px;
+	border:1px solid #dfdfdf;
+	font-size:10px;
+	background:#FFF;
+	color:#505050;
+	margin-right:8px;
+	vertical-align:top;
+	overflow:hidden;
+}
+
+.page a.current
+{
+	background-color:#999;
+	color:#FFF;
+	border-color:#e7c7a1;
+}
+
+.page a:hover
+{
+	background-color:#999;
+	text-decoration:none;
+}
+
+s{
+	font-size:10px;
+	position:relative;
+	top:2px;
+ }
+	  
+
+.page a.current:hover
+{
+	background-color:#999
+}
+
+.page a.pageup-dis, .page a.pagedown-dis
+{
+	background-color:#eff2f0;
+	color:#bcbebd;
+	cursor:default;
+}
+
+.page a.pageup-dis:hover, .page a.pagedown-dis:hover
+{
+	background-color:#eff2f0;
+}
+
+.carSelect{
+	border:#CCC 1px solid;
+	width:780px;
+	height:78px;
+	background:#f8f8f8;
+}
+
+.carSeries{
+	width:100px;
+	height:20px;
+	margin-right:15px;
+	margin-top:10px;
+}
+
+.carModel{
+	width:100px;
+	height:20px;
+	margin-right:15px;
+	margin-top:10px;
+}
+.actName{
+	width:100px;
+	height:20px;
+	margin-right:15px;
+	margin-top:10px;
+
+}
+.tab{
+	width:500px;
+	height:auto;
+	margin-left:15px;
+}
+
+.search{
+	display:block;
+	float:right;
+	width:60px;
+	height:25px;
+	background:#fcfcfc;
+	border:solid 1px #999999;
+	border-radius:5px;
+	line-height:25px;
+	text-align:center;
+	text-decoration:none;
+	font-family:"微软雅黑";
+	font-size:13px;
+	position:relative;
+	bottom:25px;
+	right:10px;
+}
+
+.export{
+	display:block;
+	float:right;
+	width:60px;
+	height:25px;
+	background:#fcfcfc;
+	border:solid 1px #999999;
+	border-radius:5px;
+	line-height:25px;
+	text-align:center;
+	text-decoration:none;
+	font-family:"微软雅黑";
+	font-size:13px;
+	position:relative;
+	bottom:25px;
+	right:20px;
+}
+.tTitle{
+	background:#f3f3f3;
+	height:37px;
+	color:#000;
+	font-weight:700;
+}

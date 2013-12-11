@@ -1,0 +1,4 @@
+var ser=new Array();
+
+ser[1]='ff'
+ser[3]='ss'

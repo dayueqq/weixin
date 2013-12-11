@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="../common/temp/brand.json"></script>
+<script language="javascript">
+window.onload=function(){
+    //更改任务栏
+    var str='<option>- 请选择 -</option>';
+	for(var j=0;j<brandJson.length;j++){
+		temp =brandJson[j].split(',');
+		str+="<option value='"+temp[0].replace('_','')+"'>"+temp[1]+"</option>" ;
+    }
+	$('#carType').html(str);
+	
+	var str='<option>- 请选择 -</option>';
+	var res=seriesJson[33].split(',');
+	for(var i=0;i<res.length;i=i+2){
+		str+="<option value='"+res[i]+"'>"+res[i+1]+"</option>" ;
+    }
+	$('#carSeries').html(str);
+	
+	//改变选项栏
+    $('#carType').change(function(){
+		var faval=parseInt($('#carType').val());
+		var str='<option>- 请选择 -</option>';
+		if(faval){
+			var res=seriesJson[faval].split(',');
+			for(var i=0;i<res.length;i=i+2){
+				str+="<option value='"+res[i]+"'>"+res[i+1]+"</option>" ;
+			}
+		}
+		$('#carSeries').html(str);
+    });
+	
+	//改变选项栏
+    $('#carSeries').change(function(){
+		var faval=parseInt($('#carSeries').val());
+		var str='<option>- 请选择 -</option>';
+		if(faval){
+			var res=mod[faval].split(',');
+			for(var i=0;i<res.length;i=i+2){
+				 str+="<option value='"+res[i]+"'>"+res[i+1]+"</option>" ;
+			}
+		}
+		$('#carModel').html(str);
+    });
+	//提取配置信息
+	$('#carModel').change(function(){
+		var faval=parseInt($('#carModel').val());
+		for(var k=0;k<modJson.length;k++){
+			if(modJson[k][0]==faval){
+				$('#guidePrice1').html('&nbsp;&nbsp;'+modJson[k][4]);
+				$('#guidePrice').val(modJson[k][4]);
+				$('#picVal').val(modJson[k][5]);
+				break;
+			}
+		}
+    });
+}
+</script>
+</head>
+
+<body>
+<p>请选择品牌:</p>
+        <select  name="huge" class="select-block mbl" id="carType">
+            <option value="0">1</option>
+        </select>
+        <p>请选择车系:</p>
+        <select  name="huge" class="select-block mbl" id="carSeries">
+            <option value="0">1</option>
+        </select>
+        <p>请选择车型:</p>
+        <select  name="huge" class="select-block mbl" id="carModel">
+            <option value="0">1</option>
+        </select>
+</body>
+</html>

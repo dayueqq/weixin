@@ -1,0 +1,11 @@
+@charset "utf-8";
+.cartype {
+	width: 600px; zoom:1; overflow:hidden;
+	margin:30px auto;
+}
+.cartype table tr td input {
+	margin-left: 10px;
+}
+.cartype table tr td select {
+	margin-left: 10px;
+}

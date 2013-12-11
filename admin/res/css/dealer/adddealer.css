@@ -1,0 +1,11 @@
+@charset "utf-8";
+.dealertype {
+	width: 600px; zoom:1; overflow:hidden;
+	margin:30px auto;
+}
+.dealertype table tr td input {
+	margin-left: 10px; width:300px;
+}
+.dealertype table tr td .gift{
+	width:30px; margin-left: 10px; 
+}

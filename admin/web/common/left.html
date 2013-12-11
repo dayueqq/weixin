@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台管理</title>
+<link href="../../res/css/common/manage.css" rel="stylesheet" type="text/css" />
+</head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js "></script>
+<script type="text/javascript">
+   $(function(){
+	   $('.left div a').each(function(){   //选择要展示的图片
+		   $(this).click(function(){
+			   $('#frame').attr('src',$(this).attr('href'));
+		   });    
+	   });
+   });
+</script>
+
+<body>
+<div class="left">
+      <div><a href="../dealer/dealerinfo.php" onclick="return false">经销商信息</a></div>
+      <div><a href="../dealer/adddealer.php" onclick="return false">添加经销商</a></div>
+      <div><a href="../carinfo/carinfo.php" onclick="return false">活动汽车情况</a></div>
+      <div><a href="../carinfo/addcar.php" onclick="return false">添加活动汽车</a></div>
+      <div><a href="../userinfo/adduser.php" onclick="return false">添加用户</a></div>
+      <div><a href="../userinfo/userinfo.php" onclick="return false">用户信息</a></div>
+</div>
+  <iframe id="frame" style="width:90%; height:640px; float:right;" src="../dealer/dealerinfo.php"></iframe>
+</body>
+</html>

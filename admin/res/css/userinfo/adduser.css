@@ -1,0 +1,11 @@
+@charset "utf-8";
+.usertype {
+	width: 600px; zoom:1; overflow:hidden;
+	margin:30px auto;
+}
+.usertype table tr td input {
+	margin-left: 10px; width:300px;
+}
+.usertype table tr td .sex{
+	width:30px; margin-left: 10px; 
+}

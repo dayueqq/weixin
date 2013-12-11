@@ -1,0 +1,186 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;
+}
+
+body
+{
+	width:829px;
+	height:800px;
+}
+
+.carOnSellList{
+	width:780px;
+	height:auto;
+	margin:20px 20px 0 24px;	
+}
+.addNewCar{
+	width:780px;
+	height:28px;
+}
+.addCar{
+	display:block;
+	width:60px;
+	height:25px;
+	background:#fcfcfc;
+	border:solid 1px #999999;
+	border-radius:5px;
+	line-height:25px;
+	text-align:center;
+	text-decoration:none;
+	float:left;
+	font-family:"微软雅黑";
+	font-size:13px;
+}
+
+.statics p{
+	font-family:"微软雅黑";
+	font-size:13px;
+	color:#999;
+	float:left;
+	margin-left:20px;
+	line-height:25px;
+}
+
+.statics span{
+	color:#000;
+}
+
+.carTable{
+	width:780px;
+	height:auto;
+	text-align:left;
+	line-height:30px;
+	font-family:"微软雅黑";
+	font-weight:500;
+}
+.thead{
+	margin-top:20px;
+	border-collapse:collapse;
+	border:none;
+}
+.thead td{
+	border:1px solid #CCC;
+	border-bottom:none;
+	font-size:14px;
+	padding-left:10px;
+}
+
+.tbody{
+	border-collapse:collapse;
+	border:none;
+	font-size:11px;
+	color:#999;
+}
+.tbody td{
+	border:1px solid #CCC;
+	font-size:12px;
+	padding-left:10px;
+}
+
+.brand{
+	width:70px;
+}
+.series{
+	width:100px;
+}
+.model{
+	width:200px;
+}
+.guidePrice{
+	width:60px;
+}
+.actPrice{
+	width:60px;
+}
+.actTime{
+	width:100px;
+}
+.operation{
+	width:110px;
+}
+
+.operation a:hover{
+	color:#999;
+}
+
+.page
+{
+	margin-top:13px;
+	*margin-top:33px;
+	_margin-top:13px;
+	height:32px;
+	text-align:center;
+	font-size:10px;	
+	font-family:"微软雅黑";
+	float:right;
+}
+
+.page span
+{
+	display:inline-block;
+	width:16px;
+	margin:4px 8px 0 0;
+	height:25px;
+	font-size:10px;
+	font:10px Arial;
+	vertical-align:top;
+}
+
+.page a
+{
+	display:inline-block;
+	width:auto;
+	padding:3px 8px;
+	border:1px solid #dfdfdf;
+	font-size:10px;
+	background:#FFF;
+	color:#505050;
+	margin-right:8px;
+	vertical-align:top;
+	overflow:hidden;
+}
+
+.page a.current
+{
+	background-color:#999;
+	color:#FFF;
+	border-color:#e7c7a1;
+}
+
+.page a:hover
+{
+	background-color:#999;
+	text-decoration:none;
+}
+
+s{
+	font-size:10px;
+	position:relative;
+	top:2px;
+ }
+	  
+
+.page a.current:hover
+{
+	background-color:#999
+}
+
+.page a.pageup-dis, .page a.pagedown-dis
+{
+	background-color:#eff2f0;
+	color:#bcbebd;
+	cursor:default;
+}
+
+.page a.pageup-dis:hover, .page a.pagedown-dis:hover
+{
+	background-color:#eff2f0;
+}
+
+
+
+

@@ -1,0 +1,218 @@
+@charset "utf-8";
+/* CSS Document */
+
+.activityContanor{
+	width:780px;
+	height:550px;
+	margin:15px 10px 0 10px;
+	padding:0;
+	border:solid 1px #CCCCCC;
+	border-radius:5px;
+	list-style:none;
+	background:#f9f9f9; 
+	display:block;
+}
+
+.activityContanor li{
+	width:230px;
+	height:210px;
+	margin:20px 0 0 20px;
+	position:relative;
+	float:left;
+}
+
+.actAdded{
+	width:230px;
+	height:210px;
+	background:#FFF;
+	border:solid 1px #CCCCCC;
+	border-radius:5px;
+}
+
+.addAct{
+	display:block;
+	width:228px;
+	height:209px;
+	background:url(../img/addAct-back.png) no-repeat;
+}
+
+.addAct:hover{
+	background:url(../img/addAct-back-hover.png) no-repeat;
+}
+
+.actCar{
+	width:210px;
+	height:130px;
+	margin:10px 10px 0 10px;
+}
+
+.mengban{
+	position:absolute;
+	z-index:9999;
+	top:110px;
+	left:10px;
+	background:#000;
+	opacity:0.77;
+	width:210px;
+	height:30px;
+	overflow:hidden;
+}
+.mengban p {
+	line-height:18px;
+	font-size:13px;
+	color:#FFF;
+	font-family:"微软雅黑";
+	letter-spacing:1.2px;
+	margin-left:7px;
+	width:200px;
+	height:20px;
+	overflow:hidden;
+	position:relative;
+	bottom:7px;
+}
+
+
+.actDescribe{
+	border-top:solid 1px #CCCCCC;
+	overflow:hidden;
+	margin:10px auto 0 auto;
+	width:200px;
+	height:46px;
+	text-overflow:ellipsis;
+
+}
+.actDescribe p{
+    font-size:12px!important;
+	color:#000!important;
+	font-family:"微软雅黑"!important;
+	line-height:16px!important;	
+}
+
+.actDescribe p span{
+    font-size:12px!important;
+	color:#000!important;
+	font-family:"微软雅黑"!important;
+	line-height:16px!important;
+}
+
+
+.opacityLayer 
+{	
+	margin-top:0px;
+	font-size:14px;
+	color:white;
+	text-decoration:none;
+	display:block;	
+	overflow:hidden;
+}
+
+.operate .opacityLayer
+{   
+	background:url(../img/6.png) repeat-y;
+	width:230px;
+	height:210px;
+	position:absolute;
+	z-index:10000;
+	border-radius:5px;
+	display:block;
+}
+.innerCase{
+	width:230px;
+	height:75px;
+}
+.actModify{
+	width:55px;
+	height:53px;
+	background:url(../img/actModify.png);
+	margin-left:40px;
+	position:relative;
+	float:left;
+}
+.actDelete{
+	width:55px;
+	height:53px;
+	background:url(../img/actDelete.png);
+	margin-left:30px;
+	postion:relative;
+	float:left;
+}
+.actModify:hover{
+	background:url(../img/actModifyHover.png);
+}
+.actDelete:hover{
+	background:url(../img/actDelHover.png);
+}
+
+.page
+{
+	margin-top:13px;
+	*margin-top:33px;
+	_margin-top:13px;
+	height:32px;
+	text-align:center;
+	font-size:10px;	
+	font-family:"微软雅黑";
+	float:right;
+}
+
+.page span
+{
+	display:inline-block;
+	width:16px;
+	margin:4px 8px 0 0;
+	height:25px;
+	font-size:10px;
+	font:10px Arial;
+	vertical-align:top;
+}
+
+.page a
+{
+	display:inline-block;
+	width:auto;
+	padding:3px 8px;
+	border:1px solid #dfdfdf;
+	font-size:10px;
+	background:#FFF;
+	color:#505050;
+	margin-right:8px;
+	vertical-align:top;
+	overflow:hidden;
+}
+
+.page a.current
+{
+	background-color:#999;
+	color:#FFF;
+	border-color:#e7c7a1;
+}
+
+.page a:hover
+{
+	background-color:#999;
+	text-decoration:none;
+}
+
+s{
+	font-size:10px;
+	position:relative;
+	top:2px;
+ }
+	  
+
+.page a.current:hover
+{
+	background-color:#999
+}
+
+.page a.pageup-dis, .page a.pagedown-dis
+{
+	background-color:#eff2f0;
+	color:#bcbebd;
+	cursor:default;
+}
+
+.page a.pageup-dis:hover, .page a.pagedown-dis:hover
+{
+	background-color:#eff2f0;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>优惠活动</title>
+<link rel="stylesheet" href="../../res/css/activity.css" type="text/css" />
+<script type="text/javascript" src="../../res/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="../../res/js/activity.js"></script>
+</head>
+
+<body>
+<!--activity modify-->
+<ul class="activityContanor">
+  <!--{section name=info_id loop=$info}-->
+	<li class="actAdded"  onmouseout="closeVessel('operate<!--{$smarty.section.info_id.index}-->');" onmouseover="openVessel('operate<!--{$smarty.section.info_id.index}-->');">
+    		<div id="operate<!--{$smarty.section.info_id.index}-->" class="operate" onmouseout="closeVessel('operate<!--{$smarty.section.info_id.index}-->');" style="display:none;">
+            	<div class="opacityLayer">
+                	 <div class="innerCase"></div>
+    				 <a class="actModify" href="addAct.php?actId=<!--{$info[info_id].act_id}-->"></a>
+                     <a class="actDelete" onclick="return confirm('是否删除此优惠信息')" href="operation.php?action=delAct&actId=<!--{$info[info_id].act_id}-->"></a>
+                </div>   
+            </div>
+    		<div class="actPic">
+        	<div class="actImg">
+            	<img class="actCar" src="<!--{$info[info_id].path}-->"/>
+             	<div class="mengban">
+            		<p class="mengban-title"><!--{$info[info_id].act_name}--></p>
+            	</div>  
+            </div>          
+      		</div>
+        <div class="actDescribe">
+        	<!--{$info[info_id].actDescribe}-->
+        </div>
+    </li>
+  <!--{/section}--> 
+
+   <!--{if $actNew==1}--> 
+    <li class="actNew">
+    	<a href="addAct.php" class="addAct" title="新增优惠活动"></a>
+    </li>
+   <!--{/if}--> 
+</ul>
+<!--activity modify-->
+</body>
+</html>

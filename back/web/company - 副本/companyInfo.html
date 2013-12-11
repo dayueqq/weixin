@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新增优惠活动</title>
+<link rel="stylesheet" href="../../res/css/companyInfo.css"type="text/css" />
+<link rel="stylesheet" href="../../res/css/datepicker.css" type="text/css" />
+<script type="text/javascript" src="../../res/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="../../../ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="../../../ueditor/ueditor.all.js"></script>
+<script>
+    window.UEDITOR_HOME_URL = "/weixin/ueditor";
+</script>
+<script src="../../res/js/companyInfo.js" type="text/javascript"></script>
+<script type="text/javascript">
+  function upForm(){
+	  $('#theForm').submit();
+  }
+</script>
+
+</head>
+
+<body>
+
+<div class="addActivity">
+<div class="goBack">
+</div>
+<div class="infoForm">
+	<form id="theForm" class="addAct" action="operation.php?action=upComInfo" enctype="multipart/form-data" method="post">
+    	<label for="actName">公司名称 *</label>
+        <input type="text" name="actName" class="actName" id="actName" value="<!--{$info.company_name}-->" /><br />
+        <label for"uploadPic">店面图片 *</label>
+        <input type="file" name="uploadPic" class="uploadPic" id="uploadPic" onchange="previewImage(this)" />
+			<div id="preview">
+  				  <img id="imghead" border=0 src="<!--{$info.pic}-->" />
+                  <p class="attention">注意：1.封面尺寸要求4:3<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  2.推荐尺寸480*360像素</p>
+			</div>
+            </br>
+            </br>
+        <label for="actDescribe" >公司简介 *</label></br>
+       	<textarea name="actDescribe" class="actDescribe" id="actDescribe"  placeholder="最多支持300个文字"><!--{$info.company_info}--></textarea>
+         <script type="text/javascript">
+		    UE.getEditor("actDescribe");
+	    </script>
+		<p class="phone" >客服电话 *</p>
+        <input type="text" name="customPhone" class="customPhone" id="customPhone" placeholder="请输入联系号码" value="<!--{$info.phone}-->" />
+    </form>
+</div>
+<div class="addActArrow">
+	<img src="../../res/img/addActArrow.png" />
+</div>
+<div class="pagePreview" style="background:url('../../res/img/phonePreview.png') no-repeat;">
+	<!--<div class="test" style="width:245px;height:356px;overflow:hidden; margin-top:138px;margin-left:26px;">
+	<iframe id="preview_page" name="preview" frameborder="0" src="../../../user/web/user/companyInfo.html" >
+    </iframe>
+    </div>-->
+</div>
+<div class="clr">
+</div>
+<div class="saveExit">
+	<a href="javascript:void(0)" onclick="upForm()" class="save">保存</a>
+    <a href="#" class="exit">预览</a>
+</div>
+
+<div class="previewPage">
+	
+</div>
+</div>
+</body>
+</html>

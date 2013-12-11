@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="title" content="员工管理系统">
+<meta name="apple-touch-fullscreen" content="YES">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>东莞市悦车广告有限公司员工管理系统</title>
+<link rel="stylesheet" href="loginPage.css">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+</head>
+
+<body class="bg01">
+      <div id="content">
+      <div class="header">
+        <p>东莞市悦车广告有限公司</p>
+        <p>员工管理系统</p>
+      </div>
+      <form method="post" action="XXXX">
+        <div class="section">
+        	<div id="section_items">
+                <label for="name">姓名：</label>
+                <input id="name" class="items" name="name"><br>
+                <label for="password">密码：</label>
+                <input id="password" class="items" name="password" type="password"><br>
+          </div>
+        </div>
+        <div id="btn_box">
+        	<input id="btn" type="button" value="马上登录"  onClick="XXXX">
+        </div>
+      </form>
+	</div>  
+    <script type="text/javascript">
+		document.getElementById("btn").onclick = function() {
+			var name = document.getElementById("name").value;
+			var password = document.getElementById("password").value;
+			var items = document.getElementById("items_select").value;
+			if(name == "") {
+				alert("姓名不能为空！");
+				return false;
+			}
+			if(password == "") {
+				alert("手机不能为空！");
+				return false;
+			}
+			if(items == "") {
+				alert("车系不能为空！");
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>

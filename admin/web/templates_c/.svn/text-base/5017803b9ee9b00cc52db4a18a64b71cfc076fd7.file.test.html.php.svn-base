@@ -1,0 +1,169 @@
+<?php /* Smarty version Smarty-3.0.6, created on 2013-10-03 12:53:59
+         compiled from "test.html" */ ?>
+<?php /*%%SmartyHeaderCode:24236524d68e785d1b6-46405914%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '5017803b9ee9b00cc52db4a18a64b71cfc076fd7' => 
+    array (
+      0 => 'test.html',
+      1 => 1380804812,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '24236524d68e785d1b6-46405914',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="wb:webmaster" content="833ef1b46f1caabd" />
+<meta name="description" content="印迹tee是中国最专业的T恤个性定制服务商，通过印迹网您可以随心所欲地选择您喜欢的图案或照片来制作具有您个人风格或具有一定纪念意义的服装。">
+<meta name="keywords" content="定制T恤,创意T恤DIY,T恤定制,在线T恤定制网,网上定制T恤,DIY个性服装,个性T恤定制网站">
+<title>印迹</title>
+<link href="../res/css/indexa.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="background-color:#34495E;" >
+
+   <!--  第一部分  -->
+ <div id="head">
+       <div>
+           <div style="margin-left:20px; line-height:50px; position:absolute; width: 100px;">
+               <a href="authentication/login.php" style="color:#EEE; font-size:14px; float:left">登陆</a><img style="float:left" src="../res/img/split.png" />
+               <a href="authentication/login.php" style="color:#EEE; font-size:14px; float:left">注册</a><img style="float:left" src="../res/img/split.png" />
+           </div>
+         <div style="right:0px; position:absolute;">
+ <div style="margin-top:25px; float:left">
+                   <a href="#" style="color:#FFF; font-weight:bold; font-size:16px;"><?php echo $_smarty_tpl->getVariable('name')->value;?>
+</a>
+               </div>
+               <span style="background:#FF4137; color:#FFF; line-height:20px; font-size:12px; float:left; margin-top:10px; margin-right:5px">&nbsp;7&nbsp;</span>
+               <img src="<?php echo $_smarty_tpl->getVariable('headpic')->value;?>
+" height="50" width="50"/>
+         </div>
+           <div align="center">
+               <img src="../res/img/headline logo.png" />
+           </div>
+       </div>
+	   <div style="width:80%; margin-left:auto; margin-right:auto;"><img style="width:100%" src="../res/img/spit-line1.png" /></div>
+   </div>
+   
+   <!--  第二部分  -->
+<div id="bannar">
+	   <div id="bannar1"><a href="design/design.php"  target="_self"><img style="-webkit-box-shadow:2px 2px 6px #000000; -moz-box-shadow:2px 2px 6px #000000;
+    box-shadow:2px 2px 6px #000000;" src="../res/img/主页1.png" alt="yinjiclass" width="100%" height="100%" /></a></div>
+	
+	    <div id="bannar2"><a href="class.html"  target="_self"><img style="-webkit-box-shadow:2px 2px 6px #000000; -moz-box-shadow:2px 2px 6px #000000;
+    box-shadow:2px 2px 6px #000000;" src="../res/img/主页2.png" alt="yinjiclass" width="100%" height="100%" /></a></div>
+		
+		
+		 <div id="bannar3"><a href="sharedesign/show.php"  target="_self"><img style="-webkit-box-shadow:2px 2px 6px #000000; -moz-box-shadow:2px 2px 6px #000000;
+    box-shadow:2px 2px 6px #000000;" src="../res/img/主页3.png" alt="yinjishop" width="100%" height="100%" /></a></div>
+		 
+		 
+		 
+		 
+		 
+		  <div id="bannar4">
+		    <div align="center"><a href="design/design.php"  target="_self"><img src="../res/img/button1.png" align="middle" height="100%" width="33%" /></a></div>
+		  </div>
+	    <div id="bannar5">
+	      <div align="center"><a href="class.html"  target="_self"><img src="../res/img/button2.png"  align="middle" height="100%" width="33%"/></a></div>
+	    </div>
+		 <div id="bannar6">
+		   <div align="center"><a href="sharedesign/show.php"  target="_self"><img src="../res/img/button3.png"  align="middle" height="100%" width="33%"/></a></div>
+		 </div>
+</div>
+   
+  <div id="tail">
+  <div id="tail1"><a href="www.baidu.com"  target="_self"><img src="../res/img/主页4.png" alt="video" width="100%" height="100%" /></a></div>
+   <div id="tail2"><a href="www.baidu.com"  target="_self"><img src="../res/img/主页5.png" alt="yinji" width="100%"  height="100%"/></a></div>
+    <div id="tail3"><a href="www.baidu.com"  target="_self"><img src="../res/img/主页6.png" alt="yinji" width="100%" height="100%" /></a></div>
+  </div>
+   
+ 
+   <!--  第六部分  返回按钮 -->
+   <div id="gotopbtn"></div>
+   <script type="text/javascript" src="../res/js/jquery-1.7.2.min.js"></script>
+<script language="JavaScript" type="text/javascript">
+var winHeight;
+
+  
+var winHeight;
+
+ function owinHeight(){//当前窗口的height
+  
+  if (window.innerHeight){
+      winHeight = window.innerHeight
+  }else if ((document.body) && (document.body.clientHeight)){
+      winHeight = document.body.clientHeight
+  }
+  if (document.documentElement  && document.documentElement.clientHeight){
+      winHeight = document.documentElement.clientHeight;
+  }
+ 
+  
+  var h = document.body.clientWidth;
+  var w = 0.181* h;
+  
+   for(var i=1;i<4;i++){
+      $('#bannar'+i).css('height',w);
+	  $('#bannar'+i).css('width',w);
+  }
+  for(var i=4;i<7;i++){
+	  $('#bannar'+i).css('width',w);
+	  $('#bannar'+i).css('height',0.154*w);
+  }
+  $('#tail').css('height',1*w);
+  $('#bannar').css('height',1.5*w);
+  $('#bannar').css('top',0.5*w+50);
+  document.body.style.height=(winHeight-0.5*w-100)+"px";
+ 
+  
+  
+  return winHeight; 
+}
+
+	owinHeight();                  //调用函数，获取数值
+    window.onresize=owinHeight;
+	
+	
+ 
+
+
+
+
+
+
+ $(window).resize(function(){  //屏幕调整大小时加载
+ 
+ var h = document.body.clientWidth;
+  var w = 0.181* h;
+ 
+  
+  
+  for(var i=1;i<4;i++){
+      $('#bannar'+i).css('height',w);
+	  $('#bannar'+i).css('width',w);
+  }
+  for(var i=4;i<7;i++){
+	  $('#bannar'+i).css('width',w);
+	  $('#bannar'+i).css('height',0.154*w);
+  }
+  $('#tail').css('height',1*w);
+  $('#bannar').css('height',1.5*w);
+   $('#bannar').css('top',0.5*w+50);
+   document.body.style.height=(winHeight-0.5*w-100)+"px"; 
+	})      
+	      
+		  
+		  		  
+</script>
+
+</body>
+</html>

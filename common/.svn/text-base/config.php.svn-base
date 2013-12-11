@@ -1,0 +1,6 @@
+<?php
+header('Content-Type: text/html; charset=UTF-8');
+
+define( "WB_AKEY" , '558684273' );
+define( "WB_SKEY" , '74adc6787e9eb0ea242111c76836ae19' );
+define( "WB_CALLBACK_URL" , 'http://192.168.206.5/stampnew/callback.php' );

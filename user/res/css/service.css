@@ -1,0 +1,205 @@
+s@charset "utf-8";
+/* CSS Document */
+*{
+	padding:0 0;
+	margin:0 0;
+}
+body{	
+	background:#f8f8f8;
+	margin:0;
+	}
+.carName{
+	width:100%;
+	height:40px;
+	font-size:18px;
+	font-weight:600;
+	font-family:"微软雅黑";
+	text-align:center;
+	background:#FFF;
+	margin:0 auto;
+	border-top:1px solid #ccc;
+	border-bottom:3px solid #666;
+}
+
+.carName p{
+	margin-top:9px;
+}
+.rules{
+	width:92%;
+	height:auto;
+	background:#FFF;
+	border-right:solid 1px #ccc;
+	border-left:solid 1px #ccc;
+	border-bottom:solid 1px #ccc;
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+	margin:0 auto 20px auto;
+	overflow:hidden;
+}
+
+.dot-line{
+	background:url(../img/dot-line.png) repeat-x;
+	width:92%;
+	height:5px;
+	margin:10px auto 10px auto;	
+}
+
+.title{
+	width:88%;
+	height:auto;
+	font-size:15px;
+	font-family:"微软雅黑";
+	margin:10px auto 10px auto;
+}
+
+.detail{
+	width:88%;
+	height:auto;
+	font-size:14px;
+	font-family:"微软雅黑";
+	margin:10px auto 10px auto;
+	color:#666;
+}
+
+.phone{
+	background:#000;
+	width:100%;
+	height:47px;
+	font-size:18px;
+	font-family:"微软雅黑";
+	color:#fff;
+	line-height:47px;
+	border-bottom:solid #666 3px;
+}
+
+.phone-pic{
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+	float:left;
+	width:25px;
+	height:25px;
+}
+
+.phone-num{
+	display:block;
+	height:auto;
+	width:auto;
+	color:#fff;
+	float:left;
+	text-decoration:none;
+}
+.ensure{
+	width:88%;
+	height:auto;
+	font-size:15px;
+	font-family:"微软雅黑";
+	margin:10px auto 10px auto;
+}
+.signup{
+	width:92%;
+	height:auto;
+	margin:0 auto 20px auto;
+	background:#FFF;
+	border-right:1px solid #ccc;
+	border-left:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+	overflow:hidden;
+}
+.signup-form{
+	width:92%;
+	height:auto;
+	margin:10px auto;
+	display:block;
+}
+.name{
+	display:block;
+	width:94%;
+	height:30px;
+	margin:0 auto 0 auto;
+	font-size:15px;
+}
+.custom{
+	display:block;
+	width:94%;
+	height:30px;
+	margin:0 auto 0 auto;
+	font-size:15px;
+}
+.carNumber{
+	display:block;
+	width:94%;
+	height:30px;
+	margin:0 auto 0 auto;
+	font-size:15px;
+}
+.carSeries{
+	display:block;
+    width:100%;
+	height:40px;
+	margin:0 auto 20px auto;
+	font-size:15px;
+}
+.carModel{
+	display:block;
+    width:100%;
+	height:40px;
+	margin:0 auto 20px auto;
+	font-size:15px;
+}
+.submit{
+	width:90%;
+	height:40px;
+	font-family:"微软雅黑";
+	font-size:18px;
+	color:#FFF;
+	text-align:center;
+	display:block;
+	line-height:40px;
+	background:#157eff;
+	text-decoration:none;
+	display:block;
+	margin:20px auto 20px auto;
+}
+
+.footer{
+	width:100%;
+	height:47px;;
+	background:#000;
+	font-family:"微软雅黑";
+	font-size:10px;
+	color:#FFF;
+	text-align:center;
+	line-height:7px;
+	overflow:hidden;
+}
+.tengxun{
+	font-size:12px;
+	margin-bottom:0;
+}
+.describe{
+	width:90%;
+	margin:0 auto;
+	margin-bottom:10px;
+}
+
+.time{
+	display:block;
+    width:94%;
+	height:30px;
+	margin:0 auto 20px auto;
+	font-size:15px;
+}
+
+
+.maintain{
+	margin-left:5%;
+	margin-bottom:15px;
+}
+
+.repair{
+	margin-left:27%;
+	margin-bottom:15px;
+}

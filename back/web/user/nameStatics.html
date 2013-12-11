@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>在售车型</title>
+<script type="text/javascript" src="../../res/js/jquery-1.4.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../res/css/nameList.css" />
+<link rel="stylesheet" href="../../res/css/datepicker.css" type="text/css" />
+<script src="../../res/js/nameList.js"></script>
+<script type="text/javascript">
+        window.onload = function () {
+            var tb = document.getElementById("tbody");
+            var tbody = tb.getElementsByTagName("tbody")[0];
+            var trs = tbody.getElementsByTagName("tr");
+
+            for (var i = 0; i < trs.length; i++) {
+                if (i % 2 != 0) {
+                    trs[i].style.backgroundColor = "#fcfcfc";
+                }
+            }
+        };
+    </script>
+</head>
+
+<body>
+    	<div class="carTable">
+        	<table class="thead" bgcolor="#f3f3f3">
+            	<tbody>
+                	<tr>
+                    	<td width="70px">日期
+                        </td>
+                        <td width="60px">品牌
+                        </td>
+                        <td width="60px">车系
+                        </td>
+                        <td width="200px">车型
+                        </td>
+                        <td width="60px">姓名
+                        </td>
+                        <td width="100px">联系方式
+                        </td>
+                        <td width="166px">来源活动
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        	<table id="tbody" class="tbody" >
+            	<tbody>
+                 <!--{section name=info_id loop=$info}-->
+                   	<tr>
+                    	<td class="date"><!--{$info[info_id].date}-->
+                        </td>
+                        <td class="brand"><!--{$info[info_id].brand}-->
+                        </td>
+                        <td class="series"><!--{$info[info_id].series}-->
+                        </td>
+                        <td class="model"><!--{$info[info_id].model}-->
+                        </td>
+                        <td class="name"><!--{$info[info_id].name}-->
+                        </td>
+                        <td class="phone"><!--{$info[info_id].telephone}-->
+                        </td>
+                        <td class="source">
+                            <a href="#" class="site"><!--{$info[info_id].active}--></a>
+                        </td>
+                    </tr>
+                 <!--{/section}-->
+                     
+                </tbody>
+            </table>
+      </div>
+      <div class="page" style="clear:both; font-size:14px; padding-top:15px;"> 
+         <p class="page" align="center"><!--{$pageshow}--></p>   <!-- 显示页码-->
+      </div>
+      
+</body>
+</html>

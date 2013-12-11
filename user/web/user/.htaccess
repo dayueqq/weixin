@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule activityList.html$ http://115.29.184.11/weixin/user/web/user/activityList.php
+RewriteRule homepage.html$ http://115.29.184.11/weixin/user/web/user/homepage.php
+#RewriteRule ^(.*)html(.*)$ $1.php?$2
