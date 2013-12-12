@@ -1,7 +1,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
   include_once('../globalpath.php');
-  //include '../common/SqlQuery.php';
+  //include '../../../common/SqlQuery.php';
   include $common_path.'SqlQuery.php';
   $sqlQuery=new SqlQuery();
   
@@ -65,8 +65,13 @@
 	  }
 	  
 	  if($_POST['detail']){
-		  $arr=array(uniqid(),$_COOKIE['comId'],date('Y-m-d'),$_POST['name'],$_POST['phone'],$_POST['detail']);
-		  $result=$sqlQuery->insert($tableName,$arr);print_r($arr);
+		  if($_POST['name']){
+			  $name=$_POST['name'];
+		  }else{
+			  $name='匿名';
+		  }
+		  $arr=array(uniqid(),$_COOKIE['comId'],date('Y-m-d'),$name,$_POST['phone'],$_POST['detail']);
+		  $result=$sqlQuery->insert($tableName,$arr);
 		  if($result){
 			  echo "<script>alert('恭喜您留言成功!');location.href='message.php';</script>";
 		  }else{

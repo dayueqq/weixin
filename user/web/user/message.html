@@ -41,6 +41,11 @@ window.onload=function(){
 }
 
 function upForm(){
+	 var text = document.getElementById("detail").value;
+	 if(text == ""){
+	    alert("您还没有填写完留言呢^.^");
+	 }
+	 else
 	 $('#theForm').submit();
 }
 

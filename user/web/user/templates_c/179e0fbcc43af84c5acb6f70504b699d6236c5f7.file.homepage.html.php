@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-12-11 01:14:13
+<?php /* Smarty version Smarty-3.0.6, created on 2013-12-11 11:51:49
          compiled from "./homepage.html" */ ?>
-<?php /*%%SmartyHeaderCode:3274652a7bc654ae005-36954634%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:956652a851d56bff72-05274353%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '179e0fbcc43af84c5acb6f70504b699d6236c5f7' => 
     array (
       0 => './homepage.html',
-      1 => 1386724446,
+      1 => 1386762702,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3274652a7bc654ae005-36954634',
+  'nocache_hash' => '956652a851d56bff72-05274353',
   'function' => 
   array (
   ),
@@ -147,7 +147,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['info_id']['last']       = ($
             	<p>车贷计算</p>
             </a>
         </dd>
-        <dd class="left2">
+        <dd class="left">
         	<a  href="tel:<?php echo $_smarty_tpl->getVariable('info')->value['helpPhone'];?>
 " target="_self">
         		<img src="../../res/img/help.png" border="0">

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-12-10 17:53:20
+<?php /* Smarty version Smarty-3.0.6, created on 2013-12-11 19:59:57
          compiled from "./mainbody.html" */ ?>
-<?php /*%%SmartyHeaderCode:601252a6e490127a57-64783731%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:356852a853bdefb5f2-83182259%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '698697e9dd6bcc6b1f827d1ae1ab0572af9f8625' => 
     array (
       0 => './mainbody.html',
-      1 => 1386669196,
+      1 => 1386763195,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '601252a6e490127a57-64783731',
+  'nocache_hash' => '356852a853bdefb5f2-83182259',
   'function' => 
   array (
   ),
@@ -60,6 +60,7 @@ $_smarty_tpl->decodeProperties(array (
           			<li><a href="addDrive.php" target="leftBody" >预约试驾</a></li>
                     <li><a href="addService.php" target="leftBody" >预约售后</a></li>
                     <li><a href="companyInfo.php" target="leftBody" >公司信息</a></li>
+                    <li><a href="groupBuy.html" target="leftBody" >团购设置</a></li>
         		</ul>
             </li>
       		<li class="level1"><a href="#none"><img border="0" src="../../res/img/leftNavWeixin.gif" style="display:inline; float:left; margin:8px 17px 0 20px" />微信回复</a>

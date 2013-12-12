@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-12-11 02:14:33
+<?php /* Smarty version Smarty-3.0.6, created on 2013-12-12 00:31:38
          compiled from "./message.html" */ ?>
-<?php /*%%SmartyHeaderCode:2875352a7ca89a22522-25441142%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:84052a903ea43a133-15211064%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8202234efced9c27c3d4d7170645663e0d9a4559' => 
     array (
       0 => './message.html',
-      1 => 1386728060,
+      1 => 1386808280,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2875352a7ca89a22522-25441142',
+  'nocache_hash' => '84052a903ea43a133-15211064',
   'function' => 
   array (
   ),
@@ -62,6 +62,11 @@ window.onload=function(){
 }
 
 function upForm(){
+	 var text = document.getElementById("detail").value;
+	 if(text == ""){
+	    alert("您还没有填写完留言呢^.^");
+	 }
+	 else
 	 $('#theForm').submit();
 }
 
