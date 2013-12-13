@@ -68,7 +68,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>7</ArticleCount>
+					    <ArticleCount>8</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入兴隆东风风行微店]]></Title> 
@@ -107,6 +107,12 @@ class wechatCallbackapiTest
 								<Description><![CDATA[一键导航]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-navMap.png]]></PicUrl>
 								<Url><![CDATA[http://j.map.baidu.com/5M2S6]]></Url>
+							</item>
+							<item>
+								<Title><![CDATA[车友留言]]></Title>
+								<Description><![CDATA[车友留言]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/add-message.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=14]]></Url>
 							</item>
 							<item>
 								<Title><![CDATA[关于兴隆东风风行]]></Title>
@@ -133,7 +139,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>7</ArticleCount>
+					    <ArticleCount>8</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入兴隆东风风行微店]]></Title> 
@@ -172,6 +178,12 @@ class wechatCallbackapiTest
 								<Description><![CDATA[一键导航]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-navMap.png]]></PicUrl>
 								<Url><![CDATA[http://j.map.baidu.com/5M2S6]]></Url>
+							</item>
+							<item>
+								<Title><![CDATA[车友留言]]></Title>
+								<Description><![CDATA[车友留言]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/add-message.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=14]]></Url>
 							</item>
 							<item>
 								<Title><![CDATA[关于兴隆东风风行]]></Title>
@@ -196,7 +208,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>7</ArticleCount>
+					    <ArticleCount>8</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入兴隆东风风行微店]]></Title> 
@@ -235,6 +247,12 @@ class wechatCallbackapiTest
 								<Description><![CDATA[一键导航]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-navMap.png]]></PicUrl>
 								<Url><![CDATA[http://j.map.baidu.com/5M2S6]]></Url>
+							</item>
+							<item>
+								<Title><![CDATA[车友留言]]></Title>
+								<Description><![CDATA[车友留言]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/add-message.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=14]]></Url>
 							</item>
 							<item>
 								<Title><![CDATA[关于兴隆东风风行]]></Title>

@@ -68,7 +68,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>7</ArticleCount>
+					    <ArticleCount>8</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入东莞周通泰比亚迪微店]]></Title> 
@@ -107,6 +107,12 @@ class wechatCallbackapiTest
 								<Description><![CDATA[一键导航]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-navMap.png]]></PicUrl>
 								<Url><![CDATA[http://dwz.cn/bV4rD]]></Url>
+							</item>
+							<item>
+								<Title><![CDATA[车友留言]]></Title>
+								<Description><![CDATA[车友留言]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/add-message.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=7]]></Url>
 							</item>
 							<item>
 								<Title><![CDATA[东莞周通泰比亚迪]]></Title>
@@ -133,7 +139,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>7</ArticleCount>
+					    <ArticleCount>8</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入东莞周通泰比亚迪微店]]></Title> 
@@ -172,6 +178,12 @@ class wechatCallbackapiTest
 								<Description><![CDATA[一键导航]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-navMap.png]]></PicUrl>
 								<Url><![CDATA[http://dwz.cn/bV4rD]]></Url>
+							</item>
+							<item>
+								<Title><![CDATA[车友留言]]></Title>
+								<Description><![CDATA[车友留言]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/add-message.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=7]]></Url>
 							</item>
 							<item>
 								<Title><![CDATA[东莞周通泰比亚迪]]></Title>
@@ -196,7 +208,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>7</ArticleCount>
+					    <ArticleCount>8</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入东莞周通泰比亚迪微店]]></Title> 
@@ -235,6 +247,12 @@ class wechatCallbackapiTest
 								<Description><![CDATA[一键导航]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-navMap.png]]></PicUrl>
 								<Url><![CDATA[http://dwz.cn/bV4rD]]></Url>
+							</item>
+							<item>
+								<Title><![CDATA[车友留言]]></Title>
+								<Description><![CDATA[车友留言]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/add-message.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=7]]></Url>
 							</item>
 							<item>
 								<Title><![CDATA[东莞周通泰比亚迪]]></Title>

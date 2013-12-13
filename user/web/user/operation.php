@@ -63,6 +63,11 @@
 	  if(file_exists($docUnlink)){ //判断是否存在文件
 		  unlink($docUnlink);
 	  }
+	  //删除缓存
+	  $docUnlink=$_SERVER ['DOCUMENT_ROOT'].'/weixin/back/web/temp/message/'.$_COOKIE['comId'].'/message.json';
+	  if(file_exists($docUnlink)){ //判断是否存在文件
+		  unlink($docUnlink);
+	  }
 	  
 	  if($_POST['detail']){
 		  if($_POST['name']){

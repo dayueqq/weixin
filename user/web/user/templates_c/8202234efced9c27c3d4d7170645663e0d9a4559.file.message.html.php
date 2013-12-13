@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-12-12 00:31:38
+<?php /* Smarty version Smarty-3.0.6, created on 2013-12-12 06:32:38
          compiled from "./message.html" */ ?>
-<?php /*%%SmartyHeaderCode:84052a903ea43a133-15211064%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:913652a9588607c237-89067165%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8202234efced9c27c3d4d7170645663e0d9a4559' => 
     array (
       0 => './message.html',
-      1 => 1386808280,
+      1 => 1386829478,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '84052a903ea43a133-15211064',
+  'nocache_hash' => '913652a9588607c237-89067165',
   'function' => 
   array (
   ),
@@ -133,7 +133,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['info_id']['last']       = ($
 	</ul>
 
 	<div class="clearfix"></div>
-	<a href="message2.html" data-rel="dialog" data-transition="pop" style="display:block;position:fixed;width:50px; height:50px; bottom:42px; border-top:#CCC 1px solid; border-right:#CCC 1px solid;border-bottom:#CCC 1px solid;background:#FFF;border-radius:5px;"><img src="../../res/img/add-massage.png" width="50" height="50" style="margin:0;padding:0;"/></a>
+	<a href="message2.html" data-rel="dialog" data-transition="pop" style="display:block;position:fixed;width:50px; height:50px; bottom:42px; border-top:#CCC 1px solid; border-right:#CCC 1px solid;border-bottom:#CCC 1px solid;background:#FFF;border-radius:5px;"><img src="../../res/img/add-message.png" width="50" height="50" style="margin:0;padding:0;"/></a>
 	</div>
     <div class="footer" style="text-shadow:none;">
     	<p class="tengxun">腾讯汽车</p>

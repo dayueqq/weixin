@@ -68,7 +68,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>7</ArticleCount>
+					    <ArticleCount>8</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入广汽本田凯润微店]]></Title> 
@@ -105,6 +105,12 @@ class wechatCallbackapiTest
 								<Description><![CDATA[一键导航]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-navMap.png]]></PicUrl>
 								<Url><![CDATA[http://dwz.cn/bOcsW]]></Url>
+							</item>
+							<item>
+								<Title><![CDATA[车友留言]]></Title>
+								<Description><![CDATA[车友留言]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/add-message.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=2]]></Url>
 							</item>
 							<item>
 								<Title><![CDATA[关于广汽凯润本田]]></Title>
@@ -131,7 +137,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>7</ArticleCount>
+					    <ArticleCount>8</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入广汽本田凯润微店]]></Title> 
@@ -168,6 +174,12 @@ class wechatCallbackapiTest
 								<Description><![CDATA[一键导航]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-navMap.png]]></PicUrl>
 								<Url><![CDATA[http://dwz.cn/bOcsW]]></Url>
+							</item>
+							<item>
+								<Title><![CDATA[车友留言]]></Title>
+								<Description><![CDATA[车友留言]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/add-message.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=2]]></Url>
 							</item>
 							<item>
 								<Title><![CDATA[关于广汽凯润本田]]></Title>
@@ -192,7 +204,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>7</ArticleCount>
+					    <ArticleCount>8</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入广汽本田凯润微店]]></Title> 
@@ -229,6 +241,12 @@ class wechatCallbackapiTest
 								<Description><![CDATA[一键导航]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-navMap.png]]></PicUrl>
 								<Url><![CDATA[http://dwz.cn/bOcsW]]></Url>
+							</item>
+							<item>
+								<Title><![CDATA[车友留言]]></Title>
+								<Description><![CDATA[车友留言]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/add-message.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=2]]></Url>
 							</item>
 							<item>
 								<Title><![CDATA[关于广汽凯润本田]]></Title>

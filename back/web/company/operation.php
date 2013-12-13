@@ -18,12 +18,12 @@
 			  echo "<script>alert('文件无法保存!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 			  exit(0);
 		  }else{
-			  $setArr=array('company_name','company_info','pic','phone','helpPhone');
-	          $setArrCont=array($_POST['actName'],$_POST['actDescribe'],$path,$_POST['customPhone'],$_POST['helpPhone']);
+			  $setArr=array('company_name','company_info','pic','phone');
+	          $setArrCont=array($_POST['actName'],$_POST['actDescribe'],$path,$_POST['customPhone']);
 		  }
 	  }else{
-		  $setArr=array('company_name','company_info','phone','helpPhone');
-	      $setArrCont=array($_POST['actName'],$_POST['actDescribe'],$_POST['customPhone'],$_POST['helpPhone']);
+		  $setArr=array('company_name','company_info','phone');
+	      $setArrCont=array($_POST['actName'],$_POST['actDescribe'],$_POST['customPhone']);
 	  }
       
 	  $conArr='company_id';
@@ -59,7 +59,7 @@
 	  
 	  //如果没有存在，则添加
 	  if($result=='error'){
-		  $arr=array(uniqid(),$_POST['carModel'],$_COOKIE['companyId'],$_COOKIE['carBrand'],$_POST['carSerName'],$_POST['carIdName'],str_replace('万','',$_POST['guidePrice']),str_replace('万','',$_POST['carActPrice']),$_POST['picVal']);
+		  $arr=array(uniqid(),$_POST['carModel'],$_COOKIE['companyId'],$_COOKIE['carBrand'],$_POST['carSerName'],$_POST['carIdName'],$_POST['guidePrice'],$_POST['carActPrice'],$_POST['picVal']);
 		  $result=$sqlQuery->insert($tableName,$arr);
 		  if($result){
 			  echo "<script>alert('在售汽车添加成功!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
@@ -76,7 +76,7 @@
 	  $tableName='car_sell';
 	  //先验证是否有相同车型的存在
 	  $setArr=array('car_id','series','model','discount','pic');
-	  $setArrCont=array($_POST['carModel'],$_POST['carSerName'],$_POST['carIdName'],str_replace('万','',$_POST['carActPrice']),$_POST['picVal']);
+	  $setArrCont=array($_POST['carModel'],$_POST['carSerName'],$_POST['carIdName'],$_POST['carActPrice'],$_POST['picVal']);
 	  $conArr='onsell_id';
       $conArrCont=$_GET['onId'];
 	  $result=$sqlQuery->update($tableName,$setArr,$setArrCont,$conArr,$conArrCont);
@@ -155,7 +155,7 @@
 	  createDir($tempfile);
 	  $fh = fopen($jsonfile, 'w')
 		  or die("Error opening output file");
-	  fwrite($fh, str_replace("\'","'",$_POST['tempSer'])); 
+	  fwrite($fh, str_replace("\'","'",$_POST['tempSer']).str_replace("\'","'",$_POST['tempMod'])); 
 	  fclose($fh);
 	  
 	  if($result){
@@ -213,7 +213,7 @@
 	  createDir($tempfile);
 	  $fh = fopen($jsonfile, 'w')
 		  or die("Error opening output file");
-	  fwrite($fh, str_replace("\'","'",$_POST['tempSer'])); 
+	  fwrite($fh, str_replace("\'","'",$_POST['tempSer']).str_replace("\'","'",$_POST['tempMod'])); 
 	  fclose($fh);
 	  
 	  if($result){
@@ -418,66 +418,29 @@
 	  }
 	  
 	  //end
-  }else if($action=='dealSerReg'){   //维修服务报名信息 标记为仍然 没有 后悔操作处理  service    #####################
-	  $tableName='user_service';
+  }else if($action=='delMess'){   //删除留言  message   #####################
+	  $tableName='user_message';
 
-	  $conArr='service_id';
-	  $conArrCont=$_GET['id'];
-	  $setArr=array('status');
-	  $setArrCont=array('0');
+	  $conArr=array('message_id');
+	  $conArrCont=array($_GET['id']);
+ 
+	  $result=$sqlQuery->delete($tableName,$conArr,$conArrCont);
 	  
-	  $result=$sqlQuery->update($tableName,$setArr,$setArrCont,$conArr,$conArrCont);
-	  
-	  $docUnlink='../temp/service/'.$_COOKIE['companyId'].date('H').'serData.json';
+	  $docUnlink='../temp/message/'.$_COOKIE['companyId'].'/message.json';
+	  if(file_exists($docUnlink)){ //判断是否存在文件
+		  unlink($docUnlink);
+	  }
+	  $docUnlink=$common_path.'../user/web/temp/message/'.$_COOKIE['companyId'].'/message.json';
 	  if(file_exists($docUnlink)){ //判断是否存在文件
 		  unlink($docUnlink);
 	  }
 	  
 	  if($result){
-		  echo "<script>alert('服务报名信息已标记成功!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+		  echo "<script>alert('留言信息删除成功!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 	  }else{
-		  echo "<script>alert('服务报名信息标记失败!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+		  echo "<script>alert('留言信息删除失败!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 	  }
-	  
-	  //end
-  }else if($action=='addService'){   //添加汽车  服务  #####################
-	  $tableName='car_service';
-	  //先验证是否有汽车服务存在
-	  $conArr=array('company_id');
-      $conArrCont=array($_COOKIE['companyId']);
-      $result=$sqlQuery->selectSingle($tableName,$conArr,$conArrCont,'','');
-	  
-	  //如果有存在，则删除
-	  if($result!='error'){
-		  $conArr=array('company_id');
-          $conArrCont=array($_COOKIE['companyId']);
-          $result=$sqlQuery->delete($tableName,$conArr,$conArrCont);
-	  }
-	  
-      $arr=array(uniqid(),$_COOKIE['companyId'],$_POST['maintain_intro'],$_POST['repair_intro']);
-	  $result=$sqlQuery->insert($tableName,$arr);
-	  if($result){
-		  echo "<script>alert('汽车服务信息添加成功!');location.href='addService.php';</script>";
-	  }else{
-		  echo "<script>alert('汽车服务信息添加失败!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
-	  }
-	  
-	  //end
-  }else if($action=='addUpService'){   //修改汽车 服务 信息  #####################
-	  $tableName='car_service';
-
-	  $setArr=array('maintain','fixed');
-	  $setArrCont=array($_POST['maintain_intro'],$_POST['repair_intro']);
-	  $conArr='company_id';
-      $conArrCont=$_COOKIE['companyId'];
-	  $result=$sqlQuery->update($tableName,$setArr,$setArrCont,$conArr,$conArrCont);
-	  
-	  if($result){
-		  echo "<script>alert('汽车服务信息修改成功!');location.href='addService.php';</script>";
-	  }else{
-		  echo "<script>alert('汽车服务信息修改失败!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
-	  }
-	  
+      
 	  //end
   }
   

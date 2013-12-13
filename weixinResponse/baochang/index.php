@@ -68,7 +68,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>7</ArticleCount>
+					    <ArticleCount>8</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入虎门宝昌宝马微店]]></Title> 
@@ -109,6 +109,12 @@ class wechatCallbackapiTest
 								<Url><![CDATA[http://dwz.cn/c125v]]></Url>
 							</item>
 							<item>
+								<Title><![CDATA[车友留言]]></Title>
+								<Description><![CDATA[车友留言]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/add-message.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=12]]></Url>
+							</item>
+							<item>
 								<Title><![CDATA[东莞虎门宝昌宝马]]></Title>
 								<Description><![CDATA[关于东莞虎门宝昌宝马]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/company-info.png]]></PicUrl>
@@ -133,7 +139,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>7</ArticleCount>
+					    <ArticleCount>8</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入虎门宝昌宝马微店]]></Title> 
@@ -172,6 +178,12 @@ class wechatCallbackapiTest
 								<Description><![CDATA[一键导航]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-navMap.png]]></PicUrl>
 								<Url><![CDATA[http://dwz.cn/c125v]]></Url>
+							</item>
+							<item>
+								<Title><![CDATA[车友留言]]></Title>
+								<Description><![CDATA[车友留言]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/add-message.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=12]]></Url>
 							</item>
 							<item>
 								<Title><![CDATA[东莞虎门宝昌宝马]]></Title>
@@ -196,7 +208,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>7</ArticleCount>
+					    <ArticleCount>8</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入虎门宝昌宝马微店]]></Title> 
@@ -235,6 +247,12 @@ class wechatCallbackapiTest
 								<Description><![CDATA[一键导航]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-navMap.png]]></PicUrl>
 								<Url><![CDATA[http://dwz.cn/c125v]]></Url>
+							</item>
+							<item>
+								<Title><![CDATA[车友留言]]></Title>
+								<Description><![CDATA[车友留言]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/add-message.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=12]]></Url>
 							</item>
 							<item>
 								<Title><![CDATA[东莞虎门宝昌宝马]]></Title>

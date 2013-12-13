@@ -68,7 +68,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>7</ArticleCount>
+					    <ArticleCount>8</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入珠海达田本田微店]]></Title> 
@@ -105,6 +105,12 @@ class wechatCallbackapiTest
 								<Description><![CDATA[一键导航]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-navMap.png]]></PicUrl>
 								<Url><![CDATA[http://]]></Url>
+							</item>
+							<item>
+								<Title><![CDATA[车友留言]]></Title>
+								<Description><![CDATA[车友留言]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/add-message.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=11]]></Url>
 							</item>
 							<item>
 								<Title><![CDATA[关于达田本田珠海店]]></Title>
@@ -131,7 +137,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>7</ArticleCount>
+					    <ArticleCount>8</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入珠海达田本田微店]]></Title> 
@@ -170,6 +176,12 @@ class wechatCallbackapiTest
 								<Url><![CDATA[http://]]></Url>
 							</item>
 							<item>
+								<Title><![CDATA[车友留言]]></Title>
+								<Description><![CDATA[车友留言]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/add-message.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=11]]></Url>
+							</item>
+							<item>
 								<Title><![CDATA[关于珠海达田本田]]></Title>
 								<Description><![CDATA[关于达田本田珠海店]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/company-info.png]]></PicUrl>
@@ -192,7 +204,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>7</ArticleCount>
+					    <ArticleCount>8</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入珠海达田本田微店]]></Title> 
@@ -229,6 +241,12 @@ class wechatCallbackapiTest
 								<Description><![CDATA[一键导航]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-navMap.png]]></PicUrl>
 								<Url><![CDATA[http://dwz.cn/bXvCh]]></Url>
+							</item>
+							<item>
+								<Title><![CDATA[车友留言]]></Title>
+								<Description><![CDATA[车友留言]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/add-message.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=11]]></Url>
 							</item>
 							<item>
 								<Title><![CDATA[关于达田本田珠海店]]></Title>
