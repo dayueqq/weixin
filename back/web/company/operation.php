@@ -442,6 +442,82 @@
 	  }
       
 	  //end
+  }else if($action=='addGroup'){   //添加团购报名  car_group  #####################
+	  $tableName='car_group';
+	  //先验证是否有相同车型的存在
+	  $conArr=array('company_id');
+      $conArrCont=array($_COOKIE['companyId']);
+      $result=$sqlQuery->selectSingle($tableName,$conArr,$conArrCont,'','');
+	  
+	  //如果没有存在，则添加
+	  if($result=='error'){
+		  $arr=array(uniqid(),$_COOKIE['companyId'],$_POST['actDescribe'],$_POST['startDate'],$_POST['endDate']);
+		  $result=$sqlQuery->insert($tableName,$arr);
+		  if($result){
+			  echo "<script>alert('团购活动添加成功!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+		  }else{
+			  echo "<script>alert('对不起，团购活动添加失败!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+		  }
+	  }else{
+		  echo "<script>alert('对不起，团购活动已经存在!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+	  }
+	  
+	  //end
+  }else if($action=='addUpGroup'){   //修改团购报名  car_group   #####################
+	  $tableName='car_group';
+	  //先验证是否有相同车型的存在
+	  $setArr=array('actDescribe','startDate','endDate');
+	  $setArrCont=array($_POST['actDescribe'],$_POST['startDate'],$_POST['endDate']);
+	 
+	  $conArr='company_id';
+      $conArrCont=$_COOKIE['companyId'];
+	  $result=$sqlQuery->update($tableName,$setArr,$setArrCont,$conArr,$conArrCont);
+	 
+	  if($result){
+		  echo "<script>alert('团购活动修改成功!');location.href='addDrive.php';</script>";
+	  }else{
+		  echo "<script>alert('对不起，团购活动修改失败!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+	  }
+	  
+	  //end
+  }else if($action=='addService'){   //添加售后服务 car_service #####################
+	  $tableName='car_service';
+	  //先验证是否有相同车型的存在
+	  $conArr=array('company_id');
+      $conArrCont=array($_COOKIE['companyId']);
+      $result=$sqlQuery->selectSingle($tableName,$conArr,$conArrCont,'','');
+	  
+	  //如果没有存在，则添加
+	  if($result=='error'){
+		  $arr=array(uniqid(),$_COOKIE['companyId'],$_POST['maintain_intro'],$_POST['repair_intro']);
+		  $result=$sqlQuery->insert($tableName,$arr);
+		  if($result){
+			  echo "<script>alert('保养服务添加成功!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+		  }else{
+			  echo "<script>alert('对不起，保养服务添加失败!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+		  }
+	  }else{
+		  echo "<script>alert('对不起，保养服务已经存在!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+	  }
+	  
+	  //end
+  }else if($action=='addUpService'){   //修改售后服务 car_service #####################
+	  $tableName='car_service';
+	  //先验证是否有相同车型的存在
+	  $setArr=array('maintain','fixed');
+	  $setArrCont=array($_POST['maintain_intro'],$_POST['repair_intro']);
+	 
+	  $conArr='company_id';
+      $conArrCont=$_COOKIE['companyId'];
+	  $result=$sqlQuery->update($tableName,$setArr,$setArrCont,$conArr,$conArrCont);
+	 
+	  if($result){
+		  echo "<script>alert('保养服务修改成功!');location.href='addService.php';</script>";
+	  }else{
+		  echo "<script>alert('对不起，保养服务修改失败!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+	  }
+	  
+	  //end
   }
   
   

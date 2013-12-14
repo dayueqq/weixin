@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-12-12 17:13:33
+<?php /* Smarty version Smarty-3.0.6, created on 2013-12-14 14:49:19
          compiled from "./addService.html" */ ?>
-<?php /*%%SmartyHeaderCode:1175852a97e3dad26a3-90905227%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1275352abff6f8f2518-43870931%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e3e6131e5569ac8585a834dad0f7405f19147f87' => 
     array (
       0 => './addService.html',
-      1 => 1386038476,
+      1 => 1387003451,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1175852a97e3dad26a3-90905227',
+  'nocache_hash' => '1275352abff6f8f2518-43870931',
   'function' => 
   array (
   ),
@@ -42,8 +42,7 @@ $_smarty_tpl->decodeProperties(array (
 <div class="addActivity">
 <div class="infoForm">
  <?php if ($_smarty_tpl->getVariable('upSer')->value==1){?> 
-	<form class="addAct" id="theForm" action="operation.php?action=addUpService&serId=<?php echo $_smarty_tpl->getVariable('info')->value['service_id'];?>
-" enctype="multipart/form-data" method="post">
+	<form class="addAct" id="theForm" action="operation.php?action=addUpService" enctype="multipart/form-data" method="post">
     	<label for="maintain_intro" style="margin-left:12px;">保养简介 *<br />
         <textarea name="maintain_intro" id="maintain_intro" class="maintain_intro" placeholder="请输入保养条款"><?php echo $_smarty_tpl->getVariable('info')->value['maintain'];?>
 </textarea> 

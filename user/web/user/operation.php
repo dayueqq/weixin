@@ -63,7 +63,7 @@
 	  if(file_exists($docUnlink)){ //判断是否存在文件
 		  unlink($docUnlink);
 	  }
-	  //删除缓存
+	  //
 	  $docUnlink=$_SERVER ['DOCUMENT_ROOT'].'/weixin/back/web/temp/message/'.$_COOKIE['comId'].'/message.json';
 	  if(file_exists($docUnlink)){ //判断是否存在文件
 		  unlink($docUnlink);
@@ -84,6 +84,57 @@
 		  }
 	  }
 	  //end
+  }else if($action=='upGro'){   //添加  团购  活动报名   #####################
+      $tableName='user_group';
+	  
+	  $arr=array(uniqid(),$_GET['comId'],date('Y-m-d'),$_POST['name'],$_POST['custom'],$_POST['carModel'],$_POST['brand'],$_POST['carSerName'],$_POST['carIdName'],$_POST['willBuyTime']);
+	  $result=$sqlQuery->insert($tableName,$arr);
+	  
+	  //生成xml 文件
+	  $xmlFile='../temp/group/'.$_GET['comId'].'.xml';
+	  
+	  if(!file_exists($xmlFile)){  //创建  xml 文件
+		  $tableName='car_type';
+		  $conArr=array('father','level');
+		  $conArrCont=array($_COOKIE['carId'],'2');
+		  $returnArr=$sqlQuery->select($tableName,$conArr,$conArrCont,'',$orderArr,'-1');
+	
+		  $xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
+		  $xml .= "<article>\n";
+	
+		  foreach ($returnArr as $data) {
+			 $xml .= create_item($data['car_id'], $data['name']);
+		  }
+	
+		  $xml .= "</article>\n";
+  
+		  $fh = fopen($xmlFile, 'w')
+			  or die("Error opening output file");
+		  fwrite($fh, $xml);
+		  fclose($fh);
+	  }
+	  //修改xml 文件
+	  $doc=new DOMDocument();
+
+	  $doc->load($xmlFile);
+	  $books=$doc->getElementsByTagName('item');
+
+	  foreach($books as $book){
+		  if($book->getElementsByTagName('name')->item(0)->nodeValue==$_POST['carSerName']){
+			  $book->getElementsByTagName('num')->item(0)->nodeValue++;
+			  break;
+		  }
+	  }
+	  $doc->save($xmlFile);
+	  
+	  //
+	  if($result){
+		  echo "<script>alert('恭喜您报名成功!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+	  }else{
+		  echo "<script>alert('对不住，服务器响应超时，请重新报名!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+	  }
+	  
+	  //end
   }
   
   mysql_close();
@@ -93,5 +144,16 @@
 	 $tmp_num=count($tmp_upfiles);
 	 $format=$tmp_upfiles[$tmp_num-1];
 	 return $format;
+  }
+  
+  //  创建XML单项
+  function create_item($car_id, $name){
+	  $item = "<item>\n";
+	  $item .= "<carid>" . $car_id . "</carid>\n";
+	  $item .= "<name>" . $name . "</name>\n";
+	  $item .= " <num>0</num>\n";
+	  $item .= "</item>\n";
+  
+	  return $item;
   }
 ?>
