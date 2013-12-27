@@ -18,9 +18,10 @@
 	 });
 	 
 	 window.onload=function(){
+		
 		 var str='';
 		 for(var i=0;i<dataJson.length;i++){
-			 str+="<li><a href='actSignup.php?actId="+dataJson[i].act_id+"#mp.weixin.qq.com' class='actLink'><div class='act'>"+
+			 str+="<li><a href='<!--{$comId}-->-actSignup-"+dataJson[i].act_id+".html' class='actLink'><div class='act'>"+
     	              "<p class='title'>"+dataJson[i].act_name+"</p><div class='dot-line'></div>";
 					  if(dataJson[i].startTime==dataJson[i].endTime){
                           str+="<p class='time'>"+dataJson[i].startTime+"</p>";
@@ -31,7 +32,8 @@
 		 }
 		 $('#actList').html(str);
 		hashH = document.documentElement.scrollHeight; 
-		urlC = "http://gd.qq.com/zt2013/addga/index.htm"; 
+		urlC = "http://115.28.168.60/test/agent.html";
+		//http://gd.qq.com/zt2013/addga/index.htm"; 
 		document.getElementById("iframeC").src=urlC+"#"+hashH; 
 
 		
@@ -42,7 +44,7 @@
 <body>
 	<div class="goback" style="width:100%;height:47px;background:#000;position:fixed; top:0; text-align:center;">
 		<p style="color:#fff; position:relative;">优惠活动列表</p>
-        <a href="homepage.php" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:6%; margin-top:8px;"><img src="../../res/img/back.png" width="33" height="33" border="0"/></a>	
+        <a href="<!--{$comId}-->-homepage.html" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:6%; margin-top:8px;"><img src="../../res/img/back.png" width="33" height="33" border="0"/></a>	
     </div>
     <div style="width:100%; height:47px;"></div>
 	<ul id="actList">

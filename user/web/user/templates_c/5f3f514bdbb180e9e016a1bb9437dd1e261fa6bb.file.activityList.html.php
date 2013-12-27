@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-12-05 09:47:12
+<?php /* Smarty version Smarty-3.0.6, created on 2013-12-26 07:01:35
          compiled from "./activityList.html" */ ?>
-<?php /*%%SmartyHeaderCode:858752a04ba0d453f1-98037128%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:963552bbd44f93df59-38588697%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5f3f514bdbb180e9e016a1bb9437dd1e261fa6bb' => 
     array (
       0 => './activityList.html',
-      1 => 1386236596,
+      1 => 1388028027,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '858752a04ba0d453f1-98037128',
+  'nocache_hash' => '963552bbd44f93df59-38588697',
   'function' => 
   array (
   ),
@@ -39,9 +39,11 @@ $_smarty_tpl->decodeProperties(array (
 	 });
 	 
 	 window.onload=function(){
+		
 		 var str='';
 		 for(var i=0;i<dataJson.length;i++){
-			 str+="<li><a href='actSignup.php?actId="+dataJson[i].act_id+"#mp.weixin.qq.com' class='actLink'><div class='act'>"+
+			 str+="<li><a href='<?php echo $_smarty_tpl->getVariable('comId')->value;?>
+-actSignup-"+dataJson[i].act_id+".html' class='actLink'><div class='act'>"+
     	              "<p class='title'>"+dataJson[i].act_name+"</p><div class='dot-line'></div>";
 					  if(dataJson[i].startTime==dataJson[i].endTime){
                           str+="<p class='time'>"+dataJson[i].startTime+"</p>";
@@ -52,7 +54,8 @@ $_smarty_tpl->decodeProperties(array (
 		 }
 		 $('#actList').html(str);
 		hashH = document.documentElement.scrollHeight; 
-		urlC = "http://gd.qq.com/zt2013/addga/index.htm"; 
+		urlC = "http://115.28.168.60/test/agent.html";
+		//http://gd.qq.com/zt2013/addga/index.htm"; 
 		document.getElementById("iframeC").src=urlC+"#"+hashH; 
 
 		
@@ -63,7 +66,8 @@ $_smarty_tpl->decodeProperties(array (
 <body>
 	<div class="goback" style="width:100%;height:47px;background:#000;position:fixed; top:0; text-align:center;">
 		<p style="color:#fff; position:relative;">优惠活动列表</p>
-        <a href="homepage.php" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:6%; margin-top:8px;"><img src="../../res/img/back.png" width="33" height="33" border="0"/></a>	
+        <a href="<?php echo $_smarty_tpl->getVariable('comId')->value;?>
+-homepage.html" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:6%; margin-top:8px;"><img src="../../res/img/back.png" width="33" height="33" border="0"/></a>	
     </div>
     <div style="width:100%; height:47px;"></div>
 	<ul id="actList">

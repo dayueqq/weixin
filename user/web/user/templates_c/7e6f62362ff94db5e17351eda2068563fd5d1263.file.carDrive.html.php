@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-12-05 09:48:47
+<?php /* Smarty version Smarty-3.0.6, created on 2013-12-26 07:10:43
          compiled from "./carDrive.html" */ ?>
-<?php /*%%SmartyHeaderCode:3217152a04bffcbade5-97509009%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1381752bbd673e7d0c7-98770231%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7e6f62362ff94db5e17351eda2068563fd5d1263' => 
     array (
       0 => './carDrive.html',
-      1 => 1386236558,
+      1 => 1387983694,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3217152a04bffcbade5-97509009',
+  'nocache_hash' => '1381752bbd673e7d0c7-98770231',
   'function' => 
   array (
   ),
@@ -64,7 +64,8 @@ function upForm(){
 <body>
 	<div class="goback" style="width:100%;height:47px;background:#000;position:fixed; top:0; text-align:center;">
 		<p style="color:#fff; position:relative;">试驾报名</p>
-        <a href="homepage.php" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:6%; margin-top:8px;"><img src="../../res/img/back.png" width="33" height="33" border="0"/></a>
+        <a href="<?php echo $_smarty_tpl->getVariable('comId')->value;?>
+-homepage.html" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:6%; margin-top:8px;"><img src="../../res/img/back.png" width="33" height="33" border="0"/></a>
     </div>
     <div style="width:100%; height:47px;"></div>
 	<div class="carName">

@@ -1,4 +1,13 @@
 RewriteEngine On
-RewriteRule activityList.html$ http://115.29.184.11/weixin/user/web/user/activityList.php
-RewriteRule homepage.html$ http://115.29.184.11/weixin/user/web/user/homepage.php
+#RewriteRule ([a-zA-Z]{1,}).html$ $1.php#mp.weixin.qq.com
+#用于匹配  homepage.php?comId=1   activityList.php?comId=1
+RewriteRule ([0-9]{1,11})-([a-zA-Z]{1,14}).html$ $2.php?comId=$1#mp.weixin.qq.com
+
+#用于匹配  actSignup.php?comId=1&actId=12312
+#RewriteRule cid=([0-9]{1,})-page=([a-zA-Z]{1,})-act=([0-9a-zA-Z]{1,}).html$ $2.php?comId=$1&actId=$3#mp.weixin.qq.com
+
+RewriteRule ([0-9]{1,11})-([a-zA-Z]{1,14})-([0-9a-zA-Z]{10,15}).html$ $2.php?comId=$1&actId=$3#mp.weixin.qq.com
+
+#RewriteRule actSignup-2-52b2e1dd589dc.html$ actSignup.php?comId=2&actId=52b2e1dd589dc#mp.weixin.qq.com
+#RewriteRule ([a-zA-Z]{1,})-([0-9]{1,}).html$ index.php?action=$1&id=$2  
 #RewriteRule ^(.*)html(.*)$ $1.php?$2

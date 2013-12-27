@@ -42,7 +42,7 @@
       $smarty->assign('upSer',1); //让前端知道是否要有信息
   }
 
-
+  $smarty->assign('comId',$comId); 
   $smarty->display($html_path.'service.html');
   mysql_close();
 ?>

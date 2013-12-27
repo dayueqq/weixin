@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-12-12 17:13:06
+<?php /* Smarty version Smarty-3.0.6, created on 2013-12-20 09:49:21
          compiled from "./addAct.html" */ ?>
-<?php /*%%SmartyHeaderCode:166452a97e22a44e01-34656931%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:310352b3a221139572-54933489%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '43bd54c8d93d6e730af21ead97536fbbd98639a6' => 
     array (
       0 => './addAct.html',
-      1 => 1386151981,
+      1 => 1387460165,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '166452a97e22a44e01-34656931',
+  'nocache_hash' => '310352b3a221139572-54933489',
   'function' => 
   array (
   ),
@@ -90,7 +90,7 @@ $(document).ready(function(){
 		str+='<input type="checkbox" class="seriesPick" name="seriesPick" value="'+res[i]+'"/><span>'+res[i+1]+'</span><br />';
     }
 	$('#selectCarSeries').html(str);
-    
+
 	$('#selectAll').bind('change', function(){
 		if($('#selectAll').prop('checked')){
 			$("input[name^='seriesPick']").each(function(){
@@ -234,9 +234,9 @@ $(document).ready(function(){
   			<div id="dialog-form" title="选择车型">
  				 <span class="validateTips">可以同时添加多个车型</span>
                  <form>
-  					<fieldset id="selectCarModel"〉				
-             
-			 </fieldset>
+  					<fieldset id="selectCarSeries">				
+ 
+   					 </fieldset>
   				</form>
 			</div>
 			<button id="addCarModel" class="addCarModel" style="display:inline-block;">选择车型</button>

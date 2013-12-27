@@ -44,7 +44,7 @@
   $smarty->assign('carInfo',$carInfo);
   $smarty->assign('carId',$carId);
   $smarty->assign('comName',$comName);
-  
+  $smarty->assign('comId',$comId);
   $smarty->display($html_path.'carDrive.html');
   mysql_close();
 ?>

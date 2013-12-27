@@ -5,6 +5,7 @@
 */
 
 define("TOKEN", "dongsheng");
+define("TOKEN", "yonghong");
 $wechatObj = new wechatCallbackapiTest();
 if (isset($_GET['echostr'])) {
     $wechatObj->valid();
@@ -68,12 +69,12 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>8</ArticleCount>
+					    <ArticleCount>9</ArticleCount>
 						<Articles>
 							<item>
-								<Title><![CDATA[点击进入东莞长安东胜现代微店]]></Title> 
-								<Description><![CDATA[东莞长安东胜现代，为您提供最尊贵服务]]></Description>
-								<PicUrl><![CDATA[http://88auto.com.cn/weixin/back/image/company/52a964c5500ea.jpg]]></PicUrl>
+								<Title><![CDATA[点击进入东莞东胜现代微店]]></Title> 
+								<Description><![CDATA[东莞东胜现代，为您提供最尊贵服务]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/back/image/company/52a964c5500ea.jpg]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/homepage.php?comId=16]]></Url>
 							</item>
 							<item>
@@ -82,14 +83,14 @@ class wechatCallbackapiTest
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-bonus.png]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/activityList.php?comId=16]]></Url>
 							</item>
-							<!--
+						
 							<item>
-								<Title><![CDATA[在售车型]]></Title>
-								<Description><![CDATA[在售车型]]></Description>
-								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-carOnSell.png]]></PicUrl>
-								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/carOnSellList.php?comId=16]]></Url>
+								<Title><![CDATA[团购报名]]></Title>
+								<Description><![CDATA[团购报名]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-groupBuy.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/groupbuy.php?comId=16]]></Url>
 							</item>
-							-->
+							
 							<item>
 								<Title><![CDATA[预约试驾]]></Title>
 								<Description><![CDATA[预约试驾]]></Description>
@@ -115,14 +116,14 @@ class wechatCallbackapiTest
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=16]]></Url>
 							</item>
 							<item>
-								<Title><![CDATA[东莞长安东胜现代]]></Title>
-								<Description><![CDATA[关于东莞长安东胜现代]]></Description>
+								<Title><![CDATA[东莞东胜现代]]></Title>
+								<Description><![CDATA[关于东莞东胜现代]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/company-info.png]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/companyInfo.php?comId=16#mp.weixin.qq.com]]></Url>
 							</item>
 							<item>
-								<Title><![CDATA[东莞长安东胜现代，臻至尊贵享受]]></Title>
-								<Description><![CDATA[东莞长安东胜现代]]></Description>
+								<Title><![CDATA[东莞东胜现代，臻至尊贵享受]]></Title>
+								<Description><![CDATA[东莞东胜现代]]></Description>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/companyInfo.php?comId=16#mp.weixin.qq.com]]></Url>
 							</item>
 							</Articles>
@@ -139,12 +140,12 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>8</ArticleCount>
+					    <ArticleCount>9</ArticleCount>
 						<Articles>
 							<item>
-								<Title><![CDATA[点击进入东莞长安东胜现代微店]]></Title> 
-								<Description><![CDATA[东莞长安东胜现代，为您提供最尊贵服务]]></Description>
-								<PicUrl><![CDATA[http://88auto.com.cn/weixin/back/image/company/52a964c5500ea.jpg]]></PicUrl>
+								<Title><![CDATA[点击进入东莞东胜现代微店]]></Title> 
+								<Description><![CDATA[东莞东胜现代，为您提供最尊贵服务]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/back/image/company/52a964c5500ea.jpg]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/homepage.php?comId=16]]></Url>
 							</item>
 							<item>
@@ -153,14 +154,14 @@ class wechatCallbackapiTest
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-bonus.png]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/activityList.php?comId=16]]></Url>
 							</item>
-							<!--
+							
 							<item>
-								<Title><![CDATA[在售车型]]></Title>
-								<Description><![CDATA[在售车型]]></Description>
-								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-carOnSell.png]]></PicUrl>
-								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/carOnSellList.php?comId=16]]></Url>
+								<Title><![CDATA[团购报名]]></Title>
+								<Description><![CDATA[团购报名]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-groupBuy.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/groupbuy.php?comId=16]]></Url>
 							</item>
-							-->
+							
 							<item>
 								<Title><![CDATA[预约试驾]]></Title>
 								<Description><![CDATA[预约试驾]]></Description>
@@ -186,14 +187,14 @@ class wechatCallbackapiTest
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=16]]></Url>
 							</item>
 							<item>
-								<Title><![CDATA[东莞长安东胜现代]]></Title>
-								<Description><![CDATA[关于东莞长安东胜现代]]></Description>
+								<Title><![CDATA[东莞东胜现代]]></Title>
+								<Description><![CDATA[关于东莞东胜现代]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/company-info.png]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/companyInfo.php?comId=16#mp.weixin.qq.com]]></Url>
 							</item>
 							<item>
-								<Title><![CDATA[东莞长安东胜现代，臻至尊贵享受]]></Title>
-								<Description><![CDATA[东莞长安东胜现代]]></Description>
+								<Title><![CDATA[东莞东胜现代，臻至尊贵享受]]></Title>
+								<Description><![CDATA[东莞东胜现代]]></Description>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/companyInfo.php?comId=16#mp.weixin.qq.com]]></Url>
 							</item>
 							</Articles>
@@ -208,12 +209,12 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>8</ArticleCount>
+					    <ArticleCount>9</ArticleCount>
 						<Articles>
 							<item>
-								<Title><![CDATA[点击进入东莞长安东胜现代微店]]></Title> 
-								<Description><![CDATA[东莞长安东胜现代，为您提供最尊贵服务]]></Description>
-								<PicUrl><![CDATA[http://88auto.com.cn/weixin/back/image/company/52a964c5500ea.jpg]]></PicUrl>
+								<Title><![CDATA[点击进入东莞东胜现代微店]]></Title> 
+								<Description><![CDATA[东莞东胜现代，为您提供最尊贵服务]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/back/image/company/52a964c5500ea.jpg]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/homepage.php?comId=16]]></Url>
 							</item>
 							<item>
@@ -222,14 +223,14 @@ class wechatCallbackapiTest
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-bonus.png]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/activityList.php?comId=16]]></Url>
 							</item>
-							<!--
+							
 							<item>
-								<Title><![CDATA[在售车型]]></Title>
-								<Description><![CDATA[在售车型]]></Description>
-								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-carOnSell.png]]></PicUrl>
-								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/carOnSellList.php?comId=16]]></Url>
+								<Title><![CDATA[团购报名]]></Title>
+								<Description><![CDATA[团购报名]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-groupBuy.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/groupbuy.php?comId=16]]></Url>
 							</item>
-							-->
+							
 							<item>
 								<Title><![CDATA[预约试驾]]></Title>
 								<Description><![CDATA[预约试驾]]></Description>
@@ -255,14 +256,14 @@ class wechatCallbackapiTest
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=16]]></Url>
 							</item>
 							<item>
-								<Title><![CDATA[东莞长安东胜现代]]></Title>
-								<Description><![CDATA[关于东莞长安东胜现代]]></Description>
+								<Title><![CDATA[东莞东胜现代]]></Title>
+								<Description><![CDATA[关于东莞东胜现代]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/company-info.png]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/companyInfo.php?comId=16#mp.weixin.qq.com]]></Url>
 							</item>
 							<item>
-								<Title><![CDATA[东莞长安东胜现代，臻至尊贵享受]]></Title>
-								<Description><![CDATA[东莞长安东胜现代]]></Description>
+								<Title><![CDATA[东莞东胜现代，臻至尊贵享受]]></Title>
+								<Description><![CDATA[东莞东胜现代]]></Description>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/companyInfo.php?comId=16#mp.weixin.qq.com]]></Url>
 							</item>
 							</Articles>

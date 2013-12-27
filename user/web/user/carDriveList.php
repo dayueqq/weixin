@@ -22,7 +22,7 @@
 
   $smarty->assign('dataJson',$jsonfile);
   $smarty->assign('comName',$_COOKIE['comName']);
-  
+  $smarty->assign('comId',$comId);
   $smarty->display($html_path.'carDriveList.html');
   mysql_close();
 ?>

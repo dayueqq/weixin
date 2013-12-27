@@ -63,12 +63,12 @@ class wechatCallbackapiTest
 	    
 	    	$ev = $postObj->Event;
  	    	if($ev == "subscribe"){              
-				 		$textTpl = "<xml>
+				 		 $textTpl =  "<xml>
                         <ToUserName><![CDATA[%s]]></ToUserName>
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>8</ArticleCount>
+					    <ArticleCount>9</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入虎门宝昌宝马微店]]></Title> 
@@ -77,19 +77,19 @@ class wechatCallbackapiTest
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/homepage.php?comId=12]]></Url>
 							</item>
 							<item>
-								<Title><![CDATA[优惠活动]]></Tssitle>
+								<Title><![CDATA[优惠活动]]></Title>
 								<Description><![CDATA[优惠活动]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-bonus.png]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/activityList.php?comId=12]]></Url>
 							</item>
-							<!--
+							
 							<item>
-								<Title><![CDATA[在售车型]]></Title>
-								<Description><![CDATA[在售车型]]></Description>
-								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-carOnSell.png]]></PicUrl>
-								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/carOnSellList.php?comId=12]]></Url>
+								<Title><![CDATA[团购报名]]></Title>
+								<Description><![CDATA[团购报名]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-groupBuy.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/groupbuy.php?comId=12]]></Url>
 							</item>
-							-->
+							
 							<item>
 								<Title><![CDATA[预约试驾]]></Title>
 								<Description><![CDATA[预约试驾]]></Description>
@@ -132,14 +132,14 @@ class wechatCallbackapiTest
 	    	}
 
 
-            if($keyword == "测试" || $keyword == "321321")
+            if($keyword == "菜单" || $keyword == "0")
             {
                $textTpl = "<xml>
                         <ToUserName><![CDATA[%s]]></ToUserName>
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>8</ArticleCount>
+					    <ArticleCount>9</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入虎门宝昌宝马微店]]></Title> 
@@ -153,14 +153,14 @@ class wechatCallbackapiTest
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-bonus.png]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/activityList.php?comId=12]]></Url>
 							</item>
-							<!--
+							
 							<item>
-								<Title><![CDATA[在售车型]]></Title>
-								<Description><![CDATA[在售车型]]></Description>
-								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-carOnSell.png]]></PicUrl>
-								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/carOnSellList.php?comId=12]]></Url>
+								<Title><![CDATA[团购报名]]></Title>
+								<Description><![CDATA[团购报名]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-groupBuy.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/groupbuy.php?comId=12]]></Url>
 							</item>
-							-->
+							
 							<item>
 								<Title><![CDATA[预约试驾]]></Title>
 								<Description><![CDATA[预约试驾]]></Description>
@@ -208,7 +208,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>8</ArticleCount>
+					    <ArticleCount>9</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入虎门宝昌宝马微店]]></Title> 
@@ -222,14 +222,14 @@ class wechatCallbackapiTest
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-bonus.png]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/activityList.php?comId=12]]></Url>
 							</item>
-							<!--
+							
 							<item>
-								<Title><![CDATA[在售车型]]></Title>
-								<Description><![CDATA[在售车型]]></Description>
-								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-carOnSell.png]]></PicUrl>
-								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/carOnSellList.php?comId=12]]></Url>
+								<Title><![CDATA[团购报名]]></Title>
+								<Description><![CDATA[团购报名]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-groupBuy.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/groupbuy.php?comId=12]]></Url>
 							</item>
-							-->
+							
 							<item>
 								<Title><![CDATA[预约试驾]]></Title>
 								<Description><![CDATA[预约试驾]]></Description>

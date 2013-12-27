@@ -68,7 +68,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>8</ArticleCount>
+					    <ArticleCount>9</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入腾兴雷克萨斯微店]]></Title> 
@@ -82,12 +82,12 @@ class wechatCallbackapiTest
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-bonus.png]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/activityList.php?comId=13]]></Url>
 							</item>
-							<!--<item>
-								<Title><![CDATA[在售车型]]></Title>
-								<Description><![CDATA[在售车型]]></Description>
-								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-carOnSell.png]]></PicUrl>
-								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/carOnSellList.php?comId=13]]></Url>
-							</item>-->
+						<item>
+								<Title><![CDATA[团购报名]]></Title>
+								<Description><![CDATA[团购报名]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-groupBuy.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/groupbuy.php?comId=13]]></Url>
+							</item>
 							<item>
 								<Title><![CDATA[预约试驾]]></Title>
 								<Description><![CDATA[预约试驾]]></Description>
@@ -137,7 +137,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>8</ArticleCount>
+					    <ArticleCount>9</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入腾兴雷克萨斯微店]]></Title> 
@@ -151,12 +151,12 @@ class wechatCallbackapiTest
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-bonus.png]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/activityList.php?comId=13]]></Url>
 							</item>
-							<!--<item>
-								<Title><![CDATA[在售车型]]></Title>
-								<Description><![CDATA[在售车型]]></Description>
-								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-carOnSell.png]]></PicUrl>
-								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/carOnSellList.php?comId=13]]></Url>
-							</item>-->
+							<item>
+								<Title><![CDATA[团购报名]]></Title>
+								<Description><![CDATA[团购报名]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-groupBuy.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/groupbuy.php?comId=13]]></Url>
+							</item>
 							<item>
 								<Title><![CDATA[预约试驾]]></Title>
 								<Description><![CDATA[预约试驾]]></Description>
@@ -204,7 +204,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>8</ArticleCount>
+					    <ArticleCount>9</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入腾兴雷克萨斯微店]]></Title> 
@@ -218,12 +218,12 @@ class wechatCallbackapiTest
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-bonus.png]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/activityList.php?comId=13]]></Url>
 							</item>
-							<!--<item>
-								<Title><![CDATA[在售车型]]></Title>
-								<Description><![CDATA[在售车型]]></Description>
-								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-carOnSell.png]]></PicUrl>
-								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/carOnSellList.php?comId=13]]></Url>
-							</item>-->
+							<item>
+								<Title><![CDATA[团购报名]]></Title>
+								<Description><![CDATA[团购报名]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/homepage-groupBuy.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/groupbuy.php?comId=13]]></Url>
+							</item>
 							<item>
 								<Title><![CDATA[预约试驾]]></Title>
 								<Description><![CDATA[预约试驾]]></Description>

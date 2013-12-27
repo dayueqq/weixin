@@ -1,1 +1,1 @@
-var dataJson=[]
+var dataJson=[{"user_id":"52afc62d52e06","company_id":"12","date":"2013-12-17","name":"\u674e\u5148\u751f","sex":"","telephone":"13728447769","car_id":"","brand":"B \u5b9d\u9a6c","series":"B \u5b9d\u9a6c3\u7cfb","model":"","bookDate":"2013-12-19"},{"user_id":"52a7d6ad05d19","company_id":"12","date":"2013-12-11","name":"\u7f57\u5148\u751f","sex":"","telephone":"18665103159","car_id":"","brand":"B \u5b9d\u9a6c","series":"B \u5b9d\u9a6c3\u7cfb","model":"","bookDate":"2013-12-23"}]

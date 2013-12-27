@@ -1,0 +1,6 @@
+RewriteEngine On
+#RewriteRule ([a-zA-Z]{1,}).html$ $1.php#mp.weixin.qq.com
+RewriteRule ([0-9]{1,})-([a-zA-Z]{1,}).html$ $2.php?comId=$1#mp.weixin.qq.com
+
+#RewriteRule ([a-zA-Z]{1,})-([0-9]{1,}).html$ index.php?action=$1&id=$2  
+#RewriteRule ^(.*)html(.*)$ $1.php?$2

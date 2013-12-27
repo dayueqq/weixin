@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-12-05 09:48:25
+<?php /* Smarty version Smarty-3.0.6, created on 2013-12-26 07:01:55
          compiled from "./actSignup.html" */ ?>
-<?php /*%%SmartyHeaderCode:127152a04be90f9d38-17324893%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2473652bbd46381a902-73560441%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '2b689043f3c23899aa10f85c546388f62bc1e703' => 
     array (
       0 => './actSignup.html',
-      1 => 1386236585,
+      1 => 1388036916,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '127152a04be90f9d38-17324893',
+  'nocache_hash' => '2473652bbd46381a902-73560441',
   'function' => 
   array (
   ),
@@ -34,10 +34,13 @@ $_smarty_tpl->decodeProperties(array (
 <script src="../../../common/temp/brand.json"></script>
 <link rel="stylesheet" href="../../res/css/actSignup.css">
 <script language="javascript">
+ $(document).ready(function(e) {
+    urlC = "http://115.28.168.60/test/agent.html";
+});
  window.onload=function(){
 	 //修改父节点iframe高度
 	hashH = document.documentElement.scrollHeight; 
-	urlC = "http://gd.qq.com/zt2013/addga/index.htm"; 
+	urlC = "http://115.28.168.60/test/agent.html";//"http://gd.qq.com/zt2013/addga/index.htm"; 
 	document.getElementById("iframeC").src=urlC+"#"+hashH; 
 	 //更改任务栏
 	var str='<option>请选择车系</option>';
@@ -102,8 +105,10 @@ $_smarty_tpl->decodeProperties(array (
 <body>
 	<div class="goback" style="width:100%;height:47px;background:#000;position:fixed; top:0; text-align:center; z-index:77;">
 		<p style="color:#fff; position:relative;">活动报名</p>
-        <a href="activityList.php" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:6%; margin-top:8px;"><img src="../../res/img/back.png" width="33" height="33" border="0"/></a>
-        <a href="homepage.php" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:85%; margin-top:8px;"><img src="../../res/img/home.png" width="33" height="33"/></a>		
+        <a href="<?php echo $_smarty_tpl->getVariable('comId')->value;?>
+-activityList.html" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:6%; margin-top:8px;"><img src="../../res/img/back.png" width="33" height="33" border="0"/></a>
+        <a href="<?php echo $_smarty_tpl->getVariable('comId')->value;?>
+-homepage.html" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:85%; margin-top:8px;"><img src="../../res/img/home.png" width="33" height="33"/></a>		
     </div>
     <div style="width:100%; height:47px;"></div>
 	<div class="actImg" style="position:relative;">

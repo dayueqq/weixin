@@ -18,12 +18,12 @@
 			  echo "<script>alert('文件无法保存!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 			  exit(0);
 		  }else{
-			  $setArr=array('company_name','company_info','pic','phone');
-	          $setArrCont=array($_POST['actName'],$_POST['actDescribe'],$path,$_POST['customPhone']);
+			  $setArr=array('company_name','company_info','pic','phone','helpPhone');
+	          $setArrCont=array($_POST['actName'],$_POST['actDescribe'],$path,$_POST['customPhone'],$_POST['helpPhone']);
 		  }
 	  }else{
-		  $setArr=array('company_name','company_info','phone');
-	      $setArrCont=array($_POST['actName'],$_POST['actDescribe'],$_POST['customPhone']);
+		  $setArr=array('company_name','company_info','phone','helpPhone');
+	      $setArrCont=array($_POST['actName'],$_POST['actDescribe'],$_POST['customPhone'],$_POST['helpPhone']);
 	  }
       
 	  $conArr='company_id';
@@ -477,6 +477,26 @@
 		  echo "<script>alert('团购活动修改成功!');location.href='addDrive.php';</script>";
 	  }else{
 		  echo "<script>alert('对不起，团购活动修改失败!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+	  }
+	  
+	  //end
+  }else if($action=='delGroUser'){   //删除团购报名  car_group   #####################
+	  $tableName='user_group';
+
+	  $conArr=array('group_id');
+	  $conArrCont=array($_GET['id']);
+ 
+	  $result=$sqlQuery->delete($tableName,$conArr,$conArrCont);
+	  
+	  $docUnlink='../temp/group/'.$_COOKIE['companyId'].date('H').'groData.json';
+	  if(file_exists($docUnlink)){ //判断是否存在文件
+		  unlink($docUnlink);
+	  }
+	  
+	  if($result){
+		  echo "<script>alert('购车报名信息删除成功!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+	  }else{
+		  echo "<script>alert('购车报名信息删除失败!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 	  }
 	  
 	  //end

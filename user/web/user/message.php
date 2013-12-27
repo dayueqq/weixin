@@ -1,4 +1,5 @@
 <?php
+  ob_start(); //打开缓冲区
   include_once('../globalpath.php');
   //include '../../../common/SqlQuery.php';
   include $common_path.'SqlQuery.php';
@@ -40,9 +41,10 @@
 	  fclose($fh);
   }
   
-  
+  ob_end_flush();//输出全部内容到浏览器
   $smarty->assign('comName',$comName);
   $smarty->assign('jsonfile',$jsonfile);
+  $smarty->assign('comId',$comId);
   $smarty->display($html_path.'message.html');
   mysql_close();
   

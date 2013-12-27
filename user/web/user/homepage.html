@@ -23,7 +23,7 @@
                   <!--{section name=info_id loop=$actInfo}-->
 					<li>
 						<div class="img">
-                        	<a href="actSignup.php?actId=<!--{$actInfo[info_id].act_id}-->#mp.weixin.qq.com" style=" text-decoration:none;display:block;">
+                        	<a href="<!--{$comId}-->-actSignup-<!--{$actInfo[info_id].act_id}-->.html" style=" text-decoration:none;display:block;">
                             	<img class="bannerPic" src="<!--{$actInfo[info_id].path}-->" height=240 alt="">
                                 <div class="mengban">
                                    <p class="actName"><!--{$actInfo[info_id].act_name}--></p>
@@ -49,25 +49,25 @@
     
     <dl class="homeList">
         <dd class="left">
-        	<a  href="activityList.php#mp.weixin.qq.com" >
+        	<a  href="<!--{$comId}-->-activityList.html" >
         		<img src="../../res/img/homepage-bonus.png" border="0">
             	<p>优惠活动</p>
             </a>
         </dd>
         <dd class="right">
-        	<a  href="carOnSellList.php#mp.weixin.qq.com" target="_self">
-        		<img src="../../res/img/homepage-carOnSell.png" border="0">
-            	<p>在售车型</p>
+        	<a  href="<!--{$comId}-->-groupbuy.html" target="_self">
+        		<img src="../../res/img/homepage-groupBuy.png" border="0">
+            	<p>团购报名</p>
             </a>
         </dd>
         <dd class="left2">
-        	<a  href="carDrive.php#mp.weixin.qq.com" target="_self">
+        	<a  href="<!--{$comId}-->-carDrive.html" target="_self">
         		<img src="../../res/img/car-drive.png" border="0">
             	<p>预约试驾</p>
             </a>
         </dd>
          <dd class="right2">
-        	<a  href="service.php#mp.weixin.qq.com" target="_self">
+        	<a  href="<!--{$comId}-->-service.html" target="_self">
         		<img src="../../res/img/homepage-service.png" border="0">
             	<p>售后预约</p>
             </a>
@@ -80,7 +80,7 @@
         	
         </dd>
         <dd class="right">
-            <a  href="companyInfo.php#mp.weixin.qq.com" target="_self">
+            <a  href="<!--{$comId}-->-companyInfo.html" target="_self">
         		<img src="../../res/img/company-info.png" border="0">
             	<p>公司简介</p>
             </a>
@@ -104,7 +104,7 @@
             </a>
         </dd>
         <dd class="right">
-        	<a  href="message.php#mp.weixin.qq.com">
+        	<a  href="<!--{$comId}-->-message.html">
         		<img src="../../res/img/homepage-customerMessage.png" border="0">
             	<p>客户留言</p>
             </a>
@@ -142,7 +142,7 @@
 <script type="text/javascript"> 
 function sethash(){
     hashH = document.documentElement.scrollHeight; 
-    urlC = "http://113.107.219.208/agent.html"; 
+    urlC = "http://115.28.168.60/test/agent.html";//"http://gd.qq.com/zt2013/addga/index.htm"; 
     document.getElementById("iframeC").src=urlC+"#"+hashH;
 }
 window.onload=sethash;

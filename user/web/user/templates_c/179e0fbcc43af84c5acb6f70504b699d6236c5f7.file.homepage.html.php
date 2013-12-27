@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-12-11 11:51:49
+<?php /* Smarty version Smarty-3.0.6, created on 2013-12-26 07:01:17
          compiled from "./homepage.html" */ ?>
-<?php /*%%SmartyHeaderCode:956652a851d56bff72-05274353%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1996252bbd43d692519-15971969%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '179e0fbcc43af84c5acb6f70504b699d6236c5f7' => 
     array (
       0 => './homepage.html',
-      1 => 1386762702,
+      1 => 1388028019,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '956652a851d56bff72-05274353',
+  'nocache_hash' => '1996252bbd43d692519-15971969',
   'function' => 
   array (
   ),
@@ -66,8 +66,9 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['info_id']['last']       = ($
 ?>
 					<li>
 						<div class="img">
-                        	<a href="actSignup.php?actId=<?php echo $_smarty_tpl->getVariable('actInfo')->value[$_smarty_tpl->getVariable('smarty')->value['section']['info_id']['index']]['act_id'];?>
-#mp.weixin.qq.com" style=" text-decoration:none;display:block;">
+                        	<a href="<?php echo $_smarty_tpl->getVariable('comId')->value;?>
+-actSignup-<?php echo $_smarty_tpl->getVariable('actInfo')->value[$_smarty_tpl->getVariable('smarty')->value['section']['info_id']['index']]['act_id'];?>
+.html" style=" text-decoration:none;display:block;">
                             	<img class="bannerPic" src="<?php echo $_smarty_tpl->getVariable('actInfo')->value[$_smarty_tpl->getVariable('smarty')->value['section']['info_id']['index']]['path'];?>
 " height=240 alt="">
                                 <div class="mengban">
@@ -98,25 +99,29 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['info_id']['last']       = ($
     
     <dl class="homeList">
         <dd class="left">
-        	<a  href="activityList.php#mp.weixin.qq.com" >
+        	<a  href="<?php echo $_smarty_tpl->getVariable('comId')->value;?>
+-activityList.html" >
         		<img src="../../res/img/homepage-bonus.png" border="0">
             	<p>优惠活动</p>
             </a>
         </dd>
         <dd class="right">
-        	<a  href="carOnSellList.php#mp.weixin.qq.com" target="_self">
-        		<img src="../../res/img/homepage-carOnSell.png" border="0">
-            	<p>在售车型</p>
+        	<a  href="<?php echo $_smarty_tpl->getVariable('comId')->value;?>
+-groupbuy.html" target="_self">
+        		<img src="../../res/img/homepage-groupBuy.png" border="0">
+            	<p>团购报名</p>
             </a>
         </dd>
         <dd class="left2">
-        	<a  href="carDrive.php#mp.weixin.qq.com" target="_self">
+        	<a  href="<?php echo $_smarty_tpl->getVariable('comId')->value;?>
+-carDrive.html" target="_self">
         		<img src="../../res/img/car-drive.png" border="0">
             	<p>预约试驾</p>
             </a>
         </dd>
          <dd class="right2">
-        	<a  href="service.php#mp.weixin.qq.com" target="_self">
+        	<a  href="<?php echo $_smarty_tpl->getVariable('comId')->value;?>
+-service.html" target="_self">
         		<img src="../../res/img/homepage-service.png" border="0">
             	<p>售后预约</p>
             </a>
@@ -130,7 +135,8 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['info_id']['last']       = ($
         	
         </dd>
         <dd class="right">
-            <a  href="companyInfo.php#mp.weixin.qq.com" target="_self">
+            <a  href="<?php echo $_smarty_tpl->getVariable('comId')->value;?>
+-companyInfo.html" target="_self">
         		<img src="../../res/img/company-info.png" border="0">
             	<p>公司简介</p>
             </a>
@@ -155,7 +161,8 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['info_id']['last']       = ($
             </a>
         </dd>
         <dd class="right">
-        	<a  href="message.php#mp.weixin.qq.com">
+        	<a  href="<?php echo $_smarty_tpl->getVariable('comId')->value;?>
+-message.html">
         		<img src="../../res/img/homepage-customerMessage.png" border="0">
             	<p>客户留言</p>
             </a>
@@ -193,7 +200,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['info_id']['last']       = ($
 <script type="text/javascript"> 
 function sethash(){
     hashH = document.documentElement.scrollHeight; 
-    urlC = "http://113.107.219.208/agent.html"; 
+    urlC = "http://115.28.168.60/test/agent.html";//"http://gd.qq.com/zt2013/addga/index.htm"; 
     document.getElementById("iframeC").src=urlC+"#"+hashH;
 }
 window.onload=sethash;

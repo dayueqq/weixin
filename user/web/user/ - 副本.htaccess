@@ -1,0 +1,11 @@
+RewriteEngine On
+#RewriteRule ([a-zA-Z]{1,}).html$ $1.php#mp.weixin.qq.com
+#用于匹配  homepage.php?comId=1   activityList.php?comId=1
+RewriteRule ([0-9]{1,})-([a-zA-Z]{1,}).html$ $2.php?comId=$1#mp.weixin.qq.com
+
+#用于匹配  actSignup.php?comId=1&actId=12312
+#RewriteRule ([0-9]{1,})-([a-zA-Z]{1,}/52b2e1dd589dc.html$ $2.php?comId=$1&actId=52b2e1dd589dc#mp.weixin.qq.com
+
+#RewriteRule actSignup-2-52b2e1dd589dc.html$ actSignup.php?comId=2&actId=52b2e1dd589dc#mp.weixin.qq.com
+#RewriteRule ([a-zA-Z]{1,})-([0-9]{1,}).html$ index.php?action=$1&id=$2  
+#RewriteRule ^(.*)html(.*)$ $1.php?$2

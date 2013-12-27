@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-12-05 10:40:23
+<?php /* Smarty version Smarty-3.0.6, created on 2013-12-26 07:01:19
          compiled from "./companyInfo.html" */ ?>
-<?php /*%%SmartyHeaderCode:3852a0581710fb07-28557894%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:401152bbd43fec4276-04619032%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '9e9e6c323adfe68263942b08343cd25db445bc64' => 
     array (
       0 => './companyInfo.html',
-      1 => 1386236518,
+      1 => 1387984194,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3852a0581710fb07-28557894',
+  'nocache_hash' => '401152bbd43fec4276-04619032',
   'function' => 
   array (
   ),
@@ -38,7 +38,8 @@ $_smarty_tpl->decodeProperties(array (
 <body>
 	<div class="goback" style="width:100%;height:47px;background:#000;position:fixed; top:0; text-align:center;">
 		<p style="color:#fff; position:relative;">经销商介绍</p>
-        <a href="homepage.php" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:6%; margin-top:8px;"><img src="../../res/img/back.png" width="33" height="33"/></a>	
+        <a href="<?php echo $_smarty_tpl->getVariable('comId')->value;?>
+-homepage.html" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:6%; margin-top:8px;"><img src="../../res/img/back.png" width="33" height="33"/></a>	
     </div>
     <div style="width:100%; height:47px;"></div>
 	 <img class="bannerPic" id="bannerPic" src="" border="0"/>

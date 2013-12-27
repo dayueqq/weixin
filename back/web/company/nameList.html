@@ -171,6 +171,8 @@ $(document).ready(function(){
 			  conArrCont[4]='0';
 		  }  
 		  $('#theFrame').attr('src','nameStatics3.php?data='+encodeURI(conArrCont.join(',')));
+	  }else if(curData=='groupBuy'){
+		  $('#theFrame').attr('src','nameStatics4.php?data='+encodeURI(conArrCont.join(',')));
 	  }
 	  //
   }
@@ -185,7 +187,6 @@ $(document).ready(function(){
 	   var service=document.getElementById("serviceTable");
 	   var buy =document.getElementById("buyTable");
 	   var drive = document.getElementById("driveTable");
-	   var groupBuy = document.getElementById("groupBuyTable");
 	  if(num==1)
 	     {
 		 item1.className = "tabBuySelected";
@@ -203,7 +204,6 @@ $(document).ready(function(){
 	   item3.className = "tabService";
 	   service.style.display="none";
 	   item4.className = "tabGroupBuy";
-	   groupBuy.style.display="none";
 	  
   }
   
@@ -244,6 +244,8 @@ $(document).ready(function(){
 			  conArrCont[4]='0';
 		  }  
 		  window.location.href='download.php?type=service&data='+encodeURI(conArrCont.join(','));
+	  }else if(curData=='groupBuy'){
+		  window.location.href='download.php?type=groupBuy&data='+encodeURI(conArrCont.join(','));
 	  }
   }
   function changeTab()
@@ -251,11 +253,9 @@ $(document).ready(function(){
 	   var service=document.getElementById("serviceTable");
 	   var buy =document.getElementById("buyTable");
 	   var drive =document.getElementById("driveTable");
-	   var groupBuy = document.getElementById("groupBuyTable");
 	  
 	   buy.style.display="none";
 	   drive.style.display="none";
-	   groupBuy.style.display="none";
 	   service.style.display="block";
 	   var item1 = document.getElementById("tabBuy");
 	   var item2 = document.getElementById("tabDrive");
@@ -274,11 +274,10 @@ $(document).ready(function(){
 	   var service=document.getElementById("serviceTable");
 	   var buy =document.getElementById("buyTable");
 	   var drive =document.getElementById("driveTable");
-	   var groupBuy = document.getElementById("groupBuyTable");
 	   service.style.display="none";
-	   buy.style.display="none";
+	   buy.style.display="block";
 	   drive.style.display="none";
-	   groupBuy.style.display="block";
+
 	   var item1 = document.getElementById("tabBuy");
 	   var item2 = document.getElementById("tabDrive");
 	   var item3 = document.getElementById("tabSerive");
@@ -288,7 +287,7 @@ $(document).ready(function(){
 	   item3.className="tabService";
 	   item4.className="tabGroupBuySelected";
 	   curData='groupBuy';
-	   $('#theFrame').attr('src','nameStatics4.html');
+	   $('#theFrame').attr('src','nameStatics4.php');
   }
   function changeStatus(obj){
 	  if(obj=='1'){
@@ -385,27 +384,7 @@ $(document).ready(function(){
                    <option>已处理</option>              
                 </select>
             </div>
-            <div id="groupBuyTable" class="groupBuyTable" style="display:none;">
-                <label for="carSeries">车系:</label>
-                <select class="carSeries" name="carSeries" id="carSeries">
-                    <option>全部</option>
-                </select>
-           
-                <label for="carModel">车型:</label>
-                <select class="carModel" name="carModel" id="carModel">
-                   <option>全部</option>  	
-                </select>
-          
-                <label for="willBuyTime">预计购车时间:</label>
-                <select id="willBuyTime" class="willBuyTime" name="willBuyTime">
-                   <option value="0">全部</option>
-                   <option value="一星期内">一星期内</option>
-                   <option value="一个月内">一个月内</option>
-                   <option value="三个月内">三个月内</option>
-                   <option value="六个月内">六个月内</option>
-                   <option value="一年之内">一年之内</option>              
-                </select>
-            </div>
+            
            </form>
            <br />
         </div>

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-12-14 12:47:42
+<?php /* Smarty version Smarty-3.0.6, created on 2013-12-26 09:30:42
          compiled from "./groupBuy.html" */ ?>
-<?php /*%%SmartyHeaderCode:2940252ac536ebf29c8-69034385%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:3162352bbf74262d787-26170638%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'bade4710556a9335a9a0f78b683027666f49cf01' => 
     array (
       0 => './groupBuy.html',
-      1 => 1387025168,
+      1 => 1388042615,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2940252ac536ebf29c8-69034385',
+  'nocache_hash' => '3162352bbf74262d787-26170638',
   'function' => 
   array (
   ),
@@ -29,8 +29,6 @@ $_smarty_tpl->decodeProperties(array (
 </title>
 <script type="text/javascript" src="../../res/js/groupBuy.js"></script>
 <script type="text/javascript" src="../../res/js/jquery-1.4.2.min.js"></script>
-<script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('jsonfile')->value;?>
-"></script>
 <script src="../../../common/temp/brand.json"></script>
 <link rel="stylesheet" href="../../res/css/groupBuy.css">
 <script language="javascript">
@@ -42,8 +40,17 @@ $_smarty_tpl->decodeProperties(array (
 	
 	//更改任务栏
 	var str='<option>- 请选择 -</option>';
+	
+	//判断是不是双品牌
+	<?php if ($_smarty_tpl->getVariable('double')->value==1){?> 
+	var carIdArr='<?php echo $_smarty_tpl->getVariable('carId')->value;?>
+'.split('@');
+	var res=(seriesJson[carIdArr[0]]+','+seriesJson[carIdArr[1]]).split(',');
+	<?php }else{ ?> 
 	var res=seriesJson['<?php echo $_smarty_tpl->getVariable('carId')->value;?>
 '].split(',');
+	<?php }?> 
+
 	for(var i=0;i<res.length;i=i+2){
 		str+="<option value='"+res[i]+"'>"+res[i+1]+"</option>" ;
     }
@@ -80,13 +87,13 @@ $_smarty_tpl->decodeProperties(array (
 			   
 			   xmlArr.sort(function(a,b){return b[2]-a[2]});
 			   var tempStr='';
-			   for(var i=0;i<xmlArr.length;i++){
+			   for(var i=0;i<10&&i<xmlArr.length;i++){//xmlArr.length
 				   if(i<3){
 				       tempStr+="<li><div class='position'><img src='../../res/img/list-icon1.jpg'/>";
 				   }else{
 					   tempStr+="<li><div class='position'><img src='../../res/img/list-icon2.jpg'/>";
 				   }
-				   tempStr+="<p class='rankNum'>01</p></div><div class='content'><span class='rankcar'>"+xmlArr[i][1]+"</span><span class='rankPeople'>("+xmlArr[i][2]+"人)</span></div></li>";
+				   tempStr+="<p class='rankNum'>"+(i+1)+"</p></div><div class='content'><span class='rankcar' style='display:block; float:left; width:68px; overflow:hidden; text-overflow:ellipsis;white-space:nowrap; font-size:12px;'>"+xmlArr[i][1]+"</span><span class='rankPeople' style='display:block; float:left;font-size:10px;'>("+xmlArr[i][2]+"人)</span></div></li>";
 			   }
 			   tempStr+="<p class='clear'></p>";
 			   $('#rankList').html(tempStr);
@@ -132,13 +139,24 @@ $_smarty_tpl->decodeProperties(array (
 <body>
 	<div class="goback" style="width:100%;height:47px;background:#000;position:fixed; top:0; text-align:center; z-index:77;">
 		<p style="color:#fff; font-size:18px; position:relative;">团购报名</p>
-        <a href="activityList.php" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:6%; margin-top:8px;"><img src="../../res/img/back.png" width="33" height="33" border="0"/></a>
-        <a href="homepage.php" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:85%; margin-top:8px;"><img src="../../res/img/home.png" width="33" height="33"/></a>		
+        <a href="<?php echo $_smarty_tpl->getVariable('comId')->value;?>
+-homepage.html" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:6%; margin-top:8px;"><img src="../../res/img/back.png" width="33" height="33" border="0"/></a>
+        <a href="<?php echo $_smarty_tpl->getVariable('comId')->value;?>
+-homepage.html" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:85%; margin-top:8px;"><img src="../../res/img/home.png" width="33" height="33"/></a>		
     </div>
     <div style="width:100%; height:47px;"></div>
     <div class="rules">
-           <p class="actName">奥迪团购奥迪百团大战火热进行中</p>
-           <p class="actTime">2013-12-11 至 2013-12-20</p>
+           <p class="actName">团购细则</p>
+           <p class="actTime">
+                      <?php if ($_smarty_tpl->getVariable('info')->value['startDate']==$_smarty_tpl->getVariable('info')->value['endDate']){?>
+                            <?php echo $_smarty_tpl->getVariable('info')->value['startDate'];?>
+
+                      <?php }else{ ?>
+                            <?php echo $_smarty_tpl->getVariable('info')->value['startDate'];?>
+ 至 <?php echo $_smarty_tpl->getVariable('info')->value['endDate'];?>
+
+                      <?php }?>
+           </p>
         <div class="dot-line">
         </div>
         <div class="describe">
@@ -155,6 +173,7 @@ $_smarty_tpl->decodeProperties(array (
         <div class="dot-line">
         </div>
         <form id="theForm" class="signup-form" action="operation.php?action=upGro&comId=<?php echo $_smarty_tpl->getVariable('comInfo')->value['company_id'];?>
+&carId=<?php echo $_smarty_tpl->getVariable('carId')->value;?>
 " method="post" enctype="multipart/form-data">
         <input type="hidden" value="<?php echo $_smarty_tpl->getVariable('comInfo')->value['car_brand'];?>
 " name="brand">
@@ -220,8 +239,9 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['info_id']['first']      = ($
 $_smarty_tpl->tpl_vars['smarty']->value['section']['info_id']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['info_id']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['info_id']['total']);
 ?>
         	<li>
-              <a href="actSignup.php?actId=<?php echo $_smarty_tpl->getVariable('actInfo')->value[$_smarty_tpl->getVariable('smarty')->value['section']['info_id']['index']]['act_id'];?>
-#mp.weixin.qq.com" class="readTitle">
+              <a href="<?php echo $_smarty_tpl->getVariable('comId')->value;?>
+-actSignup-<?php echo $_smarty_tpl->getVariable('actInfo')->value[$_smarty_tpl->getVariable('smarty')->value['section']['info_id']['index']]['act_id'];?>
+.html" class="readTitle">
 <?php echo $_smarty_tpl->getVariable('actInfo')->value[$_smarty_tpl->getVariable('smarty')->value['section']['info_id']['index']]['act_name'];?>
 </a>
             </li>

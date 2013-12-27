@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-12-12 21:19:16
+<?php /* Smarty version Smarty-3.0.6, created on 2013-12-17 13:11:24
          compiled from "./nameList.html" */ ?>
-<?php /*%%SmartyHeaderCode:1377552a9b7d45776e2-92027761%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:3242052afdcfc932d63-04316389%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '913e3fb7837d21c210023ecc3e32159e243e9934' => 
     array (
       0 => './nameList.html',
-      1 => 1386681927,
+      1 => 1387256714,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1377552a9b7d45776e2-92027761',
+  'nocache_hash' => '3242052afdcfc932d63-04316389',
   'function' => 
   array (
   ),
@@ -192,6 +192,8 @@ $(document).ready(function(){
 			  conArrCont[4]='0';
 		  }  
 		  $('#theFrame').attr('src','nameStatics3.php?data='+encodeURI(conArrCont.join(',')));
+	  }else if(curData=='groupBuy'){
+		  $('#theFrame').attr('src','nameStatics4.php?data='+encodeURI(conArrCont.join(',')));
 	  }
 	  //
   }
@@ -206,7 +208,6 @@ $(document).ready(function(){
 	   var service=document.getElementById("serviceTable");
 	   var buy =document.getElementById("buyTable");
 	   var drive = document.getElementById("driveTable");
-	   var groupBuy = document.getElementById("groupBuyTable");
 	  if(num==1)
 	     {
 		 item1.className = "tabBuySelected";
@@ -224,7 +225,6 @@ $(document).ready(function(){
 	   item3.className = "tabService";
 	   service.style.display="none";
 	   item4.className = "tabGroupBuy";
-	   groupBuy.style.display="none";
 	  
   }
   
@@ -265,6 +265,8 @@ $(document).ready(function(){
 			  conArrCont[4]='0';
 		  }  
 		  window.location.href='download.php?type=service&data='+encodeURI(conArrCont.join(','));
+	  }else if(curData=='groupBuy'){
+		  window.location.href='download.php?type=groupBuy&data='+encodeURI(conArrCont.join(','));
 	  }
   }
   function changeTab()
@@ -272,11 +274,9 @@ $(document).ready(function(){
 	   var service=document.getElementById("serviceTable");
 	   var buy =document.getElementById("buyTable");
 	   var drive =document.getElementById("driveTable");
-	   var groupBuy = document.getElementById("groupBuyTable");
 	  
 	   buy.style.display="none";
 	   drive.style.display="none";
-	   groupBuy.style.display="none";
 	   service.style.display="block";
 	   var item1 = document.getElementById("tabBuy");
 	   var item2 = document.getElementById("tabDrive");
@@ -295,11 +295,10 @@ $(document).ready(function(){
 	   var service=document.getElementById("serviceTable");
 	   var buy =document.getElementById("buyTable");
 	   var drive =document.getElementById("driveTable");
-	   var groupBuy = document.getElementById("groupBuyTable");
 	   service.style.display="none";
-	   buy.style.display="none";
+	   buy.style.display="block";
 	   drive.style.display="none";
-	   groupBuy.style.display="block";
+
 	   var item1 = document.getElementById("tabBuy");
 	   var item2 = document.getElementById("tabDrive");
 	   var item3 = document.getElementById("tabSerive");
@@ -309,7 +308,7 @@ $(document).ready(function(){
 	   item3.className="tabService";
 	   item4.className="tabGroupBuySelected";
 	   curData='groupBuy';
-	   $('#theFrame').attr('src','nameStatics4.html');
+	   $('#theFrame').attr('src','nameStatics4.php');
   }
   function changeStatus(obj){
 	  if(obj=='1'){
@@ -431,27 +430,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['info_id']['last']       = ($
                    <option>已处理</option>              
                 </select>
             </div>
-            <div id="groupBuyTable" class="groupBuyTable" style="display:none;">
-                <label for="carSeries">车系:</label>
-                <select class="carSeries" name="carSeries" id="carSeries">
-                    <option>全部</option>
-                </select>
-           
-                <label for="carModel">车型:</label>
-                <select class="carModel" name="carModel" id="carModel">
-                   <option>全部</option>  	
-                </select>
-          
-                <label for="willBuyTime">预计购车时间:</label>
-                <select id="willBuyTime" class="willBuyTime" name="willBuyTime">
-                   <option value="0">全部</option>
-                   <option value="一星期内">一星期内</option>
-                   <option value="一个月内">一个月内</option>
-                   <option value="三个月内">三个月内</option>
-                   <option value="六个月内">六个月内</option>
-                   <option value="一年之内">一年之内</option>              
-                </select>
-            </div>
+            
            </form>
            <br />
         </div>

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-12-05 09:48:33
+<?php /* Smarty version Smarty-3.0.6, created on 2013-12-26 07:02:12
          compiled from "./service.html" */ ?>
-<?php /*%%SmartyHeaderCode:394052a04bf1a85ac4-11053761%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:503752bbd474310a67-85836194%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '62521a2a58b81490a110564a734853410189cbc9' => 
     array (
       0 => './service.html',
-      1 => 1386236498,
+      1 => 1387984119,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '394052a04bf1a85ac4-11053761',
+  'nocache_hash' => '503752bbd474310a67-85836194',
   'function' => 
   array (
   ),
@@ -105,7 +105,8 @@ function upForm(){
 <body>
 	<div class="goback" style="width:100%;height:47px;background:#000;position:fixed; top:0; text-align:center;">
 		<p style="color:#fff; position:relative;">售后预约</p>
-        <a href="homepage.php" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:6%; margin-top:8px;"><img src="../../res/img/back.png" width="33" height="33" border="0"/></a>
+        <a href="<?php echo $_smarty_tpl->getVariable('comId')->value;?>
+-homepage.html" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:6%; margin-top:8px;"><img src="../../res/img/back.png" width="33" height="33" border="0"/></a>
     </div>
     <div style="width:100%; height:47px;"></div>
 	<div class="carName">

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-12-12 06:32:38
+<?php /* Smarty version Smarty-3.0.6, created on 2013-12-26 09:29:03
          compiled from "./message.html" */ ?>
-<?php /*%%SmartyHeaderCode:913652a9588607c237-89067165%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1013352bbf6df008b62-57747364%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8202234efced9c27c3d4d7170645663e0d9a4559' => 
     array (
       0 => './message.html',
-      1 => 1386829478,
+      1 => 1388049804,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '913652a9588607c237-89067165',
+  'nocache_hash' => '1013352bbf6df008b62-57747364',
   'function' => 
   array (
   ),
@@ -63,9 +63,13 @@ window.onload=function(){
 
 function upForm(){
 	 var text = document.getElementById("detail").value;
+	 var number = document.getElementById("phone").value;
 	 if(text == ""){
 	    alert("您还没有填写完留言呢^.^");
 	 }
+     else if(number == ""){
+		alert("您还没有填写完联系方式呢^.^")
+		 }
 	 else
 	 $('#theForm').submit();
 }
@@ -75,7 +79,8 @@ function upForm(){
 <body >
 <div class="goback" style="width:100%;height:47px;background:#000;position:fixed; top:0; text-align:center;">
 		<p style="color:#fff; position:relative; font-size:16px;margin-top:12px;text-shadow:none;">车友留言</p>
-        <a href="homepage.php" data-ajax="false" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:6%; margin-top:8px;"><img src="../../res/img/back.png" width="33" height="33" border="0"/></a>	
+        <a href="<?php echo $_smarty_tpl->getVariable('comId')->value;?>
+-homepage.html" data-ajax="false" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:6%; margin-top:8px;"><img src="../../res/img/back.png" width="33" height="33" border="0"/></a>	
     </div>
     <div style="width:100%; height:47px;"></div>
 <div class="box">
@@ -133,7 +138,8 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['info_id']['last']       = ($
 	</ul>
 
 	<div class="clearfix"></div>
-	<a href="message2.html" data-rel="dialog" data-transition="pop" style="display:block;position:fixed;width:50px; height:50px; bottom:42px; border-top:#CCC 1px solid; border-right:#CCC 1px solid;border-bottom:#CCC 1px solid;background:#FFF;border-radius:5px;"><img src="../../res/img/add-message.png" width="50" height="50" style="margin:0;padding:0;"/></a>
+	<a href="<?php echo $_smarty_tpl->getVariable('comId')->value;?>
+-writeMess.html" data-rel="dialog" data-transition="pop" style="display:block;position:fixed;width:50px; height:50px; bottom:42px; border-top:#CCC 1px solid; border-right:#CCC 1px solid;border-bottom:#CCC 1px solid;background:#FFF;border-radius:5px;"><img src="../../res/img/add-message.png" width="50" height="50" style="margin:0;padding:0;"/></a>
 	</div>
     <div class="footer" style="text-shadow:none;">
     	<p class="tengxun">腾讯汽车</p>

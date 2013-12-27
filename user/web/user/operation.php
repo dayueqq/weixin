@@ -13,7 +13,7 @@
 	  $arr=array(uniqid(),$_GET['comId'],date('Y-m-d'),$_POST['name'],$_POST['custom'],$_POST['carModel'],$_POST['brand'],$_POST['carSerName'],$_POST['carIdName'],$_POST['actName'],$_POST['willBuyTime']);
 	  $result=$sqlQuery->insert($tableName,$arr);
 	  if($result){
-		  echo "<script>alert('恭喜您报名成功!');location.href='activityList.php';</script>";
+		  echo "<script>alert('恭喜您报名成功!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 	  }else{
 		  echo "<script>alert('对不住，服务器响应超时，请重新报名!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 	  }
@@ -25,7 +25,7 @@
 	  $arr=array(uniqid(),$_POST['comId'],date('Y-m-d'),$_POST['name'],$_POST['custom'],$_POST['carNameId'],$_POST['carBrand'],$_POST['carSeries'],$_POST['carName'],'',$_POST['willBuyTime']);
 	  $result=$sqlQuery->insert($tableName,$arr);
 	  if($result){
-		  echo "<script>alert('恭喜您报名成功!');location.href='./carOnSellList.php';</script>";
+		  echo "<script>alert('恭喜您报名成功!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 	  }else{
 		  echo "<script>alert('对不住，服务器响应超时，请重新报名!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 	  }
@@ -37,7 +37,7 @@
 	  $arr=array(uniqid(),$_POST['comId'],date('Y-m-d'),$_POST['name'],'',$_POST['custom'],$_POST['carModel'],$_POST['carBrand'],$_POST['carSerName'],$_POST['carModName'],$_POST['bookTime']);
 	  $result=$sqlQuery->insert($tableName,$arr);
 	  if($result){
-		  echo "<script>alert('恭喜您报名成功!');location.href='./homepage.php';</script>";
+		  echo "<script>alert('恭喜您报名成功!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 	  }else{
 		  echo "<script>alert('对不住，服务器响应超时，请重新报名!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 	  }
@@ -49,7 +49,7 @@
 	  $arr=array(uniqid(),$_POST['comId'],date('Y-m-d'),$_POST['carNumber'],$_POST['name'],$_POST['custom'],$_POST['bookTime'],$_POST['time'],$_POST['service'],'0');
 	  $result=$sqlQuery->insert($tableName,$arr);
 	  if($result){
-		  echo "<script>alert('恭喜您预约成功!');location.href='homepage.php';</script>";
+		  echo "<script>alert('恭喜您预约成功!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 	  }else{
 		  echo "<script>alert('对不住，服务器响应超时，请重新预约!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 	  }
@@ -57,14 +57,15 @@
 	  //end
   }else if($action=='addMessage'){   //添加留言信息   #####################
       $tableName='user_message';
+	  $comId=$_POST['comId'];
 	  
 	  //删除缓存
-	  $docUnlink=$_SERVER ['DOCUMENT_ROOT'].'/weixin/user/web/temp/message/'.$_COOKIE['comId'].'/message.json';
+	  $docUnlink=$_SERVER ['DOCUMENT_ROOT'].'/weixin/user/web/temp/message/'.$comId.'/message.json';
 	  if(file_exists($docUnlink)){ //判断是否存在文件
 		  unlink($docUnlink);
 	  }
 	  //
-	  $docUnlink=$_SERVER ['DOCUMENT_ROOT'].'/weixin/back/web/temp/message/'.$_COOKIE['comId'].'/message.json';
+	  $docUnlink=$_SERVER ['DOCUMENT_ROOT'].'/weixin/back/web/temp/message/'.$comId.'/message.json';
 	  if(file_exists($docUnlink)){ //判断是否存在文件
 		  unlink($docUnlink);
 	  }
@@ -75,10 +76,10 @@
 		  }else{
 			  $name='匿名';
 		  }
-		  $arr=array(uniqid(),$_COOKIE['comId'],date('Y-m-d'),$name,$_POST['phone'],$_POST['detail']);
+		  $arr=array(uniqid(),$comId,date('Y-m-d'),$name,$_POST['phone'],$_POST['detail']);
 		  $result=$sqlQuery->insert($tableName,$arr);
 		  if($result){
-			  echo "<script>alert('恭喜您留言成功!');location.href='message.php';</script>";
+			  echo "<script>alert('恭喜您留言成功!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 		  }else{
 			  echo "<script>alert('对不住，服务器响应超时，请重新留言!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 		  }
@@ -96,8 +97,8 @@
 	  if(!file_exists($xmlFile)){  //创建  xml 文件
 		  $tableName='car_type';
 		  $conArr=array('father','level');
-		  $conArrCont=array($_COOKIE['carId'],'2');
-		  $returnArr=$sqlQuery->select($tableName,$conArr,$conArrCont,'',$orderArr,'-1');
+		  $conArrCont=array($_GET['carId'],'2');
+		  $returnArr=$sqlQuery->select($tableName,$conArr,$conArrCont,'','','-1');
 	
 		  $xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
 		  $xml .= "<article>\n";

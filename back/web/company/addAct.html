@@ -67,7 +67,7 @@ $(document).ready(function(){
 		str+='<input type="checkbox" class="seriesPick" name="seriesPick" value="'+res[i]+'"/><span>'+res[i+1]+'</span><br />';
     }
 	$('#selectCarSeries').html(str);
-    
+
 	$('#selectAll').bind('change', function(){
 		if($('#selectAll').prop('checked')){
 			$("input[name^='seriesPick']").each(function(){
@@ -205,9 +205,9 @@ $(document).ready(function(){
   			<div id="dialog-form" title="选择车型">
  				 <span class="validateTips">可以同时添加多个车型</span>
                  <form>
-  					<fieldset id="selectCarModel"〉				
-             
-			 </fieldset>
+  					<fieldset id="selectCarSeries">				
+ 
+   					 </fieldset>
   				</form>
 			</div>
 			<button id="addCarModel" class="addCarModel" style="display:inline-block;">选择车型</button>

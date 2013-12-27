@@ -5,9 +5,7 @@
 <title>在售车型</title>
 <script type="text/javascript" src="../../res/js/jquery-1.4.2.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../../res/css/nameList.css" />
-<link rel="stylesheet" href="../../res/css/datepicker.css
-
-" type="text/css" />
+<link rel="stylesheet" href="../../res/css/datepicker.css" type="text/css" />
 <script src="../../res/js/nameList.js"></script>
 <script src="<!--{$tempData}--> "></script>
 <script type="text/javascript">
@@ -27,30 +25,21 @@
 	
 	<!--{if $choice=='0'}--> 
 	function pageQie(page){
-		var str="<tbody><tr class='tTitle'><td class='date'>"+"报名日期"+"</td><td class='serviceKind'>"+
-					 "服务类型"+"</td><td class='carNum'>"+
-					 "车牌号"+"</td><td class='bookDate'>"+
-					 "预约日期"+"</td><td class='bookTime'>"+
-					 "预约时间"+"</td><td class='name'>"+
-					 "姓名"+"</td><td class='phone'>"+
-					 "联系方式"+"</td><td class='operation2'>操作</td></tr>";
-					 "预约时间"+"</td></tr>";
+		var str="<tbody><tr class='tTitle'><td class='date'>"+"报名日期"+"</td><td class='series'>"+
+					 "车系</td><td class='model'>"+
+					 "车型</td><td class='name'>"+
+					 "姓名</td><td class='phone'>"+
+					 "联系方式</td><td class='willBuyTime'>"+
+					 "预约时间</td><td class='operation'>"+
+					 "操作</td>";
 		var show=10;
 		for(var i=page*show;i<(page+1)*show&&i<dataJson.length;i++){
-			str+="<tr><td class='date'>"+dataJson[i].date+"</td><td class='serviceKind'>"+
-					 dataJson[i].type+"</td><td class='carNum'>"+
-					 dataJson[i].license+"</td><td class='bookDate'>"+
-					 dataJson[i].bookDate+"</td><td class='bookTime'>"+
-					 dataJson[i].bookTime+"</td><td class='name'>"+
+			str+="<tr><td class='date'>"+dataJson[i].date+"</td><td class='brand'>"+
+					 dataJson[i].series+"</td><td class='model'>"+
+					 dataJson[i].model+"</td><td class='name'>"+
 					 dataJson[i].name+"</td><td class='phone'>"+
-					 dataJson[i].contact+"</td><td class='operation2'>";
-					 if(dataJson[i].status==0){
-						 str+="<a onclick='return confirm(\"是否标记为已处理？\")' href='operation.php?action=dealSer&id="+dataJson[i].service_id+"'>标记为已处理";
-					 }else{
-						 str+="<a onclick='return confirm(\"是否标记为未处理？\")' href='operation.php?action=dealSerReg&id="+dataJson[i].service_id+"'>已处理";
-					 }
-					 str+="</a>&nbsp;&nbsp;<a onclick='return confirm(\"是否删除此服务报名？\")' href='operation.php?action=deleSer&id="+dataJson[i].service_id+"'>删除</a>"+
-					 "</td>"+
+					 dataJson[i].telephone+"</td><td class='willBuyTime'>"+
+					 dataJson[i].willBuyTime+"</td><td class='operation'><a onclick='return confirm(\"是否删除此购车报名？\")' href='operation.php?action=delGroUser&id="+dataJson[i].group_id+"'>删除</a></td>"+
 				 +"</tr>"	;
 		}
 		str+="</tbody>";
@@ -66,7 +55,7 @@
 	<!--{else if}--> 
 	data=decodeURI('<!--{$choice}-->');
 	dataArr=data.split(',');
-    
+ 
 	var m=0;
 	var finalJson=new Array();
     for(var k=0;k<dataJson.length;k++){
@@ -86,7 +75,7 @@
 		//alert(flag+' k: '+k);
 		if(flag==1&&dataArr[0]=='0'){
 			flag=1;
-		}else if(flag==1&&dataArr[0]==dataJson[k].bookDate){
+		}else if(flag==1&&dataArr[0]==dataJson[k].series){
 			flag=1;
 		}else{
 			flag=0;
@@ -94,7 +83,7 @@
 		
 		if(flag==1&&dataArr[1]=='0'){
 			flag=1;
-		}else if(flag==1&&dataArr[1]==dataJson[k].type){
+		}else if(flag==1&&dataArr[1]==dataJson[k].model){
 			flag=1;
 		}else{
 			flag=0;
@@ -102,24 +91,11 @@
 		
 		if(flag==1&&dataArr[4]=='0'){
 			flag=1;
-		}else if(flag==1){
-			if(dataArr[4]=='未处理'){
-				if(dataJson[k].status=='0'){
-					flag=1;
-				}else{
-					flag=0;
-				}
-			}else{
-				if(dataJson[k].status=='1'){
-					flag=1;
-				}else{
-					flag=0;
-				}
-			}
+		}else if(flag==1&&dataArr[4]==dataJson[k].willBuyTime){
+			flag=1;
 		}else{
 			flag=0;
 		}
-		
 		//	
 		if(flag==1){
 			finalJson[m]=dataJson[k];
@@ -127,30 +103,21 @@
 		}
 	}
 	function pageQie(page){
-		var str="<tbody><tr class='tTitle'><td class='date'>"+"报名日期"+"</td><td class='serviceKind'>"+
-					 "服务类型"+"</td><td class='carNum'>"+
-					 "车牌号"+"</td><td class='bookDate'>"+
-					 "预约日期"+"</td><td class='bookTime'>"+
-					 "预约时间"+"</td><td class='name'>"+
-					 "姓名"+"</td><td class='phone'>"+
-					 "联系方式"+"</td><td class='operation2'>操作</td></tr>";
-					
+		var str="<tbody><tr class='tTitle'><td class='date'>"+"报名日期"+"</td><td class='series'>"+
+					 "车系</td><td class='model'>"+
+					 "车型</td><td class='name'>"+
+					 "姓名</td><td class='phone'>"+
+					 "联系方式</td><td class='willBuyTime'>"+
+					 "预约时间</td><td class='operation'>"+
+					 "操作</td>";
 		var show=10;
 		for(var i=page*show;i<(page+1)*show&&i<finalJson.length;i++){
-			str+="<tr><td class='date'>"+finalJson[i].date+"</td><td class='serviceKind'>"+
-			         finalJson[i].type+"</td><td class='carNum'>"+
-					 finalJson[i].license+"</td><td class='bookDate'>"+
-					 finalJson[i].bookDate+"</td><td class='bookTime'>"+
-					 finalJson[i].bookTime+"</td><td class='name'>"+
+			str+="<tr><td class='date'>"+finalJson[i].date+"</td><td class='brand'>"+
+					 finalJson[i].series+"</td><td class='model'>"+
+					 finalJson[i].model+"</td><td class='name'>"+
 					 finalJson[i].name+"</td><td class='phone'>"+
-					 finalJson[i].contact+"</td><td class='operation2'>";
-					 if(finalJson[i].status==0){
-						 str+="<a onclick='return confirm(\"是否标记为已处理？\")' href='operation.php?action=dealSer&id="+finalJson[i].service_id+"'>标记为已处理";
-					 }else{
-						 str+="<a onclick='return confirm(\"是否标记为未处理？\")' href='operation.php?action=dealSerReg&id="+dataJson[i].service_id+"'>已处理";
-					 }
-					 str+="</a>&nbsp;&nbsp;<a onclick='return confirm(\"是否删除此服务报名？\")' href='operation.php?action=deleSer&id="+finalJson[i].service_id+"'>删除</a>"+
-					 "</td>"+
+					 finalJson[i].telephone+"</td><td class='willBuyTime'>"+
+					 finalJson[i].willBuyTime+"</td><td class='operation'><a onclick='return confirm(\"是否删除此购车报名？\")' href='operation.php?action=delGroUser&id="+finalJson[i].group_id+"'>删除</a></td>"+
 				 +"</tr>"	;
 		}
 		str+="</tbody>";
@@ -169,17 +136,7 @@
 
 <body>
     	<div class="carTable">
-        	<table id="tbody" class="tbody" >
-            	<tr class="tTitle">
-                	<td class="date">报名日期</td>
-                    <td class="serviceKind">服务种类</td>
-                    <td class="carNum">车牌号</td>
-                    <td class="bookDate">预约日期</td>
-                    <td class="bookDate">预约时间</td>
-                    <td class="name">姓名</td>
-                    <td class="phone">联系方式</td>
-                    <td class="operation2">操作</td>                   
-                </tr>
+        	<table id="tbody" class="tbody" >  	
             </table>
       </div>
       <div class="page" style="clear:both; font-size:14px; padding-top:15px;"> 
