@@ -70,8 +70,8 @@ class wechatCallbackapiTest
 					    <ArticleCount>9</ArticleCount>
 						<Articles>
 							<item>
-								<Title><![CDATA[点击进入东莞金士达北京现代微店]]></Title> 
-								<Description><![CDATA[东莞金士达北京现代，为您提供最尊贵服务]]></Description>
+								<Title><![CDATA[点击进入东莞金世达北京现代微店]]></Title> 
+								<Description><![CDATA[东莞金世达北京现代，为您提供最尊贵服务]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/back/image/company/52b7ae3ad312f.jpg]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/homepage.php?comId=30]]></Url>
 							</item>
@@ -114,14 +114,14 @@ class wechatCallbackapiTest
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=30]]></Url>
 							</item>
 							<item>
-								<Title><![CDATA[东莞金士达北京现代]]></Title>
-								<Description><![CDATA[关于东莞金士达北京现代]]></Description>
+								<Title><![CDATA[东莞金世达北京现代]]></Title>
+								<Description><![CDATA[关于东莞金世达北京现代]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/company-info.png]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/companyInfo.php?comId=30#mp.weixin.qq.com]]></Url>
 							</item>
 							<item>
-								<Title><![CDATA[东莞金士达北京现代，臻至尊贵享受]]></Title>
-								<Description><![CDATA[东莞金士达北京现代]]></Description>
+								<Title><![CDATA[东莞金世达北京现代，臻至尊贵享受]]></Title>
+								<Description><![CDATA[东莞金世达北京现代]]></Description>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/companyInfo.php?comId=30#mp.weixin.qq.com]]></Url>
 							</item>
 							</Articles>
@@ -141,8 +141,8 @@ class wechatCallbackapiTest
 					    <ArticleCount>9</ArticleCount>
 						<Articles>
 							<item>
-								<Title><![CDATA[点击进入东莞金士达北京现代微店]]></Title> 
-								<Description><![CDATA[东莞金士达北京现代，为您提供最尊贵服务]]></Description>
+								<Title><![CDATA[点击进入东莞金世达北京现代微店]]></Title> 
+								<Description><![CDATA[东莞金世达北京现代，为您提供最尊贵服务]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/back/image/company/52b7ae3ad312f.jpg]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/homepage.php?comId=30]]></Url>
 							</item>
@@ -185,14 +185,14 @@ class wechatCallbackapiTest
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=30]]></Url>
 							</item>
 							<item>
-								<Title><![CDATA[东莞金士达北京现代]]></Title>
-								<Description><![CDATA[关于东莞金士达北京现代]]></Description>
+								<Title><![CDATA[东莞金世达北京现代]]></Title>
+								<Description><![CDATA[关于东莞金世达北京现代]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/company-info.png]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/companyInfo.php?comId=30#mp.weixin.qq.com]]></Url>
 							</item>
 							<item>
-								<Title><![CDATA[东莞金士达北京现代，臻至尊贵享受]]></Title>
-								<Description><![CDATA[东莞金士达北京现代]]></Description>
+								<Title><![CDATA[东莞金世达北京现代，臻至尊贵享受]]></Title>
+								<Description><![CDATA[东莞金世达北京现代]]></Description>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/companyInfo.php?comId=30#mp.weixin.qq.com]]></Url>
 							</item>
 							</Articles>
@@ -210,8 +210,8 @@ class wechatCallbackapiTest
 					    <ArticleCount>9</ArticleCount>
 						<Articles>
 							<item>
-								<Title><![CDATA[点击进入东莞金士达北京现代微店]]></Title> 
-								<Description><![CDATA[东莞金士达北京现代，为您提供最尊贵服务]]></Description>
+								<Title><![CDATA[点击进入东莞金世达北京现代微店]]></Title> 
+								<Description><![CDATA[东莞金世达北京现代，为您提供最尊贵服务]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/back/image/company/52b7ae3ad312f.jpg]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/homepage.php?comId=30]]></Url>
 							</item>
@@ -254,14 +254,14 @@ class wechatCallbackapiTest
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=30]]></Url>
 							</item>
 							<item>
-								<Title><![CDATA[东莞金士达北京现代]]></Title>
-								<Description><![CDATA[关于东莞金士达北京现代]]></Description>
+								<Title><![CDATA[东莞金世达北京现代]]></Title>
+								<Description><![CDATA[关于东莞金世达北京现代]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/company-info.png]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/companyInfo.php?comId=30#mp.weixin.qq.com]]></Url>
 							</item>
 							<item>
-								<Title><![CDATA[东莞金士达北京现代，臻至尊贵享受]]></Title>
-								<Description><![CDATA[东莞金士达北京现代]]></Description>
+								<Title><![CDATA[东莞金世达北京现代，臻至尊贵享受]]></Title>
+								<Description><![CDATA[东莞金世达北京现代]]></Description>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/companyInfo.php?comId=30#mp.weixin.qq.com]]></Url>
 							</item>
 							</Articles>
