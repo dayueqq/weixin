@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="title" content="微信微店">
+<meta name="apple-touch-fullscreen" content="YES">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>东莞仁孚奔驰</title>
+<script type="text/javascript">
+	document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+     WeixinJSBridge.call('hideToolbar');
+     WeixinJSBridge.call('hideOptionMenu');
+	 });
+</script>
+<style>
+*{
+    padding:0 0;
+    margin:0 0;
+}
+body{
+    background:#f3f3f3;
+
+}
+.oldCarList{
+    width:100%;
+    height:auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.oldCarSell{
+    display: block;
+    width:100%;
+    height:auto;
+    border:none;
+    text-decoration: none;
+}
+.oldCar{
+    width:98%;
+    height:140px;
+    background: #fff;
+    border-bottom: 1px solid #b1b1b1;
+    border-left:1px solid #f1f1f1;
+    margin:5px auto 5px auto;
+    box-shadow: 5px;
+}
+.carName{
+    width:96%;
+    height:20px;
+    line-height: 20px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    font-size: 16px;
+    color:#000;
+    padding-top:10px;
+    margin:0 auto;
+}
+.carBox{
+    width:96%;
+    height:140px;
+    margin:10px auto 0 auto;
+}
+.carImage{
+    width:50%;
+    height:90px;
+    display: block;
+    float: left;
+	border:none;
+}
+.carInfo{
+    width:40%;
+    float:left;
+    height:90px;
+    font-family: "微软雅黑";
+    font-size:12px;
+    font-weight: 400px;
+    margin-left: 2%;
+    margin-top:5px;
+    line-height: 20px;
+}
+.carPrice{
+    color:#ff8201;
+}
+.money{
+    font-weight: bold;
+}
+.registerTime{
+    color:#999;
+}
+.date{
+    color:#000;
+    font-weight: bold;
+}
+.mileage{
+    color:#999;
+}
+.distance{
+    color:#000;
+    font-weight: bold;
+}
+.displayment{
+    color:#999;
+}
+.size{
+    color:#000;
+    font-weight: bold;
+}
+.seeMore{
+    width:4%;
+    height:90px;
+    float: left;
+    line-height: 90px;
+    margin-left:10px;
+    background: #ff8201;
+    border-right:1px solid #ff9920;
+    font-size: 8px;
+    color:#fff;
+    font-weight: bold;
+    text-align: center;
+}
+.footer{
+    width:100%;
+    height:47px;;
+    background:#000;
+    font-family:"微软雅黑";
+    font-size:10px;
+    color:#FFF;
+    text-align:center;
+    line-height:7px;
+    overflow:hidden;
+}
+.footer p{
+    margin:12px 0 0 0;
+}
+.tengxun{
+    font-size:12px;
+    margin-bottom:0;
+}
+.clear{
+	clear:both;
+}
+</style>
+</head>
+<body>
+	 <div class="goback" style="width:100%;height:47px;background:#000;position:fixed; top:0; text-align:center; z-index:77;">
+		<p style="color:#fff; position:relative;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;">二手车列表</p>
+       <!-- <a href="3-homepage.html" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:6%; margin-top:8px;"><img src="../../res/img/back.png" width="33" height="33"/></a>-->	
+    </div>
+    <div style="width:100%; height:47px;"></div>
+    <div id="mainBody">
+    	<img src="../../res/img/S400/banner-500-163.jpg" style="width:100%;height:auto;">
+        <ul class="oldCarList">
+            <a class="oldCarSell" id="oldCarSell-0" href="http://88auto.com.cn/weixin/user/web/user/ershouInner.html#mp.weixin.qq.com">
+                <li class="oldCar" id="oldCar-1">
+                    <p class="carName">S300豪华型 GE</p>
+                    <div class="carBox">
+                        <img class="carImage" src="../../res/img/S400/S-500-332.jpg">
+                        <div class="carInfo">
+                            <p class="carPrice">销售价：<span class="money">￥93.8万</span></p>
+                            <p class="displayment">排量：<span class="size">3.0T</span></p>
+                            <p class="registerTime">上牌：<span class="date">2013-1-30</span></p>
+                            <p class="mileage">公里数：<span class="distance">513公里</span></p>
+                        </div>
+                        <p class="seeMore">>></p>
+                    </div>
+                </li>
+            </a>
+            <a class="oldCarSell" id="oldCarSell-0" href="http://88auto.com.cn/weixin/user/web/user/ershouInner-2.html#mp.weixin.qq.com">
+                <li class="oldCar" id="oldCar-1">
+                    <p class="carName">GLK300 Luxury</p>
+                    <div class="carBox">
+                        <img class="carImage" src="../../res/img/S400/GLK-500-332.jpg">
+                        <div class="carInfo">
+                            <p class="carPrice">销售价：<span class="money">￥51.8万</span></p>
+                            <p class="displayment">排量：<span class="size">3.0T</span></p>
+                            <p class="registerTime">上牌：<span class="date">2012-11-26</span></p>
+                            <p class="mileage">公里数：<span class="distance">9936公里</span></p>
+                        </div>
+                        <p class="seeMore">>></p>
+                    </div>
+                </li>
+            </a>
+            <a class="oldCarSell" id="oldCarSell-0" href="http://88auto.com.cn/weixin/user/web/user/ershouInner-3.html#mp.weixin.qq.com">
+                <li class="oldCar" id="oldCar-1">
+                    <p class="carName">R350</p>
+                    <div class="carBox">
+                        <img class="carImage" src="../../res/img/S400/R-500-332.jpg">
+                        <div class="carInfo">
+                            <p class="carPrice">销售价：<span class="money">￥75.8万</span></p>
+                            <p class="displayment">排量：<span class="size">3.5T</span></p>
+                            <p class="registerTime">上牌：<span class="date">2012-11-27</span></p>
+                            <p class="mileage">公里数：<span class="distance">6777公里</span></p>
+                        </div>
+                        <p class="seeMore">>></p>
+                    </div>
+                </li>
+            </a>
+        </ul>
+    </div>
+	
+    <div class="footer">
+    	<p class="tengxun">腾讯汽车</p>
+        <p>Copyright © 1998 - 2013 Tencent. All Rights Reserved</p>
+    </div>
+</body>
+</html>

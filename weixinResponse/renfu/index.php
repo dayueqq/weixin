@@ -68,7 +68,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>9</ArticleCount>
+					    <ArticleCount>10</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入仁孚奔驰微店]]></Title> 
@@ -115,6 +115,12 @@ class wechatCallbackapiTest
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=3]]></Url>
 							</item>
 							<item>
+								<Title><![CDATA[认证二手车]]></Title> 
+								<Description><![CDATA[认证二手车]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/secondHand-icon-200-200.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/weixinershou.html]]></Url>
+							</item>
+							<item>
 								<Title><![CDATA[关于仁孚奔驰]]></Title>
 								<Description><![CDATA[关于仁孚奔驰]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/company-info.png]]></PicUrl>
@@ -130,7 +136,26 @@ class wechatCallbackapiTest
                 $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
                 echo $resultStr;
 	    	}
-
+			if($keyword == "二手车")
+			{
+				$textTpl ="<xml>
+                        <ToUserName><![CDATA[%s]]></ToUserName>
+                        <FromUserName><![CDATA[%s]]></FromUserName>
+                        <CreateTime>%s</CreateTime>
+                        <MsgType><![CDATA[news]]></MsgType>
+					    <ArticleCount>1</ArticleCount>
+						<Articles>
+							<item>
+								<Title><![CDATA[点击查看东莞仁孚二手车]]></Title> 
+								<Description><![CDATA[点击查看东莞仁孚二手车]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/s400/pic.jpg]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/weixinershou.html]]></Url>
+							</item>
+						</Articles>
+                        </xml>";
+				$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
+                echo $resultStr;
+			}
 
             if($keyword == "测试" || $keyword == "321321")
             {
@@ -139,7 +164,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>9</ArticleCount>
+					    <ArticleCount>10</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入仁孚奔驰微店]]></Title> 
@@ -186,6 +211,12 @@ class wechatCallbackapiTest
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=3]]></Url>
 							</item>
 							<item>
+								<Title><![CDATA[认证二手车]]></Title> 
+								<Description><![CDATA[认证二手车]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/secondHand-icon-200-200.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/weixinershou.html]]></Url>
+							</item>
+							<item>
 								<Title><![CDATA[关于仁孚奔驰]]></Title>
 								<Description><![CDATA[关于仁孚奔驰]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/company-info.png]]></PicUrl>
@@ -209,7 +240,7 @@ class wechatCallbackapiTest
                         <FromUserName><![CDATA[%s]]></FromUserName>
                         <CreateTime>%s</CreateTime>
                         <MsgType><![CDATA[news]]></MsgType>
-					    <ArticleCount>9</ArticleCount>
+					    <ArticleCount>10</ArticleCount>
 						<Articles>
 							<item>
 								<Title><![CDATA[点击进入仁孚奔驰微店]]></Title> 
@@ -254,6 +285,12 @@ class wechatCallbackapiTest
 								<Description><![CDATA[车友留言]]></Description>
 								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/add-message.png]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/message.php?comId=3]]></Url>
+							</item>
+							<item>
+								<Title><![CDATA[认证二手车]]></Title> 
+								<Description><![CDATA[认证二手车]]></Description>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/user/res/img/secondHand-icon-200-200.png]]></PicUrl>
+								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/weixinershou.html]]></Url>
 							</item>
 							<item>
 								<Title><![CDATA[关于仁孚奔驰]]></Title>
