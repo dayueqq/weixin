@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-12-24 10:34:38
+<?php /* Smarty version Smarty-3.0.6, created on 2014-02-21 20:21:39
          compiled from "./mainbody.html" */ ?>
-<?php /*%%SmartyHeaderCode:1332152b8f2be16b9b2-58727774%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:22593530744d3518e28-98459367%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '698697e9dd6bcc6b1f827d1ae1ab0572af9f8625' => 
     array (
       0 => './mainbody.html',
-      1 => 1387852476,
+      1 => 1392985292,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1332152b8f2be16b9b2-58727774',
+  'nocache_hash' => '22593530744d3518e28-98459367',
   'function' => 
   array (
   ),
@@ -62,8 +62,8 @@ $_smarty_tpl->decodeProperties(array (
                     <li><a href="groupBuy.php" target="leftBody" >团购设置</a></li>
           			<li><a href="addDrive.php" target="leftBody" >预约试驾</a></li>
                     <li><a href="addService.php" target="leftBody" >预约售后</a></li>
-                    <li><a href="companyInfo.php" target="leftBody" >公司信息</a></li>
-                    
+                    <li><a href="replace.html" target="leftBody" >置换说明</a></li>
+                    <li><a href="companyInfo.php" target="leftBody" >公司信息</a></li>  
         		</ul>
             </li>
             <!--
