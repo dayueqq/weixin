@@ -6,6 +6,7 @@
   $sqlQuery=new SqlQuery();
   
   $action=$_GET['action'];  //操作指令
+  date_default_timezone_set('PRC');
   
   if($action=='upSign'){   //添加活动报名   #####################
       $tableName='user_info';

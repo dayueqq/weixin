@@ -6,7 +6,7 @@ body{font:12px/180% Arial, Helvetica, sans-serifl;color:#5a5a5a;}
 .pagedemo{width:700px;margin:0 auto;text-align:left;}
 .pagedemo h1{font-size:21px;height:47px;line-height:47px;text-transform:uppercase;}
 .tabsContent{border:1px solid #ccc;width:698px;overflow:hidden;}
-.tab{padding-top:10px;display:block;}
+.tab{padding-top:10px;display:block;height:80px;}
 .tab h2{font-weight:bold;font-size:16px;}
 .tab h3{font-weight:bold;font-size:14px;margin-top:20px;}
 .tab p{margin-top:16px;clear:both;}
@@ -39,20 +39,20 @@ input.inputDate{border:1px solid #999;padding:4px;border-bottom-color:#ddd;borde
 }
 .tabBuy{
 	display:block;
-	width:100px;
+	width:70px;
 	height:31px;
 	background:#f3f3f3;
 	float:left;
 	text-decoration:none;
 	line-height:31px;
-	padding-left:40px;
+	text-align:center;
 	border:solid 1px #CCCCCC;
 	color:#000;
 }
 .tabDriveSelected{
     background:url(../img/tabBack.jpg);
 	display:block;
-	width:100px;
+	width:70px;
 	height:31px;
 	float:left;
 	text-decoration:none;
@@ -60,23 +60,23 @@ input.inputDate{border:1px solid #999;padding:4px;border-bottom-color:#ddd;borde
 	border:solid 1px #CCC;
 	border-left:none;
 	color:#000;
-	padding-left:40px;
+	text-align:center;
 }
 .tabBuySelected{
 	background:url(../img/tabBack.jpg);
 	display:block;
-	width:100px;
+	width:70px;
 	height:31px;
 	float:left;
 	text-decoration:none;
 	line-height:31px;
-	padding-left:40px;
+	text-align:center;
 	border:solid 1px #CCCCCC;
 	color:#000
 }
 .tabDrive{
 	display:block;
-	width:100px;
+	width:70px;
 	height:31px;
 	background:#f3f3f3;
 	float:left;
@@ -85,17 +85,17 @@ input.inputDate{border:1px solid #999;padding:4px;border-bottom-color:#ddd;borde
 	border:solid 1px #CCC;
 	border-left:none;
 	color:#000;
-	padding-left:40px;
+	text-align:center;
 }
 .tabServiceSelected{
 	background:url(../img/tabBack.jpg);
 	display:block;
-	width:100px;
+	width:70px;
 	height:31px;
 	float:left;
 	text-decoration:none;
 	line-height:31px;
-	padding-left:40px;
+	text-align:center;
 	border-top:solid 1px #CCCCCC;
 	border-right:solid 1px #CCCCCC;
 	border-bottom:solid 1px #CCCCCC;
@@ -103,7 +103,7 @@ input.inputDate{border:1px solid #999;padding:4px;border-bottom-color:#ddd;borde
 }
 .tabService{
 	display:block;
-	width:100px;
+	width:70px;
 	height:31px;
 	background:#f3f3f3;
 	float:left;
@@ -112,11 +112,11 @@ input.inputDate{border:1px solid #999;padding:4px;border-bottom-color:#ddd;borde
 	border:solid 1px #CCC;
 	border-left:none;
 	color:#000;
-	padding-left:40px;
+	text-align:center;
 }
 .tabGroupBuy{
 	display:block;
-	width:100px;
+	width:70px;
 	height:31px;
 	background:#f3f3f3;
 	float:left;
@@ -125,17 +125,71 @@ input.inputDate{border:1px solid #999;padding:4px;border-bottom-color:#ddd;borde
 	border:solid 1px #CCC;
 	border-left:none;
 	color:#000;
-	padding-left:40px;
+	text-align:center;
 }
 .tabGroupBuySelected{
 	background:url(../img/tabBack.jpg);
 	display:block;
-	width:100px;
+	width:70px;
 	height:31px;
 	float:left;
 	text-decoration:none;
 	line-height:31px;
-	padding-left:40px;
+	text-align:center;
+	border-top:solid 1px #CCCCCC;
+	border-right:solid 1px #CCCCCC;
+	border-bottom:solid 1px #CCCCCC;
+	color:#000
+}
+.tabInsurance{
+	display:block;
+	width:70px;
+	height:31px;
+	background:#f3f3f3;
+	float:left;
+	text-decoration:none;
+	line-height:31px;
+	border:solid 1px #CCC;
+	border-left:none;
+	color:#000;
+	text-align:center;
+}
+.tabInsuranceSelected{
+	background:url(../img/tabBack.jpg);
+	display:block;
+	width:70px;
+	height:31px;
+	float:left;
+	text-decoration:none;
+	line-height:31px;
+	text-align:center;
+	border-top:solid 1px #CCCCCC;
+	border-right:solid 1px #CCCCCC;
+	border-bottom:solid 1px #CCCCCC;
+	color:#000
+}
+.tabReplace{
+	display:block;
+	width:70px;
+	height:31px;
+	background:#f3f3f3;
+	float:left;
+	text-decoration:none;
+	line-height:31px;
+	border:solid 1px #CCC;
+	border-left:none;
+	color:#000;
+	text-align:center;
+}
+.tabReplaceSelected{
+	background:url(../img/tabBack.jpg);
+	display:block;
+	width:70px;
+	height:31px;
+	float:left;
+	text-decoration:none;
+	line-height:31px;
+	text-align:center;
 	border-top:solid 1px #CCCCCC;
 	border-right:solid 1px #CCCCCC;
 	border-bottom:solid 1px #CCCCCC;
@@ -151,6 +205,12 @@ input.inputDate{border:1px solid #999;padding:4px;border-bottom-color:#ddd;borde
 	background:url(../img/tabBack.jpg);
 }
 .tabGroupBuy:hover{
+	background:url(../img/tabBack.jpg);
+}
+.tabReplace:hover{
+	background:url(../img/tabBack.jpg);
+}
+.tabInsurance:hover{
 	background:url(../img/tabBack.jpg);
 }
 .buyTable{
@@ -265,6 +325,39 @@ input.inputDate{border:1px solid #999;padding:4px;border-bottom-color:#ddd;borde
 .detail{
 	width:438px;
 }
+.carDate{
+	width:70px;
+}
+.carSeries{
+	width:120px;
+	overflow:hidden;
+}
+.biansu{
+	width:52px;
+}
+.carType{
+	width:100px;
+	overflow:hidden;
+}
+.carDisplacement{
+	width:40px;
+}
+.carMiles{
+	width:62px;
+}
+.carBuyTime{
+	width:70px;
+}
+.carNumber{
+	width:70px;
+}
+.insuranceType{
+	width:350px;
+	overflow:hidden;
+}
+.insurancePrice{
+	width:76px;
+}
 /*表头各项数据项规定*/
 .site{
 	display:block;
@@ -378,7 +471,7 @@ s{
 }
 .tab{
 	width:500px;
-	height:auto;
+	height:35px;
 	margin-left:15px;
 }
 
@@ -399,7 +492,9 @@ s{
 	bottom:25px;
 	right:10px;
 }
-
+.searchCondition{
+	height:80px;
+}
 .export{
 	display:block;
 	float:right;

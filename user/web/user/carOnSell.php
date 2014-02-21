@@ -4,7 +4,7 @@
   include $common_path.'SqlQuery.php';
   
   $sqlQuery=new SqlQuery();
-  
+  date_default_timezone_set('PRC');
   $carId=$_GET['carId'];
   $tableName='allcar_info';
   $conArr=array('car_id');

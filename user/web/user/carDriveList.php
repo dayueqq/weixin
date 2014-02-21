@@ -4,7 +4,7 @@
   include $common_path.'SqlQuery.php';
 
   $sqlQuery=new SqlQuery();
-  
+  date_default_timezone_set('PRC');
   $comId=$_COOKIE['comId'];
   $jsonfile='../temp/drive/'.$comId.'drive.json';
   

@@ -4,7 +4,7 @@
   include $common_path.'SqlQuery.php';
 
   $sqlQuery=new SqlQuery();
-  
+  date_default_timezone_set('PRC');
   //如果用户从 get 方式进入，则覆盖之前的 cookie
   if(isset($_GET['comId'])){
 	  $comId=$_GET['comId'];

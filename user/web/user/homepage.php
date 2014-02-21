@@ -5,7 +5,7 @@
   include $common_path.'SqlQuery.php';
   
   $sqlQuery=new SqlQuery();
-
+  date_default_timezone_set('PRC');
   if(isset($_GET['comId'])){
       $comId=$_GET['comId'];
   }else if(isset($_COOKIE['comId'])){

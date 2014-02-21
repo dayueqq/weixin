@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-12-26 07:02:12
+<?php /* Smarty version Smarty-3.0.6, created on 2014-02-21 08:46:26
          compiled from "./service.html" */ ?>
-<?php /*%%SmartyHeaderCode:503752bbd474310a67-85836194%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:908553071262250b91-56115665%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '62521a2a58b81490a110564a734853410189cbc9' => 
     array (
       0 => './service.html',
-      1 => 1387984119,
+      1 => 1392950817,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '503752bbd474310a67-85836194',
+  'nocache_hash' => '908553071262250b91-56115665',
   'function' => 
   array (
   ),
@@ -31,13 +31,15 @@ $_smarty_tpl->decodeProperties(array (
 <!--小时分钟时间选择器js及css-->
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="../../res/js/mobiscroll.custom-2.6.2.min.js"></script>
-<link href="../../res/css/mobiscroll.custom-2.6.2.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../res/js/mobiscroll.scroller.ios7.js"></script>
+<link href="../../res/css/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+<link href="../../res/css/mobiscroll.scroller.ios7.css" rel="stylesheet" type="text/css" />
 </script>
 </script>
 <script type="text/javascript">
 $(function(){
     $('#time').mobiscroll().time({
-        theme: 'ios',
+        theme: 'ios7',
         lang: 'zh',
         display: 'bottom',
         mode: 'scroller',

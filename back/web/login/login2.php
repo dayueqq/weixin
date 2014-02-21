@@ -1,6 +1,6 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
-    $sql=mysql_connect('localhost','root','root');
+    $sql=mysql_connect('localhost','root','password');
     $db=mysql_select_db("weixin",$sql);
     mysql_query('set names utf8');
 	if(isset($_POST['sub'])){

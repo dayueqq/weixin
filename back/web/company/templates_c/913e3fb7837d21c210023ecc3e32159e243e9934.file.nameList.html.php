@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-12-17 13:11:24
+<?php /* Smarty version Smarty-3.0.6, created on 2014-02-21 16:31:48
          compiled from "./nameList.html" */ ?>
-<?php /*%%SmartyHeaderCode:3242052afdcfc932d63-04316389%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:706753070ef40a0ca5-29056374%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '913e3fb7837d21c210023ecc3e32159e243e9934' => 
     array (
       0 => './nameList.html',
-      1 => 1387256714,
+      1 => 1392971482,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3242052afdcfc932d63-04316389',
+  'nocache_hash' => '706753070ef40a0ca5-29056374',
   'function' => 
   array (
   ),
@@ -28,304 +28,6 @@ $_smarty_tpl->decodeProperties(array (
 <script src="../../res/js/nameList.js"></script>
 <script type="text/javascript" src="../../res/js/datepicker.js"></script>
 <script type="text/javascript" src="../../../common/temp/brand.json"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-	//实例三
-	$('#date3').DatePicker({
-		flat: true,
-		date: ['2009-12-28','2010-01-23'],
-		current: '2010-01-01',
-		calendars: 3,
-		mode: 'range',
-		starts: 1
-	});
-	//实例五
-	var now3 = new Date();
-	now3.addDays(-4);
-	var now4 = new Date()
-	$('#widgetCalendar').DatePicker({
-		flat: true,
-		format: 'Y-m-d',
-		date: [new Date(now3), new Date(now4)],
-		calendars: 3,
-		mode: 'range',
-		starts: 1,
-		onChange: function(formated) {
-			$('#widgetField span').get(0).innerHTML = formated.join(' —— ');
-		}
-	});
-	//实例四
-	$('.inputDate').DatePicker({
-		format:'Y-m-d',
-		date: $('#inputDate').val(),
-		current: $('#inputDate').val(),
-		starts: 1,
-		position: 'right',
-		onBeforeShow: function(){
-			$('#inputDate').DatePickerSetDate($('#inputDate').val(), true);
-		},
-		onChange: function(formated, dates){
-			$('#inputDate').val(formated);
-			$('#inputDate').DatePickerHide();
-		}
-	});
-	//实例四
-	$('.inputDate1').DatePicker({
-		format:'Y-m-d',
-		date: $('#inputDate1').val(),
-		current: $('#inputDate1').val(),
-		starts: 1,
-		position: 'right',
-		onBeforeShow: function(){
-			$('#inputDate1').DatePickerSetDate($('#inputDate1').val(), true);
-		},
-		onChange: function(formated, dates){
-			$('#inputDate1').val(formated);
-			$('#inputDate1').DatePickerHide();
-		}
-	});
-	var state = false;
-	$('#widgetField>a').bind('click', function(){
-		$('#widgetCalendar').stop().animate({height: state ? 0 : $('#widgetCalendar div.datepicker').get(0).offsetHeight}, 500);
-		state = !state;
-		return false;
-	});
-    
-	//修改时间
-	var date=new Date();
-	if(date.getDate()<10){
-		var curTime=date.getFullYear()+'-'+(date.getMonth()+1)+'-0'+date.getDate();
-	    var beforeTime=date.getFullYear()+'-'+(date.getMonth())+'-0'+date.getDate();
-	}else{
-		var curTime=date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate();
-	    var beforeTime=date.getFullYear()+'-'+(date.getMonth())+'-'+date.getDate();
-	}
-	$('#inputDate').val(curTime);
-	$('#inputDate1').val(curTime);
-	$('#widgetField span').html(beforeTime+' —— '+curTime)
-	
-	//当前是处于试驾数据库还是 预约数据库
-	curData='book';
-	//更改任务栏
-	var str='<option>全部</option>';
-	
-	//判断是不是双品牌
-	<?php if ($_smarty_tpl->getVariable('double')->value==1){?> 
-	var carIdArr='<?php echo $_smarty_tpl->getVariable('carId')->value;?>
-'.split('@');
-	var res=(seriesJson[carIdArr[0]]+','+seriesJson[carIdArr[1]]).split(',');
-	<?php }else{ ?> 
-	var res=seriesJson['<?php echo $_smarty_tpl->getVariable('carId')->value;?>
-'].split(',');
-	<?php }?> 
-
-	for(var i=0;i<res.length;i=i+2){
-		str+="<option value='"+res[i]+"'>"+res[i+1]+"</option>" ;
-    }
-	$('#carSeries').html(str);
-	
-	//改变选项栏
-    $('#carSeries').change(function(){
-		var faval=parseInt($('#carSeries').val());
-		var str='<option>全部</option>';
-		if(faval){
-			var res=mod[faval].split(',');
-			for(var i=0;i<res.length;i=i+2){
-				 str+="<option value='"+res[i]+"'>"+res[i+1]+"</option>" ;
-			}
-		}
-		$('#carModel').html(str);
-    });
-
-});
-
-  function searchSql(){
-	    var series=$('#carSeries option:selected').text();
-	  var model=$('#carModel option:selected').text();
-	  var startDate=$('#widgetField span').html().split(' —— ')[0];
-	  var endDate=$('#widgetField span').html().split(' —— ')[1];
-	  var willTime=$('#willBuyTime').val();
-	  var conArr=new Array();
-	  var conArrCont=new Array();
-	  var otherCon='';
-	  if(series!='全部'){
-		  conArrCont[0]=series;
-	  }else{
-		  conArrCont[0]='0';
-	  }
-	  if(model!='全部'){
-		  conArrCont[1]=model;
-	  }else{
-		  conArrCont[1]='0';
-	  }
-	  conArrCont[2]=startDate;
-	  conArrCont[3]=endDate;
-	  conArrCont[4]=willTime;
-	  
-	  if(curData=='book'){
-		  $('#theFrame').attr('src','nameStatics.php?data='+encodeURI(conArrCont.join(',')));
-	  }else if(curData=='dri'){
-		  if($('#driveInput').attr("checked")){
-			  conArrCont[0]='0';
-		  }else{
-			  conArrCont[0]=$('#driveTable #inputDate').val();
-		  }
-		  conArrCont[1]=$('#driveTable #carSeries option:selected').text();
-		  if(conArrCont[1]=='全部'){
-			  conArrCont[1]='0';
-		  }
-		  $('#theFrame').attr('src','nameStatics2.php?data='+encodeURI(conArrCont.join(',')));
-	  }else if(curData=='service'){
-		  if($('#servInput').attr("checked")){
-			  conArrCont[0]='0';
-		  }else{
-			  conArrCont[0]=$('#inputDate1').val();
-		  }
-		  conArrCont[1]=$('#serviceKind option:selected').text();
-		  if(conArrCont[1]=='全部'){
-			  conArrCont[1]='0';
-		  }else{
-			  conArrCont[1]="预约"+conArrCont[1];
-		  }
-		  conArrCont[4]=$('#serviceState option:selected').text();
-		  if(conArrCont[4]=='全部'){
-			  conArrCont[4]='0';
-		  }  
-		  $('#theFrame').attr('src','nameStatics3.php?data='+encodeURI(conArrCont.join(',')));
-	  }else if(curData=='groupBuy'){
-		  $('#theFrame').attr('src','nameStatics4.php?data='+encodeURI(conArrCont.join(',')));
-	  }
-	  //
-  }
-  
-  function qieHuan(obj,type,num){
-	  $('#theFrame').attr('src',obj);
-	  curData=type;
-	  var item1 = document.getElementById("tabBuy");
-	  var item2 = document.getElementById("tabDrive");
-	  var item3 = document.getElementById("tabSerive");
-	  var item4 = document.getElementById("tabGroupBuy");
-	   var service=document.getElementById("serviceTable");
-	   var buy =document.getElementById("buyTable");
-	   var drive = document.getElementById("driveTable");
-	  if(num==1)
-	     {
-		 item1.className = "tabBuySelected";
-		 item2.className = "tabDrive";
-		 buy.style.display="block";
-		 drive.style.display="none";
-		 }
-	   else if(num == 2)
-	     {
-		  item1.className = "tabBuy";
-		  item2.className = "tabDriveSelected";
-		  buy.style.display="none";
-		  drive.style.display="block";
-		 }
-	   item3.className = "tabService";
-	   service.style.display="none";
-	   item4.className = "tabGroupBuy";
-	  
-  }
-  
-  function exportSql(){
-		  var series=$('#carSeries option:selected').text();
-		  var model=$('#carModel option:selected').text();
-		  var startDate=$('#widgetField span').html().split(' —— ')[0];
-		  var endDate=$('#widgetField span').html().split(' —— ')[1];
-		  var willTime=$('#willBuyTime').val();
-		  var conArr=new Array();
-		  var conArrCont=new Array();
-		  var otherCon='';
-		  if(series!='全部'){
-			  conArrCont[0]=series;
-		  }else{
-			  conArrCont[0]='0';
-		  }
-		  if(model!='全部'){
-			  conArrCont[1]=model;
-		  }else{
-			  conArrCont[1]='0';
-		  }
-		  conArrCont[2]=startDate;
-		  conArrCont[3]=endDate;
-		  conArrCont[4]=willTime;
-	  if(curData!='service'){
-		  window.location.href='download.php?type='+curData+'&data='+encodeURI(conArrCont.join(','));
-	  }else if(curData=='service'){
-		  conArrCont[0]=$('#inputDate1').val();
-		  conArrCont[1]=$('#serviceKind option:selected').text();
-		  if(conArrCont[1]=='全部'){
-			  conArrCont[1]='0';
-		  }else{
-			  conArrCont[1]="预约"+conArrCont[1];
-		  }
-		  conArrCont[4]=$('#serviceState option:selected').text();
-		  if(conArrCont[4]=='全部'){
-			  conArrCont[4]='0';
-		  }  
-		  window.location.href='download.php?type=service&data='+encodeURI(conArrCont.join(','));
-	  }else if(curData=='groupBuy'){
-		  window.location.href='download.php?type=groupBuy&data='+encodeURI(conArrCont.join(','));
-	  }
-  }
-  function changeTab()
-  { 
-	   var service=document.getElementById("serviceTable");
-	   var buy =document.getElementById("buyTable");
-	   var drive =document.getElementById("driveTable");
-	  
-	   buy.style.display="none";
-	   drive.style.display="none";
-	   service.style.display="block";
-	   var item1 = document.getElementById("tabBuy");
-	   var item2 = document.getElementById("tabDrive");
-	   var item3 = document.getElementById("tabSerive");
-	   var item4 = document.getElementById("tabGroupBuy");
-	   item1.className="tabBuy";
-	   item2.className="tabDrive";
-	   item4.className="tabGroupBuy";
-	   item3.className="tabServiceSelected";
-	   
-	   curData='service';
-	   $('#theFrame').attr('src','nameStatics3.php');
-  }
-   function changeTab1()
-  { 
-	   var service=document.getElementById("serviceTable");
-	   var buy =document.getElementById("buyTable");
-	   var drive =document.getElementById("driveTable");
-	   service.style.display="none";
-	   buy.style.display="block";
-	   drive.style.display="none";
-
-	   var item1 = document.getElementById("tabBuy");
-	   var item2 = document.getElementById("tabDrive");
-	   var item3 = document.getElementById("tabSerive");
-	   var item4 = document.getElementById("tabGroupBuy");
-	   item1.className="tabBuy";
-	   item2.className="tabDrive";
-	   item3.className="tabService";
-	   item4.className="tabGroupBuySelected";
-	   curData='groupBuy';
-	   $('#theFrame').attr('src','nameStatics4.php');
-  }
-  function changeStatus(obj){
-	  if(obj=='1'){
-		  if($('#driveInput').attr('checked')){
-			  $('#inputDate').attr('disabled',true);
-		  }else{
-			  $('#inputDate').attr('disabled',false);
-		  }
-	  }else{
-		  if($('#servInput').attr('checked')){
-			  $('#inputDate1').attr('disabled',true);
-		  }else{
-			  $('#inputDate1').attr('disabled',false);
-		  }
-	  }
-  }
-</script>
 </head>
 
 <body>
@@ -335,11 +37,13 @@ $(document).ready(function(){
             <a class="tabDrive" id="tabDrive" href="javascript:void(0)" onclick="qieHuan('nameStatics2.php','dri',2)" >试驾报名</a>
             <a class="tabService" id="tabSerive" href="javascript:void(0)" onclick="changeTab()" >售后预约</a>
             <a class="tabGroupBuy" id="tabGroupBuy" href="javascript:void(0)" onclick="changeTab1()" >团购报名</a>
+            <a class="tabReplace" id="tabReplace" href="javascript:void(0)" onclick="changeTab2()" >二手置换</a>
+            <a class="tabInsurance" id="tabInsurance" href="javascript:void(0)" onclick="changeTab3()" >续保统计</a>
         </div>
         <div class="carSelect">
-        	<form class="searchCondition">
+        	<form class="searchCondition" id="searchform">
             <div class="tab" >
-			  <div id="widget" style="height:32px;">
+			  <div id="widget" style="height:32px;" >
                 <p style="float:left; margin-top:5px; margin-right:10px;">报名日期:</p>
 				<div id="widgetField" style="float:left;">
 					<span>2013-11-10 —— 2013-12-10</span>

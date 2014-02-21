@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-12-26 07:01:17
+<?php /* Smarty version Smarty-3.0.6, created on 2014-02-21 19:45:15
          compiled from "./homepage.html" */ ?>
-<?php /*%%SmartyHeaderCode:1996252bbd43d692519-15971969%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:706353073c4b23c8e3-59140765%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '179e0fbcc43af84c5acb6f70504b699d6236c5f7' => 
     array (
       0 => './homepage.html',
-      1 => 1388028019,
+      1 => 1392983112,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1996252bbd43d692519-15971969',
+  'nocache_hash' => '706353073c4b23c8e3-59140765',
   'function' => 
   array (
   ),
@@ -165,6 +165,19 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['info_id']['last']       = ($
 -message.html">
         		<img src="../../res/img/homepage-customerMessage.png" border="0">
             	<p>客户留言</p>
+            </a>
+        </dd>
+        <dd class="left2">
+        	<a  href="<?php echo $_smarty_tpl->getVariable('comId')->value;?>
+-replace.html" target="_self">
+        		<img src="../../res/img/waiting.png" border="0">
+            	<p>敬请期待</p>
+            </a>
+        </dd>
+        <dd class="right2">
+        	<a  href="baoxian.html" target="_self">
+        		<img src="../../res/img/waiting.png" border="0">
+            	<p>敬请期待</p>
             </a>
         </dd>
         <!--

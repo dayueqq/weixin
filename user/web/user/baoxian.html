@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="title" content="微信微店">
+<meta name="apple-touch-fullscreen" content="YES">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title><!--{$comInfo.company_name}--></title>
+<link rel="stylesheet" href="../../res/css/baoxian.css">
+<link href="../../res/css/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+<link href="../../res/css/mobiscroll.scroller.ios7.css" rel="stylesheet" type="text/css" />
+<link href="../../res/css/square/square.css" rel="stylesheet" type="text/css" />
+<link href="../../res/css/line/line.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="goback" style="width:100%;height:47px;background:#000;position:fixed; top:0; text-align:center;z-index:999;">
+		<p style="color:#fff; position:relative;">续保</p>
+        <a href="<!--{$comId}-->-homepage.html" style="display:block;width:27px;height:27px;color:#000; position:fixed; top:0; margin-left:6%; margin-top:8px;"><img src="../../res/img/back.png" width="33" height="33" border="0"/></a>
+    </div>
+    <div style="width:100%; height:47px;"></div>
+    <div class="signup">
+    	<p class="ensure">请填写详细置换信息，我们承诺保密</p>
+        <div class="dot-line">
+        </div>
+        <form class="signup-form" id="theForm" action="operation.php?action=addService" enctype="multipart/form-data" method="post">
+        	<input name="carNumber" class="carBrand" id="carNumber" placeholder="车牌" onFocus="changeOutline0()"  ><br />
+            <input name="name" class="name" id="name" placeholder="姓名 如：陈先生" onFocus="changeOutline0()"  ><br />
+        	<input name="custom" class="custom" id="custom" placeholder="联系电话 如：18888888888" onFocus="changeOutline1()" > <br />
+            <ul class="insuranceType">
+            	<p style="height:20px;margin:5px auto 5px 0;font-weight:bold;">投保险种:</p>
+                <li>
+                <input type="checkbox" class="xianzhong"checked>
+                <label>交强险</label>
+                </li>
+                <li>
+                <input type="checkbox" class="xianzhong">
+                <label>第三者责任险</label>
+                </li>
+                <li>
+                <input type="checkbox" class="xianzhong">
+                <label>车上人员责任险</label>
+                </li>
+                <li>
+                <input type="checkbox" class="xianzhong">
+                <label>车损险</label>
+                </li>
+                <li>
+                <input type="checkbox" class="xianzhong">
+                <label>盗抢险</label>
+                </li>
+                <li>
+                <input type="checkbox" class="xianzhong">
+                <label>自燃险</label>
+                </li>
+                <li>
+                <input type="checkbox" class="xianzhong">
+                <label>涉水险</label>
+                </li>
+                <li>
+                <input type="checkbox" class="xianzhong">
+                <label>玻璃单独破碎险</label>
+                </li>
+                <li>
+                <input type="checkbox" class="xianzhong">
+                <label>不计免赔特约险</label>
+                </li>
+            </ul>
+            <ul class="insurancePrice">
+            	<p style="height:20px;margin:5px auto 5px 0;font-weight:bold;">第三者保额：</p>
+                <li>
+            	<input type="radio" class="BStype" name="iCheck" checked>
+				<label>2000</label>
+                </li>
+                <li>
+                <input type="radio" class="BStype" name="iCheck">
+				<label>1万</label>
+                </li>
+                <li>
+                <input type="radio" class="BStype" name="iCheck">
+				<label>2万</label>
+                </li>
+                <li>
+                <input type="radio" class="BStype" name="iCheck">
+				<label>5万</label>
+                </li>
+                <li>
+                <input type="radio" class="BStype" name="iCheck">
+				<label>10万</label>
+                </li>
+                <li>
+                <input type="radio" class="BStype" name="iCheck">
+				<label>20万</label>
+                </li>
+                <li>
+                <input type="radio" class="BStype" name="iCheck">
+				<label>30万</label>
+                </li>
+                <li>
+                <input type="radio" class="BStype" name="iCheck">
+				<label>50万</label>
+                </li>
+                <li>
+                <input type="radio" class="BStype" name="iCheck">
+				<label>100万</label>
+                </li>
+            </ul>
+        	<input type="hidden" name="comId" value="<!--{$comInfo.company_id}-->">
+        </form>
+        <a href="javascript:void(0)" class="submit" onClick="upForm()">立即提交</a>
+    </div>
+	<div class="footer">
+    	<p class="tengxun">腾讯汽车</p>
+        <p>Copyright © 1998 - 2013 Tencent. All Rights Reserved</p>
+    </div>
+     <iframe id="iframeC" name="iframeC" src="" width="0" height="0" style="display:none;" ></iframe> 
+<!--页面JS-->
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../res/js/mobiscroll.custom-2.6.2.min.js"></script>
+<script type="text/javascript" src="../../res/js/mobiscroll.scroller.ios7.js"></script>
+<script type="text/javascript" src="../../res/js/icheck.min.js"></script>
+<script type="text/javascript" src="../../res/js/service.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  //for date picker
+  $(function(){
+    $('#time').mobiscroll().date({
+        theme: 'ios7',
+        lang: 'zh',
+        display: 'bottom',
+        mode: 'scroller',
+    });    
+    $('#show').click(function(){
+        $('#time').mobiscroll('show'); 
+        return false;
+    });
+    $('#clear').click(function () {
+        $('#time').val('');
+        return false;
+    });
+  });
+   
+   //for radio redesign
+    $('.BStype').each(function(){
+    var self = $(this),
+      label = self.next(),
+      label_text = label.text();
+
+    label.remove();
+    self.iCheck({
+      radioClass: 'iradio_line',
+      insert: '<div class="icheck_line-icon"></div>' + label_text
+    });
+  });
+   //for checkbox
+    $('.xianzhong').iCheck({
+    checkboxClass: 'icheckbox_square',
+    increaseArea: '20%' // optional
+  });
+});
+</script>
+<script type="text/javascript">
+document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+     WeixinJSBridge.call('hideToolbar');
+     WeixinJSBridge.call('hideOptionMenu');
+	 });
+</script>
+</body>
+</html>

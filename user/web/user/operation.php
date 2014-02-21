@@ -7,6 +7,8 @@
   
   $action=$_GET['action'];  //操作指令
   
+  date_default_timezone_set('PRC');
+  
   if($action=='upSign'){   //添加活动报名   #####################
       $tableName='user_info';
 	  
@@ -135,6 +137,17 @@
 		  echo "<script>alert('对不住，服务器响应超时，请重新报名!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 	  }
 	  
+	  //end
+  }else if($action=='upReplace'){
+	  $tableName='car_secondhand';
+	  
+	  $arr=array($_POST['comId'],$_POST['carBrand'],$_POST['carModel'],$_POST['iCheck'],$_POST['carType'],$_POST['carDisplacement'],$_POST['carMiles'],$_POST['time'],$_POST['name'],$_POST['custom'],date('Y-m-d'));
+	  $result=$sqlQuery->insert($tableName,$arr);
+	  if($result){
+		  echo "<script>alert('恭喜您报名成功!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+	  }else{
+		  echo "<script>alert('对不住，服务器响应超时，请重新报名!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+	  }
 	  //end
   }
   

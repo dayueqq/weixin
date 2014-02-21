@@ -72,7 +72,7 @@ class wechatCallbackapiTest
 							<item>
 								<Title><![CDATA[点击进入东莞达隆菲亚特微店]]></Title> 
 								<Description><![CDATA[东莞达隆菲亚特，为您提供最尊贵服务]]></Description>
-								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/back/image/company/52e218fa8760a.jpg]]></PicUrl>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/back/image/company/52e218fa8760a.png]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/homepage.php?comId=43]]></Url>
 							</item>
 							<item>
@@ -143,7 +143,7 @@ class wechatCallbackapiTest
 							<item>
 								<Title><![CDATA[点击进入东莞达隆菲亚特微店]]></Title> 
 								<Description><![CDATA[东莞达隆菲亚特，为您提供最尊贵服务]]></Description>
-								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/back/image/company/52e218fa8760a.jpg]]></PicUrl>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/back/image/company/52e218fa8760a.png]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/homepage.php?comId=43]]></Url>
 							</item>
 							<item>
@@ -212,7 +212,7 @@ class wechatCallbackapiTest
 							<item>
 								<Title><![CDATA[点击进入东莞达隆菲亚特微店]]></Title> 
 								<Description><![CDATA[东莞达隆菲亚特，为您提供最尊贵服务]]></Description>
-								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/back/image/company/52e218fa8760a.jpg]]></PicUrl>
+								<PicUrl><![CDATA[http://www.88auto.com.cn/weixin/back/image/company/52e218fa8760a.png]]></PicUrl>
 								<Url><![CDATA[http://www.88auto.com.cn/weixin/user/web/user/homepage.php?comId=43]]></Url>
 							</item>
 							<item>
